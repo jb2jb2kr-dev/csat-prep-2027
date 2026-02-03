@@ -51,10 +51,22 @@ export const PracticeMode = () => {
                             >
                                 <ChevronLeft className="w-5 h-5" />
                             </button>
-                            <span className="mx-3 text-sm font-semibold text-slate-600 flex items-center gap-2 min-w-[100px] justify-center">
-                                <Calendar className="w-4 h-4 text-indigo-500" />
-                                {targetDate}
-                            </span>
+                            <div className="relative">
+                                <input
+                                    type="date"
+                                    value={targetDate}
+                                    onChange={(e) => {
+                                        if (e.target.value) {
+                                            navigate(`/practice/${e.target.value}`);
+                                        }
+                                    }}
+                                    className="absolute inset-0 opacity-0 cursor-pointer w-full h-full z-10"
+                                />
+                                <span className="mx-3 text-sm font-semibold text-slate-600 flex items-center gap-2 min-w-[120px] justify-center cursor-pointer hover:bg-slate-50 py-1 px-2 rounded-lg transition-colors">
+                                    <Calendar className="w-4 h-4 text-indigo-500" />
+                                    {targetDate}
+                                </span>
+                            </div>
                             <button
                                 onClick={() => handleDateChange(1)}
                                 className="p-1 hover:bg-slate-100 rounded-full text-slate-400 hover:text-indigo-600 transition-colors"
