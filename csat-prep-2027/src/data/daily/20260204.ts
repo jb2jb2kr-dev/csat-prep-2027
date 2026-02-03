@@ -6,7 +6,13 @@ export const daily20260204 = {
             level: "Foundation",
             type: "내용 불일치 (Listening)",
             isListening: true,
-            content: "W: Honey, look at the pet cam app on my phone. The new smart feeder is working well.\\nM: Oh, the video is really clear. I see our cat, Coco, sleeping on the pink cushion.\\nW: Yeah. And look at the feeder next to the water bowl. I set it to dispense food at noon.\\nM: Nice. Did you buy the round-shaped one?\\nW: No, I bought the square one because it fits the corner better. \\nM: I see. Oh, there is a toy mouse in front of the feeder.\\nW: Coco must have been playing with it.",
+            content: `W: Honey, look at the pet cam app on my phone. The new smart feeder is working well.
+M: Oh, the video is really clear. I see our cat, Coco, sleeping on the pink cushion.
+W: Yeah. And look at the feeder next to the water bowl. I set it to dispense food at noon.
+M: Nice. Did you buy the round-shaped one?
+W: No, I bought the square one because it fits the corner better.
+M: I see. Oh, there is a toy mouse in front of the feeder.
+W: Coco must have been playing with it.`,
             question: "대화의 내용과 일치하지 않는 것은?",
             choices: [
                 "여자는 스마트폰으로 펫 캠 영상을 보고 있다.",
@@ -93,7 +99,13 @@ export const daily20260204 = {
             level: "Intermediate",
             type: "할 일 파악 (Listening)",
             isListening: true,
-            content: "M: Hello, Ms. Green. I'm here to volunteer at the animal shelter.\\nW: Welcome back, Mike. Thanks for coming.\\nM: What should I do today? Should I clean the cages like last time?\\nW: The cages are already clean. We actually need someone to walk the dogs.\\nM: I'd love to do that. Which dogs need walking?\\nW: The ones in the blue kennels. But before you go, please fill out the volunteer log.\\nM: Okay, I'll do that right away.",
+            content: `M: Hello, Ms. Green. I'm here to volunteer at the animal shelter.
+W: Welcome back, Mike. Thanks for coming.
+M: What should I do today? Should I clean the cages like last time?
+W: The cages are already clean. We actually need someone to walk the dogs.
+M: I'd love to do that. Which dogs need walking?
+W: The ones in the blue kennels. But before you go, please fill out the volunteer log.
+M: Okay, I'll do that right away.`,
             question: "남자가 대화 직후에 할 일은?",
             choices: [
                 "개 산책 시키기",
@@ -288,7 +300,7 @@ export const daily20260204 = {
                 level: "Intermediate",
                 type: "세부 내용 파악 (Listening)",
                 isListening: true,
-                content: "M: Hello, students. I'm Mr. Baker, president of the school's Library Book Club. I'm happy to invite you to our monthly meeting. We meet on the second Tuesday of every month in the main reading room. This month, we'll be reading and discussing the famous mystery novel, 'The Silent Witness'. It's a great opportunity to share your thoughts and make new friends. Also, we provide free cookies and juice for all attendees. If you are interested, please sign up on the bulletin board next to the cafeteria by this Friday. We hope to see many of you there!",
+                content: `M: Hello, students. I'm Mr. Baker, president of the school's Library Book Club. I'm happy to invite you to our monthly meeting. We meet on the second Tuesday of every month in the main reading room. This month, we'll be reading and discussing the famous mystery novel, 'The Silent Witness'. It's a great opportunity to share your thoughts and make new friends. Also, we provide free cookies and juice for all attendees. If you are interested, please sign up on the bulletin board next to the cafeteria by this Friday. We hope to see many of you there!`,
                 question: "Library Book Club에 관해 언급되지 않은 것은?",
                 choices: [
                     "① 모임 요일",

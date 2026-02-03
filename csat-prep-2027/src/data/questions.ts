@@ -108,7 +108,11 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "일치/불일치",
                 isListening: true,
-                content: "(Script)\nM: Look at this photo from my camping trip.\nW: It looks fun. Is that a tent next to the tree?\nM: Yes, I set it up myself. And there's a campfire in front of it.\nW: I see a guitar leaning against the chair. Did you play it?\nM: Yes, we sang songs together.",
+                content: `M: Look at this photo from my camping trip.
+W: It looks fun. Is that a tent next to the tree?
+M: Yes, I set it up myself. And there's a campfire in front of it.
+W: I see a guitar leaning against the chair. Did you play it?
+M: Yes, we sang songs together.`,
                 question: "대화를 듣고, 그림과 일치하지 않는 것을 고르시오.",
                 choices: ["나무 옆의 텐트", "텐트 앞의 모닥불", "의자에 기대어 있는 기타", "노래하는 사람들", "바비큐 그릴"],
                 answer: 4,
@@ -120,7 +124,7 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "목적 파악 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: Hello, I'm calling about the 'Grandhill Park Cleanup' event next Saturday. I registered yesterday, but I hurt my ankle this morning. I don't think I can walk around picking up trash. Is it possible to cancel my registration?",
+                content: `M: Hello, I'm calling about the 'Grandhill Park Cleanup' event next Saturday. I registered yesterday, but I hurt my ankle this morning. I don't think I can walk around picking up trash. Is it possible to cancel my registration?`,
                 question: "남자가 전화를 건 목적으로 가장 적절한 것은?",
                 choices: ["행사에 등록하기 위해", "등록을 취소하기 위해", "길을 묻기 위해", "날짜를 변경하기 위해", "분실물을 신고하기 위해"],
                 answer: 1,
@@ -131,7 +135,12 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "세부 내용 파악 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: Welcome to the Garden Center. Can I help you?\nW: Yes, I need a pot for my sunflower.\nM: We have plastic, ceramic, and wood pots.\nW: Plastic is too light. I want something sturdy.\nM: Then how about ceramic or wood? Ceramic is heavier but looks nicer.\nW: I'll take the ceramic one.",
+                content: `M: Welcome to the Garden Center. Can I help you?
+W: Yes, I need a pot for my sunflower.
+M: We have plastic, ceramic, and wood pots.
+W: Plastic is too light. I want something sturdy.
+M: Then how about ceramic or wood? Ceramic is heavier but looks nicer.
+W: I'll take the ceramic one.`,
                 question: "여자가 구매할 화분으로 가장 적절한 것은?",
                 choices: ["플라스틱 화분", "나무 화분", "도자기 화분", "유리 화분", "금속 화분"],
                 answer: 2,
@@ -142,7 +151,10 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "이유 파악 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: Hey, do you want to see the new sci-fi movie 'Green Ocean' this afternoon?\nW: I'd love to, but I can't.\nM: Do you have to study for the math exam?\nW: No, I finished that yesterday. I have to volunteer at the library until 6 p.m.",
+                content: `M: Hey, do you want to see the new sci-fi movie 'Green Ocean' this afternoon?
+W: I'd love to, but I can't.
+M: Do you have to study for the math exam?
+W: No, I finished that yesterday. I have to volunteer at the library until 6 p.m.`,
                 question: "여자가 영화를 보러 갈 수 없는 이유는?",
                 choices: ["시험 공부를 해야 해서", "아파서", "봉사활동을 해야 해서", "가족 모임이 있어서", "돈이 없어서"],
                 answer: 2,
@@ -241,7 +253,10 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "장소 파악 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: Can I see your ticket and passport, please?\nW: Here they are. I would like a window seat.\nM: Okay. I have a seat available in row 12. Do you have any luggage to check in?\nW: Just this suitcase.",
+                content: `M: Can I see your ticket and passport, please?
+W: Here they are. I would like a window seat.
+M: Okay. I have a seat available in row 12. Do you have any luggage to check in?
+W: Just this suitcase.`,
                 question: "대화가 일어나는 장소로 알맞은 것은?",
                 choices: ["식당", "병원", "공항", "도서관", "극장"],
                 answer: 2,
@@ -252,7 +267,11 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "숫자 정보 파악 (Listening)",
                 isListening: true,
-                content: "(Script)\nW: How much is this t-shirt?\nM: It's 20 dollars.\nW: What about this cap?\nM: It's 10 dollars.\nW: I'll take one t-shirt and one cap.",
+                content: `W: How much is this t-shirt?
+M: It's 20 dollars.
+W: What about this cap?
+M: It's 10 dollars.
+W: I'll take one t-shirt and one cap.`,
                 question: "여자가 지불할 총 금액은?",
                 choices: ["$10", "$20", "$30", "$40", "$50"],
                 answer: 2,
@@ -321,7 +340,12 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Intermediate",
                 type: "할 일 파악",
                 isListening: true,
-                content: "(Script)\nW: Honey, the guests will be here in an hour. Is everything ready?\nM: Almost. I've cleaned the living room and ordered the pizza.\nW: Good. Did you buy some drinks?\nM: Oh no, I forgot! The fridge is empty.\nW: Don't worry, I'll clean the bathroom. Can you run to the store?\nM: Sure, I'll go right now.",
+                content: `W: Honey, the guests will be here in an hour. Is everything ready?
+M: Almost. I've cleaned the living room and ordered the pizza.
+W: Good. Did you buy some drinks?
+M: Oh no, I forgot! The fridge is empty.
+W: Don't worry, I'll clean the bathroom. Can you run to the store?
+M: Sure, I'll go right now.`,
                 question: "대화를 듣고, 남자가 할 일로 가장 적절한 것은?",
                 choices: ["거실 청소하기", "피자 주문하기", "음료 사러 가기", "욕실 청소하기", "손님 맞이하기"],
                 answer: 2,
@@ -355,7 +379,9 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Intermediate",
                 type: "관계 추론 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: How long have you been having this toothache?\nW: Since last night. It hurts when I drink cold water.\nM: Open your mouth, please. Hmm, I see a cavity here. We need to fill it.",
+                content: `M: How long have you been having this toothache?
+W: Since last night. It hurts when I drink cold water.
+M: Open your mouth, please. Hmm, I see a cavity here. We need to fill it.`,
                 question: "두 사람의 관계로 가장 적절한 것은?",
                 choices: ["의사 - 환자", "선생님 - 학생", "쇼핑몰 점원 - 고객", "변호사 - 의뢰인", "운전기사 - 승객"],
                 answer: 0,
@@ -399,7 +425,10 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Intermediate",
                 type: "부탁한 일 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: Sarah, are you going to the library?\nW: Yes, do you need anything?\nM: Could you return these two books for me? I have a class right now.\nW: Sure, no problem.",
+                content: `M: Sarah, are you going to the library?
+W: Yes, do you need anything?
+M: Could you return these two books for me? I have a class right now.
+W: Sure, no problem.`,
                 question: "남자가 여자에게 부탁한 일은?",
                 choices: ["책 빌리기", "책 반납하기", "도서관 자리 맡기", "수업 필기 빌리기", "점심 같이 먹기"],
                 answer: 1,
@@ -443,7 +472,9 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Intermediate",
                 type: "지불 금액 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: I'd like to buy tickets for the concert.\nW: Adults are $30 and children are $15.\nM: Two adults and one child, please. Here is $100.",
+                content: `M: I'd like to buy tickets for the concert.
+W: Adults are $30 and children are $15.
+M: Two adults and one child, please. Here is $100.`,
                 question: "남자가 받아야 할 거스름돈은?",
                 choices: ["$15", "$25", "$35", "$75", "$10"],
                 answer: 1,
@@ -487,7 +518,10 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Intermediate",
                 type: "언급되지 않은 것 (Listening)",
                 isListening: true,
-                content: "(Script)\nW: Let's check the packing list for the hiking trip.\nM: Okay. I packed water, snacks, a map, and a first-aid kit.\nW: Did you bring a flashlight?\nM: Oops, I forgot that.",
+                content: `W: Let's check the packing list for the hiking trip.
+M: Okay. I packed water, snacks, a map, and a first-aid kit.
+W: Did you bring a flashlight?
+M: Oops, I forgot that.`,
                 question: "남자가 챙긴 물건이 아닌 것은?",
                 choices: ["물", "간식", "지도", "구급상자", "손전등"],
                 answer: 4,
@@ -523,7 +557,7 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Advanced",
                 type: "담화의 주제 (Advanced)",
                 isListening: true,
-                content: "(Script)\nM: Today, we will discuss the 'Observer Effect' in quantum mechanics. It sounds complex, but simply put, it means that the act of observing a phenomenon changes the phenomenon itself. For example, to measure the pressure of a tire, you must let out some air, thus changing the pressure. In social sciences, people behave differently when they know they are being watched.",
+                content: `M: Today, we will discuss the 'Observer Effect' in quantum mechanics. It sounds complex, but simply put, it means that the act of observing a phenomenon changes the phenomenon itself. For example, to measure the pressure of a tire, you must let out some air, thus changing the pressure. In social sciences, people behave differently when they know they are being watched.`,
                 question: "남자가 하는 말의 주제로 가장 적절한 것은?",
                 choices: ["The difficulty of quantum physics", "How to measure tire pressure", "The definition and examples of the Observer Effect", "The difference between physics and social science", "The history of scientific discovery"],
                 answer: 2,
@@ -590,7 +624,10 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Advanced",
                 type: "추론 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: Professor, I read your paper on 'The Paradox of Choice'.\nW: Do you have any questions?\nM: You said having too many options makes people less happy. But doesn't freedom mean having more choices?\nW: That's the paradox. Unlimited choice leads to decision paralysis and regret. We worry if we made the wrong choice.",
+                content: `M: Professor, I read your paper on 'The Paradox of Choice'.
+W: Do you have any questions?
+M: You said having too many options makes people less happy. But doesn't freedom mean having more choices?
+W: That's the paradox. Unlimited choice leads to decision paralysis and regret. We worry if we made the wrong choice.`,
                 question: "여자의 주장에 따르면 'Paradox of Choice'의 결과는 무엇인가?",
                 choices: ["Increased happiness", "Decision paralysis and regret", "More freedom", "Better quality products", "Economic growth"],
                 answer: 1,
@@ -623,7 +660,7 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Advanced",
                 type: "세부 내용 불일치 (Listening)",
                 isListening: true,
-                content: "(Script)\nM: The 'Dunning-Kruger Effect' is a cognitive bias. People with low ability at a task overestimate their ability. Paradoxically, experts often underestimate their competence, assuming what is easy for them is easy for others.",
+                content: `M: The 'Dunning-Kruger Effect' is a cognitive bias. People with low ability at a task overestimate their ability. Paradoxically, experts often underestimate their competence, assuming what is easy for them is easy for others.`,
                 question: "Dunning-Kruger 효과에 대한 설명으로 일치하지 않는 것은?",
                 choices: ["인지 편향의 일종이다.", "능력이 낮은 사람은 자신의 능력을 과대평가한다.", "전문가는 자신의 능력을 과소평가하는 경향이 있다.", "능력이 중간인 사람이 가장 자신감이 높다.", "전문가는 타인도 쉽게 할 것이라고 가정한다."],
                 answer: 3,
@@ -641,7 +678,7 @@ export const dailyContent: Record<string, DailySet> = {
                     level: "Foundation",
                     type: "목적 파악",
                     isListening: true,
-                    content: "(Script)\nM: Attention, students. This is your principal Mr. Parker. As you know, the school library renovation is scheduled to start next week. During this period, the main library will be closed. However, we have set up a temporary study area in the auditorium.",
+                    content: `M: Attention, students. This is your principal Mr. Parker. As you know, the school library renovation is scheduled to start next week. During this period, the main library will be closed. However, we have set up a temporary study area in the auditorium.`,
                     question: "남자가 하는 말의 목적으로 가장 적절한 것은?",
                     choices: ["도서관 공사 일정 연기를 알리려고", "임시 도서관 운영 장소를 안내하려고", "도서관 자원봉사자를 모집하려고", "학교 대강당 사용 수칙을 설명하려고", "신착 도서 목록을 소개하려고"],
                     answer: 1,
@@ -652,7 +689,10 @@ export const dailyContent: Record<string, DailySet> = {
                     level: "Intermediate",
                     type: "의견 파악",
                     isListening: true,
-                    content: "(Script)\nW: I think we should ban smartphones in classrooms completely.\nM: I understand your point, but they can be useful educational tools.\nW: Using them for learning is fine, but most students get distracted by social media.\nM: Then we should teach them how to use them responsibly, rather than just banning them.",
+                    content: `W: I think we should ban smartphones in classrooms completely.
+M: I understand your point, but they can be useful educational tools.
+W: Using them for learning is fine, but most students get distracted by social media.
+M: Then we should teach them how to use them responsibly, rather than just banning them.`,
                     question: "남자의 의견으로 가장 적절한 것은?",
                     choices: ["스마트폰을 교실에서 완전히 금지해야 한다.", "스마트폰은 교육적으로 유용하지 않다.", "학생들에게 스마트폰의 책임감 있는 사용법을 가르쳐야 한다.", "소셜 미디어 사용을 적극 권장해야 한다.", "학교 예산으로 스마트폰을 지급해야 한다."],
                     answer: 2,
@@ -736,7 +776,14 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "내용 불일치",
                 isListening: true,
-                content: "(Script)\nW: Honey, we’re running low on shampoo. We should buy some.\nM: Why don’t we check out the zero-waste store in our neighborhood?\nW: Zero-waste store? What’s that?\nM: It’s a store where you can buy items like shampoo, toothpaste, and liquid soap without any plastic packaging.\nW: How is that possible?\nM: You just bring your own reusable bottles, fill them up from the large containers, and pay based on the weight.\nW: That’s interesting. But isn’t it bothersome to carry bottles to the store?\nM: Not really. It’s just one small thing we can do for the environment.",
+                content: `W: Honey, we’re running low on shampoo. We should buy some.
+M: Why don’t we check out the zero-waste store in our neighborhood?
+W: Zero-waste store? What’s that?
+M: It’s a store where you can buy items like shampoo, toothpaste, and liquid soap without any plastic packaging.
+W: How is that possible?
+M: You just bring your own reusable bottles, fill them up from the large containers, and pay based on the weight.
+W: That’s interesting. But isn’t it bothersome to carry bottles to the store?
+M: Not really. It’s just one small thing we can do for the environment.`,
                 question: "대화를 듣고, Zero-waste Store에 관해 언급된 내용과 일치하지 않는 것을 고르시오.",
                 choices: [
                     "샴푸와 치약 같은 물품을 플라스틱 포장 없이 살 수 있다.",
@@ -753,7 +800,7 @@ export const dailyContent: Record<string, DailySet> = {
                 level: "Foundation",
                 type: "주제 파악",
                 isListening: true,
-                content: "(Script)\nM: Hello, fitness lovers! Are you ready to witness the future of exercise? Join our Virtual Reality Workout Program and discover a new way to stay active. The program will be held from July 15th to July 17th at the Hi-Tech Gym. You can try virtual cycling and boxing and compete against computer-generated rivals. All necessary equipment, including VR headsets and controllers, will be available for you to borrow at the gym. Don’t miss this opportunity to see how combining technology and fitness together can create a unique workout experience.",
+                content: `M: Hello, fitness lovers! Are you ready to witness the future of exercise? Join our Virtual Reality Workout Program and discover a new way to stay active. The program will be held from July 15th to July 17th at the Hi-Tech Gym. You can try virtual cycling and boxing and compete against computer-generated rivals. All necessary equipment, including VR headsets and controllers, will be available for you to borrow at the gym. Don’t miss this opportunity to see how combining technology and fitness together can create a unique workout experience.`,
                 question: "다음을 듣고, 남자가 하는 말의 주제로 가장 적절한 것을 고르시오.",
                 choices: [
                     "가상 현실(VR) 운동 프로그램 홍보",
@@ -1056,7 +1103,10 @@ const additionalQuestions: Question[] = [
         level: "Foundation",
         type: "관계 파악",
         isListening: true,
-        content: "(Script)\nM: How would you like your hair done today?\nW: Just a trim, please. And I'd like to dye it brown.\nM: Sure. The dyeing process will take about an hour. Would you like a magazine?\nW: Yes, thank you.",
+        content: `M: How would you like your hair done today?
+W: Just a trim, please. And I'd like to dye it brown.
+M: Sure. The dyeing process will take about an hour. Would you like a magazine?
+W: Yes, thank you.`,
         question: "두 사람의 관계로 가장 적절한 것은?",
         choices: ["의사 - 환자", "미용사 - 손님", "교사 - 학생", "경찰 - 운전자", "은행원 - 고객"],
         answer: 1,
@@ -1067,7 +1117,10 @@ const additionalQuestions: Question[] = [
         level: "Intermediate",
         type: "이유 파악",
         isListening: true,
-        content: "(Script)\nW: You're late again, Tom. The meeting started 20 minutes ago.\nM: I'm really sorry. My car broke down on the highway.\nW: Oh, that's terrible. Did you call a tow truck?\nM: Yes, but it took a long time to arrive.",
+        content: `W: You're late again, Tom. The meeting started 20 minutes ago.
+M: I'm really sorry. My car broke down on the highway.
+W: Oh, that's terrible. Did you call a tow truck?
+M: Yes, but it took a long time to arrive.`,
         question: "남자가 늦은 이유는?",
         choices: ["늦잠을 자서", "차가 고장 나서", "길을 잃어서", "버스를 놓쳐서", "사고가 나서"],
         answer: 1,
@@ -1118,7 +1171,7 @@ const batch2Questions: Question[] = [
         level: "Advanced",
         type: "담화 주체 파악",
         isListening: true,
-        content: "(Script)\nM: Good morning, citizens. This is a special announcement from the City Council. Due to the severe storm warning, all public parks and beaches will be closed until further notice. We advise everyone to stay indoors and avoid unnecessary travel.",
+        content: `M: Good morning, citizens. This is a special announcement from the City Council. Due to the severe storm warning, all public parks and beaches will be closed until further notice. We advise everyone to stay indoors and avoid unnecessary travel.`,
         question: "화자는 누구인가?",
         choices: ["기상 캐스터", "시의회 관계자", "경찰관", "소방관", "공원 관리인"],
         answer: 1,
@@ -1129,7 +1182,11 @@ const batch2Questions: Question[] = [
         level: "Intermediate",
         type: "그림 정보 파악",
         isListening: true,
-        content: "(Script)\nW: Look at this painting I bought.\nM: It's beautiful. I like the mountain in the background.\nW: Yes, and the cabin by the lake looks so peaceful.\nM: Is that a boat on the lake?\nW: No, it's a duck.",
+        content: `W: Look at this painting I bought.
+M: It's beautiful. I like the mountain in the background.
+W: Yes, and the cabin by the lake looks so peaceful.
+M: Is that a boat on the lake?
+W: No, it's a duck.`,
         question: "대화의 내용과 일치하지 않는 그림 요소는?",
         choices: ["배경의 산", "호숫가 오두막", "호수", "호수 위의 배", "오리"],
         answer: 3,

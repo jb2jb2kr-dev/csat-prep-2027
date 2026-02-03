@@ -17,7 +17,8 @@ export const playDialogue = (
     // Expected format: (Script) \n M: ... \n W: ...
     // Or just M: ... \n W: ...
     const cleanText = text.replace(/\(Script\)\s*/gi, '').trim();
-    const lines = cleanText.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+    // Split by actual newline or literal "\n" string
+    const lines = cleanText.split(/\\n|\n/).map(line => line.trim()).filter(line => line.length > 0);
 
     const utterances: SpeechSynthesisUtterance[] = [];
     const voices = window.speechSynthesis.getVoices();
