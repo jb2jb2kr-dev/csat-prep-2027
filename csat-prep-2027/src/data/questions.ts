@@ -1288,7 +1288,7 @@ const finalBatchQuestions: Question[] = [
     }
 ];
 
-dailyContent["2026-02-02"].mock.questions.push(...finalBatchQuestions);
+// dailyContent["2026-02-02"].mock.questions.push(...finalBatchQuestions);
 
 
 (dailyContent as any)["2026-02-04"] = {
