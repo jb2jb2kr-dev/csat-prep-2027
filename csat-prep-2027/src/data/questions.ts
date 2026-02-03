@@ -31,6 +31,7 @@ export interface DailySet {
     mock: MockExam;
 }
 
+import { daily20260204 } from './daily/20260204';
 export const dailyContent: Record<string, DailySet> = {
     "2026-02-01": {
         foundation: [
@@ -1170,6 +1171,8 @@ const batch2Questions: Question[] = [
 ];
 
 dailyContent["2026-02-02"].mock.questions.push(...batch2Questions);
+
+(dailyContent as any)["2026-02-04"] = daily20260204;
 
 
 
