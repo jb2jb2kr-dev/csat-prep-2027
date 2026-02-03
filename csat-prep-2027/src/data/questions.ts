@@ -1172,7 +1172,7 @@ const batch2Questions: Question[] = [
 dailyContent["2026-02-02"].mock.questions.push(...batch2Questions);
 
 // Final Batch (10 questions to reach 25 total)
-const finalBatchQuestions: Question[] = [
+export const finalBatchQuestions: Question[] = [
     // Listening (adding 4 more to reach ~8/25 Listening)
     {
         id: "m-l-7",
