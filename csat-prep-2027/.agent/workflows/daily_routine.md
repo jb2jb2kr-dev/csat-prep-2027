@@ -65,7 +65,7 @@ For each level, generate questions mapping to specific CSAT types:
     *   **Translation Rule**: 
         *   **Questions (Instructions)**: Must be in **Korean**.
         *   **Choices**: Must be in **Korean** (unless specifically required to be English by the question type).
-        *   **Explanations**: Must be in **Korean**.
+        *   **Explanations**: Must be in **Korean** (Note: If including the **Listening Script/Transcript** inside the explanation, keep the script in **English**).
         *   **Content (Passages)**: Keep in **English**.
 3.  **Important**: Ensure Listening Scripts use backticks and actual newlines for proper TTS parsing.
 4.  Update `src/data/questions.ts` to import and register the new daily set.
