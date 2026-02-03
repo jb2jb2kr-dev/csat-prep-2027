@@ -1290,7 +1290,8 @@ const finalBatchQuestions: Question[] = [
 
 dailyContent["2026-02-02"].mock.questions.push(...finalBatchQuestions);
 
-dailyContent["2026-02-04"] = {
+
+(dailyContent as any)["2026-02-04"] = {
     foundation: [
         {
             id: "d-20260204-f-1",
@@ -1662,12 +1663,6 @@ dailyContent["2026-02-04"] = {
         ]
     }
 }
-};
-
-
-
-
-
 
 
 
