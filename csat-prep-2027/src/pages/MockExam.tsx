@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { Timer, CheckCircle, AlertCircle, PlayCircle, StopCircle } from 'lucide-react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Timer, CheckCircle, AlertCircle, PlayCircle, StopCircle, ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
 import { dailyContent } from '../data/questions';
 import { PDFDownloadButton } from '../components/PDFDownloadButton';
 import { saveExamResult } from '../utils/storage';
@@ -11,11 +11,24 @@ import { clsx } from 'clsx';
 
 export const MockExam = () => {
     const { date } = useParams<{ date: string }>();
+    const navigate = useNavigate();
     const [examState, setExamState] = useState<'intro' | 'active' | 'finished'>('intro');
     const [timeLeft, setTimeLeft] = useState(1200); // 20 minutes for mini mock
     const [answers, setAnswers] = useState<Record<string, number>>({});
 
     const targetDate = date || "2026-02-03";
+
+    const handleDateChange = (days: number) => {
+        const currentDateObj = new Date(targetDate);
+        currentDateObj.setDate(currentDateObj.getDate() + days);
+
+        const year = currentDateObj.getFullYear();
+        const month = String(currentDateObj.getMonth() + 1).padStart(2, '0');
+        const day = String(currentDateObj.getDate()).padStart(2, '0');
+        const newDateStr = `${year}-${month}-${day}`;
+
+        navigate(`/mock/${newDateStr}`);
+    };
     const mockData = dailyContent[targetDate]?.mock;
 
     useEffect(() => {
@@ -82,6 +95,27 @@ export const MockExam = () => {
         <div className="min-h-screen pt-24 pb-12 px-6 max-w-4xl mx-auto">
             {examState === 'intro' && (
                 <div className="text-center pt-12">
+                    <div className="flex justify-center mb-8">
+                        <div className="flex items-center bg-white rounded-full shadow-sm border border-slate-200 px-1 py-1">
+                            <button
+                                onClick={() => handleDateChange(-1)}
+                                className="p-1 hover:bg-slate-100 rounded-full text-slate-400 hover:text-emerald-600 transition-colors"
+                            >
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
+                            <span className="mx-3 text-sm font-semibold text-slate-600 flex items-center gap-2 min-w-[100px] justify-center">
+                                <Calendar className="w-4 h-4 text-emerald-500" />
+                                {targetDate}
+                            </span>
+                            <button
+                                onClick={() => handleDateChange(1)}
+                                className="p-1 hover:bg-slate-100 rounded-full text-slate-400 hover:text-emerald-600 transition-colors"
+                            >
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </div>
+
                     <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-emerald-100 text-emerald-600 mb-8">
                         <Timer className="w-10 h-10" />
                     </div>
