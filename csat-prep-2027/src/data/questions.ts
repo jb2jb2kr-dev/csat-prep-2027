@@ -32,6 +32,8 @@ export interface DailySet {
 }
 
 import { daily20260204 } from './daily/20260204';
+import { daily20260205 } from './daily/20260205';
+import { daily20260206 } from './daily/20260206';
 export const dailyContent: Record<string, DailySet> = {
     "2026-02-01": {
         foundation: [
@@ -1230,6 +1232,8 @@ W: No, it's a duck.`,
 dailyContent["2026-02-02"].mock.questions.push(...batch2Questions);
 
 (dailyContent as any)["2026-02-04"] = daily20260204;
+(dailyContent as any)["2026-02-05"] = daily20260205;
+(dailyContent as any)["2026-02-06"] = daily20260206;
 
 
 

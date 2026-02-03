@@ -1,4 +1,36 @@
-export const playDialogue = (
+// Helper to safely load voices (waits for browser to be ready)
+const loadVoices = (): Promise<SpeechSynthesisVoice[]> => {
+    return new Promise((resolve) => {
+        let voices = window.speechSynthesis.getVoices();
+        if (voices.length > 0) {
+            resolve(voices);
+            return;
+        }
+
+        console.log('[TTS] Waiting for voices to load...');
+
+        const listener = () => {
+            voices = window.speechSynthesis.getVoices();
+            if (voices.length > 0) {
+                console.log(`[TTS] Voices loaded: ${voices.length}`);
+                window.speechSynthesis.removeEventListener('voiceschanged', listener);
+                resolve(voices);
+            }
+        };
+
+        window.speechSynthesis.addEventListener('voiceschanged', listener);
+
+        // Timeout/Fallback after 2 seconds
+        setTimeout(() => {
+            window.speechSynthesis.removeEventListener('voiceschanged', listener);
+            const fallbackVoices = window.speechSynthesis.getVoices();
+            console.warn(`[TTS] Voice load timeout. Found ${fallbackVoices.length} voices.`);
+            resolve(fallbackVoices);
+        }, 2000);
+    });
+};
+
+export const playDialogue = async (
     text: string,
     onStart?: () => void,
     onEnd?: () => void,
@@ -13,6 +45,9 @@ export const playDialogue = (
     // Cancel any current speech
     window.speechSynthesis.cancel();
 
+    // Ensure voices are loaded
+    const voices = await loadVoices();
+
     // Parse the text into lines
     // Expected format: (Script) \n M: ... \n W: ...
     // Or just M: ... \n W: ...
@@ -21,10 +56,17 @@ export const playDialogue = (
     const lines = cleanText.split(/\\n|\n/).map(line => line.trim()).filter(line => line.length > 0);
 
     const utterances: SpeechSynthesisUtterance[] = [];
-    const voices = window.speechSynthesis.getVoices();
+
+    // Debugging: Log available voices
+    console.log("Available voices:", voices.map(v => `${v.name} (${v.lang})`));
+
+    // Handle voice loading usage if empty (though usually loaded by interaction time)
+    if (voices.length === 0) {
+        console.error('[TTS] No voices found even after waiting. Playback might fail or use default.');
+    }
 
     // Simple heuristic to find male/female voices
-    // Note: Voice names depend on OS. 
+    // Note: Voice names depend on OS.
     // Windows: 'Microsoft David' (Male), 'Microsoft Zira' (Female), 'Microsoft Mark' (Male)
     // Mac: 'Samantha' (Female), 'Alex' (Male), 'Daniel' (Male)
     // Android/iOS: Depends on system.
@@ -33,55 +75,114 @@ export const playDialogue = (
     // Default fallback: use different voices for M and W if possible.
 
     // Improved voice selection logic
-    // Priority for Male: US Male voices (David, Mark) -> Generic US Male -> Any Male (excluding UK if possible)
-    const maleVoice = voices.find(v =>
-        (v.name.includes('David') && v.lang.includes('US')) ||
-        (v.name.includes('Mark') && v.lang.includes('US')) ||
-        (v.name.includes('Male') && v.lang.includes('US')) ||
-        (v.name.includes('Male') && !v.name.includes('UK') && !v.name.includes('GB'))
-    ) || voices.find(v => v.name.includes('Male')) || voices.find(v => v.lang.includes('en-US')) || voices[0];
+    // Priority for Male: 
+    // 1. "David" (Standard Windows US Male)
+    // 2. "Google US English" (Chrome US Male)
+    // 3. Any voice with "Male" AND ("US" or "United States")
+    // 4. Any "en-US" voice that is NOT explicitly Female (Zira, etc.)
+    let maleVoice = voices.find(v => v.name.includes('David') && v.lang.includes('US'))
+        || voices.find(v => v.name.includes('Google US English'))
+        || voices.find(v => (v.name.includes('US') || v.name.includes('United States')) && v.name.includes('Male'))
+        || voices.find(v => v.lang === 'en-US' && !v.name.includes('Zira') && !v.name.includes('Female') && !v.name.includes('Girl'));
 
-    // Priority for Female: US Female voices (Zira) -> Google US -> Generic US Female
-    const femaleVoice = voices.find(v =>
+    // Priority for Female: US Female voices (Zira, Google US) -> Generic US Female
+    let femaleVoice = voices.find(v =>
         (v.name.includes('Zira') && v.lang.includes('US')) ||
-        (v.name.includes('Google US English')) ||
-        (v.name.includes('Female') && v.lang.includes('US'))
-    ) || voices.find(v => v.name.includes('Female')) || voices.find(v => v.lang.includes('en-US') && v !== maleVoice) || voices[0];
+        (v.name.includes('Google US English') && false) || // Google US is usually male-sounding, so skip for female preference if possible
+        ((v.name.includes('United States') || v.name.includes('US')) && v.name.includes('Female'))
+    ) || voices.find(v => v.lang === 'en-US' && (v.name.includes('Zira') || v.name.includes('Female') || v.name.includes('Woman')));
+
+    // Fallbacks if specific gendered voices aren't found
+    const englishVoices = voices.filter(v => v.lang.startsWith('en'));
+
+    if (!maleVoice) {
+        // Try to find any voice with "Male" in name, even if not US
+        maleVoice = voices.find(v => v.name.includes('Male') && v.lang.startsWith('en'));
+    }
+
+    if (!femaleVoice) {
+        // Try to find any voice with "Female" in name
+        femaleVoice = voices.find(v => v.name.includes('Female') && v.lang.startsWith('en'));
+    }
+
+    // Ultimate fallback: Ensure they are different if possible
+    if (!maleVoice && !femaleVoice) {
+        if (englishVoices.length >= 2) {
+            maleVoice = englishVoices[0];
+            femaleVoice = englishVoices[1];
+        } else {
+            maleVoice = englishVoices[0] || voices[0];
+            femaleVoice = englishVoices[0] || voices[0];
+        }
+    } else if (!maleVoice) {
+        // We have female, but no male. Pick any other english voice that isn't the female one
+        maleVoice = englishVoices.find(v => v.name !== femaleVoice!.name) || femaleVoice;
+    } else if (!femaleVoice) {
+        // We have male, but no female. Pick any other english voice
+        femaleVoice = englishVoices.find(v => v.name !== maleVoice!.name) || maleVoice;
+    }
+
+    // Ensure they are not the same object if we have options
+    if (maleVoice === femaleVoice && englishVoices.length > 1) {
+        femaleVoice = englishVoices.find(v => v.name !== maleVoice!.name) || femaleVoice;
+    }
+
+    // Debugging: selected voices
+    console.log("Selected Male Voice:", maleVoice?.name);
+    console.log("Selected Female Voice:", femaleVoice?.name);
 
     // Priority: M -> Male Voice, W -> Female Voice
     // If line doesn't start with M: or W:, use a default (Male for now)
 
+    console.log('[TTS] Parsed lines:', lines.length);
+
+    let currentVoice = voices[0]; // Default fallback
+
+    // Queue each line
     lines.forEach((line, index) => {
-        let voice = maleVoice; // Default
+        // Debug each line to see exact content
+        console.log(`[TTS] Line ${index}: "${line.substring(0, 20)}..."`);
+
+        // Check for Speaker prefixes (M: / W: / Man: / Woman:)
+        // Allow optional whitespace at start
+        const maleMatch = line.match(/^\s*(M|Man)\s*:/i);
+        const femaleMatch = line.match(/^\s*(W|Woman)\s*:/i);
+
         let spokenText = line;
 
-        if (line.match(/^[MW]:/i)) {
-            const prefix = line.substring(0, 2).toUpperCase();
-            spokenText = line.substring(2).trim();
-            if (prefix === 'W:') {
-                voice = femaleVoice;
-            } else if (prefix === 'M:') {
-                voice = maleVoice;
-            }
+        if (maleMatch) {
+            currentVoice = maleVoice || voices[0];
+            console.log('  -> Assigned Male Voice:', currentVoice?.name);
+            spokenText = line.replace(/^\s*(M|Man)\s*:/i, '').trim();
+        } else if (femaleMatch) {
+            currentVoice = femaleVoice || voices[0];
+            console.log('  -> Assigned Female Voice:', currentVoice?.name);
+            spokenText = line.replace(/^\s*(W|Woman)\s*:/i, '').trim();
         }
-        // Man/Woman full word check
-        else if (line.match(/^(Man|Woman):/i)) {
-            const prefixMatch = line.match(/^(Man|Woman):/i);
-            if (prefixMatch) {
-                const prefix = prefixMatch[0].toLowerCase(); // 'man:' or 'woman:'
-                spokenText = line.substring(prefixMatch[0].length).trim();
-                if (prefix.includes('woman')) {
-                    voice = femaleVoice;
-                } else {
-                    voice = maleVoice;
-                }
-            }
+        // If no prefix, keep previous voice (continuation)
+
+        const utterance = new SpeechSynthesisUtterance(spokenText); // Speak cleaned text
+        utterance.voice = currentVoice || null;
+
+        // Do NOT force lang if voice is set, it can cause conflicts in some browsers
+        if (!currentVoice) {
+            utterance.lang = 'en-US';
         }
 
-        const utterance = new SpeechSynthesisUtterance(spokenText);
-        utterance.voice = voice;
-        utterance.lang = 'en-US';
         utterance.rate = 0.9; // Slightly slower for clarity
+
+        // Pitch adjustment: If it's a Male part but we are using a Female voice, lower pitch
+        if (maleMatch) {
+            if (currentVoice && (currentVoice.name.includes('Female') || currentVoice.name.includes('Zira') || currentVoice.name.includes('Google US'))) {
+                // Simulated Male using Female voice
+                utterance.pitch = 0.75;
+                console.log('  -> Pitch lowered to 0.75 (Simulating Male)');
+            } else {
+                utterance.pitch = 1.0;
+            }
+        } else {
+            utterance.pitch = 1.0;
+        }
 
         if (index === 0 && onStart) {
             utterance.onstart = onStart;
