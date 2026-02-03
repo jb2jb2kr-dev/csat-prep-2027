@@ -66,11 +66,11 @@ W: Coco must have been playing with it.`,
             content: "When I opened the birthday gift from my grandma, I couldn't believe my eyes. It was the exact laptop I had been wanting for months! I jumped up and down and hugged her tightly. I had never expected to receive such a big gift.",
             question: "주인공의 심경으로 가장 적절한 것은?",
             choices: [
-                "worried",
-                "delighted",
-                "jealous",
-                "scared",
-                "bored"
+                "걱정하는 (worried)",
+                "아주 기뻐하는 (delighted)",
+                "질투하는 (jealous)",
+                "무서워하는 (scared)",
+                "지루해하는 (bored)"
             ],
             answer: 1,
             explanation: "원하던 노트북을 선물로 받고 믿을 수 없어 하며 펄쩍 뛰고 할머니를 안았다는 내용에서 매우 기뻐하는(delighted) 심경을 알 수 있습니다."
@@ -83,11 +83,11 @@ W: Coco must have been playing with it.`,
             content: "The chart above shows the preferred types of movies chosen by students in Class A. 'Action' was the most popular genre, chosen by 40% of the students. 'Comedy' came in second with 25%. 'Romance' and 'Horror' were selected by 15% and 10% of the students, respectively. Finally, 'Documentary' was the least popular, with only 5%.",
             question: "도표의 내용과 일치하지 않는 것은?",
             choices: [
-                "Action movies were the most preferred genre.",
-                "Comedy was chosen by a quarter of the students.",
-                "More students preferred Romance than Horror.",
-                "Ten percent of the students chose Horror.",
-                "Documentary was more popular than Horror."
+                "액션 영화가 가장 선호되는 장르였다.",
+                "코미디는 학생의 4분의 1이 선택했다.",
+                "공포물보다 로맨스를 선호한 학생이 더 많았다.",
+                "10퍼센트의 학생이 공포물을 선택했다.",
+                "다큐멘터리가 공포물보다 더 인기가 있었다."
             ],
             answer: 4,
             explanation: "다큐멘터리는 5%이고 공포물(Horror)은 10%이므로, 다큐멘터리가 공포물보다 더 인기 있었다는 진술은 도표 내용과 일치하지 않습니다."
@@ -125,11 +125,11 @@ M: Okay, I'll do that right away.`,
             content: "In recent years, the 'sharing economy' has changed how people travel and commute. Instead of staying in traditional hotels, travelers can rent rooms in local homes. Instead of buying a car, people can use ride-sharing items apps to get around. This economic model allows individuals to monetize their underutilized assets and provides consumers with more affordable and diverse options. However, it has also sparked debates regarding regulations and safety concerns.",
             question: "다음 글의 주제로 가장 적절한 것은?",
             choices: [
-                "The rise and impact of the sharing economy",
-                "How to book cheap hotels online",
-                "The decline of the automobile industry",
-                "Safety regulations for taxi drivers",
-                "Why traditional hotels are closing"
+                "공유 경제의 부상과 영향",
+                "온라인으로 저렴한 호텔을 예약하는 방법",
+                "자동차 산업의 쇠퇴",
+                "택시 운전사를 위한 안전 규정",
+                "전통적인 호텔들이 문을 닫는 이유"
             ],
             answer: 0,
             explanation: "공유 경제(sharing economy)가 여행과 통근 방식을 바꾸고 있으며, 자산 활용 및 저렴한 선택지 제공이라는 장점과 규제/안전 문제라는 논란을 동시에 가져왔다는 내용이므로 '공유 경제의 부상과 영향'이 주제로 가장 적절합니다."
@@ -174,13 +174,13 @@ M: Okay, I'll do that right away.`,
             type: "요약문 완성",
             isListening: false,
             content: "Plants communicate with each other in surprising ways. When a plant is attacked by insects, it can release chemical signals into the air. Nearby plants detect these signals and start producing their own defensive chemicals to protect themselves, even before they are attacked. This warning system helps the plant community survive threats.",
-            question: "Plants use ________ signals to ________ nearby plants about potential dangers.",
+            question: "식물들은 잠재적인 위험에 대해 근처 식물들에게 ________(하)기 위해 ________ 신호를 사용한다.",
             choices: [
-                "visual …… confuse",
-                "chemical …… warn",
-                "sound …… attract",
-                "electrical …… attack",
-                "physical …… block"
+                "시각적 …… 혼란스럽게 하다",
+                "화학적 …… 경고하다",
+                "소리 …… 유인하다",
+                "전기적 …… 공격하다",
+                "물리적 …… 차단하다"
             ],
             answer: 1,
             explanation: "식물들은 곤충의 공격을 받을 때 '화학적(chemical)' 신호를 방출하여 주변 식물들에게 위험을 '경고(warn)'합니다."
@@ -195,11 +195,11 @@ M: Okay, I'll do that right away.`,
             content: "One of the most persistent myths in economics is that human beings are rational actors who always make decisions to maximize their own utility. Behavioral economics challenges this assumption by demonstrating that our choices are often influenced by cognitive biases and emotions. for example, people tend to value avoiding losses more than acquiring equivalent gains, a phenomenon known as __________. This explains why investors might hold onto losing stocks for too long or why shoppers rush to buy items during a sale simply to avoid missing out.",
             question: "다음 빈칸에 들어갈 말로 가장 적절한 것은?",
             choices: [
-                "loss aversion",
-                "opportunity cost",
-                "diminishing returns",
-                "perfect competition",
-                "supply and demand"
+                "손실 회피 (loss aversion)",
+                "기회비용 (opportunity cost)",
+                "수확 체감 (diminishing returns)",
+                "완전 경쟁 (perfect competition)",
+                "수요와 공급 (supply and demand)"
             ],
             answer: 0,
             explanation: "같은 크기의 이익을 얻는 것보다 손실을 피하는 것을 더 중요하게 여기는 심리적 현상을 '손실 회피(loss aversion)'라고 합니다."
@@ -263,11 +263,11 @@ M: Okay, I'll do that right away.`,
             content: "Neuroplasticity refers to the brain's ability to reorganize itself by forming new neural connections throughout life. For a long time, it was believed that the adult brain was fixed and could not generate new neurons. However, modern research has shown that the brain remains adaptable. Learning a new skill, recovering from a stroke, or even experiencing stress can structurally alter the brain. This discovery has profound implications for education and rehabilitation.",
             question: "다음 글의 제목으로 가장 적절한 것은?",
             choices: [
-                "Why the Adult Brain Stops Growing",
-                "Neuroplasticity: The Brain's Lifelong Ability to Adapt",
-                "How Stress Damages Neurons Permanently",
-                "The History of Neuroscience Research",
-                "Fixed Mindset vs. Growth Mindset"
+                "성인의 뇌 성장이 멈추는 이유",
+                "신경가소성: 평생 적응하는 뇌의 능력",
+                "스트레스가 뉴런을 영구적으로 손상시키는 방법",
+                "신경과학 연구의 역사",
+                "고정 마인드셋 대 성장 마인드셋"
             ],
             answer: 1,
             explanation: "성인의 뇌도 평생 변화하고 적응할 수 있다는 '신경가소성'에 대한 글이므로 주제는 'Neuroplasticity: The Brain's Lifelong Ability to Adapt'입니다."
@@ -278,13 +278,13 @@ M: Okay, I'll do that right away.`,
             type: "빈칸 추론 (Prime)",
             isListening: false,
             content: "The paradox of tragedy―that we derive pleasure from representations of suffering that would be distressing in reality―has long bedeviled aestheticians. David Hume famously proposed a ‘conversion theory,’ wherein the eloquence of the narrative converts the inherent unpleasantness of the subject matter into delight. Yet, this explanation is insufficient because it treats the distressing content as merely a raw material for aesthetic transformation, failing to account for why the unpleasantness is a prerequisite for the specific profundity of tragedy. If eloquence were the sole driver, a well-written comedy should invariably supersede a tragedy. A more robust resolution posits a dual-process model: we experience first-order distress at the tragic events, but this response simultaneously triggers a second-order meta-emotion. We derive satisfaction not from the suffering itself, but from the realization that we are responding with appropriate compassion to the misfortune of others. In this light, our engagement with tragic fiction is not a masochistic deviation, but rather _______________________________________________________.",
-            question: "Which choice best completes the passage?",
+            question: "다음 빈칸에 들어갈 말로 가장 적절한 것은?",
             choices: [
-                "a strategic simulation to desensitize ourselves to potential calamities in the future",
-                "a mechanism to separate the aesthetic form from the emotional content of the work",
-                "an affirmation of one’s ethical disposition through the self-reflexive endorsement of pity",
-                "a psychological projection of our suppressed desires onto the fictional characters",
-                "a confirmation that artistic eloquence can completely override the unpleasantness of reality"
+                "미래의 잠재적 재앙에 대해 우리 자신을 둔감하게 만들기 위한 전략적 시뮬레이션",
+                "작품의 정서적 내용에서 미적 형식을 분리하는 메커니즘",
+                "연민에 대한 자기 성찰적 승인을 통해 자신의 윤리적 기질을 확인하는 것",
+                "억압된 욕망을 허구의 인물에 투사하는 심리적 투영",
+                "예술적 설득력이 현실의 불쾌함을 완전히 압도할 수 있다는 확인"
             ],
             answer: 2,
             explanation: "비극의 역설을 설명하는 '이중 과정 모델'에 따르면, 우리는 비극적 상황에 대해 적절한 연민을 느끼는 자신을 확인함으로써 만족감을 얻습니다. 따라서 빈칸에는 '연민에 대한 자기 성찰적 승인을 통해 자신의 윤리적 기질을 확인하는 것이다'라는 의미의 3번이 가장 적절합니다."
@@ -352,13 +352,13 @@ M: Okay, I'll do that right away.`,
                 type: "요약문 완성",
                 isListening: false,
                 content: "Many teenagers habitually check their social media feeds right before going to sleep. While this may seem like a harmless way to unwind, research suggests it negatively impacts sleep quality. The blue light emitted by screens suppresses the production of melatonin, the hormone that regulates sleep-wake cycles. Additionally, the content accessed on social media often triggers emotional engagement or anxiety, keeping the brain in a state of high alert. This combination of physiological suppression and psychological arousal makes it harder to fall asleep and reduces the amount of restorative deep sleep obtained.",
-                question: "Using social media before bed ___________ sleep by interfering with melatonin production and causing cognitive ___________.",
+                question: "잠자기 전 소셜 미디어 사용은 멜라토닌 생성을 방해하고 인지적 ________을 유발함으로써 수면을 ________한다.",
                 choices: [
-                    "① promotes …… relaxation",
-                    "② improves …… balance",
-                    "③ disturbs …… stimulation",
-                    "④ enhances …… confusion",
-                    "⑤ reduces …… stability"
+                    "① 촉진한다 …… 이완",
+                    "② 개선한다 …… 균형",
+                    "③ 방해한다 …… 자극",
+                    "④ 향상시킨다 …… 혼란",
+                    "⑤ 줄인다 …… 안정"
                 ],
                 answer: 2,
                 explanation: "수면을 방해하고(disturbs) 인지적 자극/각성(stimulation)을 유발하므로 3번이 정답입니다."
@@ -371,11 +371,11 @@ M: Okay, I'll do that right away.`,
                 content: "The Silk Road was much more than a trade route for transporting luxury goods like silk, spices, and precious stones between the East and the West. It functioned as a vibrant artery for the transmission of knowledge, ideas, and culture. Buddhism spread from India to China and eventually to Korea and Japan through these routes. Technological innovations, such as paper-making and gunpowder, traveled from China to the Islamic world and later to Europe, transforming civilizations. Merchants and travelers carried not only physical commodities but also stories, artistic styles, and religious beliefs. Thus, the Silk Road was effectively a superhighway for __________, shaping the course of human history.",
                 question: "다음 빈칸에 들어갈 말로 가장 적절한 것은?",
                 choices: [
-                    "① cultural and intellectual exchange",
-                    "② military expansion and conquest",
-                    "③ agricultural development and farming",
-                    "④ establishing rigid national borders",
-                    "⑤ preserving traditional isolationism"
+                    "① 문화적, 지적 교류",
+                    "② 군사적 확장과 정복",
+                    "③ 농업 발전과 영농",
+                    "④ 엄격한 국경 확립",
+                    "⑤ 전통적 고립주의 보존"
                 ],
                 answer: 0,
                 explanation: "단순 무역로를 넘어 지식, 아이디어, 문화 전파의 통로였다는 내용이므로 빈칸에는 'cultural and intellectual exchange'가 가장 적절합니다."
