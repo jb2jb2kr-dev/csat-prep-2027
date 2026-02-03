@@ -1290,6 +1290,379 @@ const finalBatchQuestions: Question[] = [
 
 dailyContent["2026-02-02"].mock.questions.push(...finalBatchQuestions);
 
+dailyContent["2026-02-04"] = {
+    foundation: [
+        {
+            id: "d-20260204-f-1",
+            level: "Foundation",
+            type: "내용 불일치 (Listening)",
+            isListening: true,
+            content: "W: Honey, look at the pet cam app on my phone. The new smart feeder is working well.\\nM: Oh, the video is really clear. I see our cat, Coco, sleeping on the pink cushion.\\nW: Yeah. And look at the feeder next to the water bowl. I set it to dispense food at noon.\\nM: Nice. Did you buy the round-shaped one?\\nW: No, I bought the square one because it fits the corner better. \\nM: I see. Oh, there is a toy mouse in front of the feeder.\\nW: Coco must have been playing with it.",
+            question: "대화를 듣고, 그림에서 대화의 내용과 일치하지 않는 것을 고르시오.",
+            choices: [
+                "① 핑크색 쿠션 위에서 자고 있는 고양이",
+                "② 물그릇 옆에 있는 스마트 급식기",
+                "③ 둥근 모양의 급식기",
+                "④ 급식기 앞에 있는 장난감 쥐",
+                "⑤ 모서리에 놓인 급식기"
+            ],
+            answer: 2,
+            explanation: "대화에서 여자는 구석에 더 잘 맞도록 사각형(square) 모양의 급식기를 샀다고 말했으나, 선택지 ③은 둥근(round) 모양이라고 했으므로 대화의 내용과 일치하지 않습니다."
+        },
+        {
+            id: "d-20260204-f-2",
+            level: "Foundation",
+            type: "금액 계산 (Listening)",
+            isListening: true,
+            content: "M: Welcome to Robo-Cafe. I am your robot server. How can I help you?\\nW: Hi. I’d like to order two Strawberry Lattes and one piece of Cheese Cake.\\nM: A Strawberry Latte is 5 dollars, and a piece of Cheese Cake is 6 dollars.\\nW: Okay. I’ll take them. Can I use this promotional coupon?\\nM: Let me check. [Beep] Yes. This coupon gives you a 1 dollar discount on the total price.\\nW: Great. I’ll pay with my credit card.",
+            question: "여자가 지불할 금액은?",
+            choices: [
+                "$14",
+                "$15",
+                "$16",
+                "$17",
+                "$20"
+            ],
+            answer: 1,
+            explanation: "딸기 라떼 2잔($5 x 2 = $10) + 치즈 케이크 1조각($6) = 총 $16. 여기서 쿠폰 할인 $1을 적용하면 여자가 지불할 금액은 $15입니다."
+        },
+        {
+            id: "d-20260204-f-3",
+            level: "Foundation",
+            type: "글의 목적",
+            isListening: false,
+            content: "Dear Students,\n\nAre you interested in fashion and the environment? The 'Green Style Club' is hosting an Upcycling Fashion Show next Friday. We want to show that old clothes can be turned into something new and beautiful. If you want to participate as a designer or a model, please sign up at the school auditorium by this Wednesday. Don't miss this chance to show off your creativity and save the planet!\n\nSincerely,\nThe Green Style Club",
+            question: "다음 글의 목적으로 가장 적절한 것은?",
+            choices: [
+                "① 패션쇼 관람을 권유하려고",
+                "② 환경 보호 동아리 가입을 홍보하려고",
+                "③ 업사이클링 패션쇼 참가자를 모집하려고",
+                "④ 학교 강당 사용 규칙을 안내하려고",
+                "⑤ 헌 옷 수거 캠페인 참여를 독려하려고"
+            ],
+            answer: 2,
+            explanation: "이 글은 'Green Style Club'이 주최하는 업사이클링 패션쇼에 디자이너나 모델로 참여할 학생들을 모집(If you want to participate... please sign up)하기 위해 쓰였습니다."
+        },
+        {
+            id: "d-20260204-f-4",
+            level: "Foundation",
+            type: "실용문 내용 불일치",
+            isListening: false,
+            content: "[Drone Delivery Service Notice]\n\nOur store now offers a drone delivery service for your convenience.\n\n* Available Time: 10:00 a.m. – 4:00 p.m.\n* Delivery Area: Within 5km of the store.\n* Weight Limit: Packages must be under 3kg.\n* Caution: Delivery may be delayed in case of heavy rain or strong wind.\n* Tracking: You can track your package in real-time on our mobile app.",
+            question: "안내문의 내용과 일치하지 않는 것은?",
+            choices: [
+                "① 오전 10시부터 오후 4시까지 이용 가능하다.",
+                "② 소포의 무게는 3kg 미만이어야 한다.",
+                "③ 앞마당에 장애물이 없도록 해야 한다.",
+                "④ 비가 많이 와도 정시에 배달된다.",
+                "⑤ 모바일 앱에서 실시간 추적이 가능하다."
+            ],
+            answer: 3,
+            explanation: "안내문에 따르면 폭우나 강풍이 불 경우 배달이 지연될 수 있다고 명시되어 있습니다(Delivery may be delayed in case of heavy rain or strong wind). 따라서 '비가 많이 와도 정시에 배달된다'는 ④번은 내용과 일치하지 않습니다."
+        },
+        {
+            id: "d-20260204-f-5",
+            level: "Foundation",
+            type: "심경 변화",
+            isListening: false,
+            content: "I sat in front of my computer, hesitating to click the 'Upload' button. It was my first time making a short dance video. \"What if people think it's silly?\" I thought. My heart was beating fast with worry. I took a deep breath and finally posted it. The next morning, I woke up and checked my phone. I couldn't believe my eyes. The video had over 100,000 views and thousands of likes! People left comments saying how much they loved my energy. I jumped out of bed and shouted, \"Yay! I did it!\" A huge smile spread across my face.",
+            question: "다음 글에 드러난 I의 심경 변화로 가장 적절한 것은?",
+            choices: [
+                "anxious -> overjoyed",
+                "bored -> curious",
+                "confident -> disappointed",
+                "angry -> calm",
+                "lonely -> thankful"
+            ],
+            answer: 0,
+            explanation: "글의 초반부에서 필자는 첫 영상을 올리기 전에 걱정하며 심장이 빨리 뛰는 등 불안해(anxious)했습니다. 그러나 다음 날 아침 영상이 큰 인기를 얻은 것을 확인하고 침대에서 뛰쳐나오며 기뻐했으므로(overjoyed), 심경 변화로 가장 적절한 것은 'anxious -> overjoyed'입니다."
+        }
+    ],
+    intermediate: [
+        {
+            id: "d-20260204-i-1",
+            level: "Intermediate",
+            type: "주제 추론",
+            isListening: false,
+            content: "As the world shifts away from fossil fuels, electric vehicles (EVs) have become a key solution for a greener future. However, a new environmental challenge has emerged: the batteries. EV batteries contain rare metals like lithium and cobalt, which are difficult to mine and process. While these vehicles produce zero emissions while driving, the disposal of their used batteries poses a serious problem. Currently, recycling these batteries is expensive and technically complex because the materials are hard to separate. If we do not develop efficient recycling systems soon, we risk trading one environmental crisis for another, piling up hazardous waste instead of exhaust fumes.",
+            question: "What is the main topic of the passage?",
+            choices: [
+                "전기차 주행 거리 연장의 필요성",
+                "화석 연료 사용의 역사적 배경",
+                "전기차 배터리 재활용의 어려움과 과제",
+                "희귀 금속 채굴이 경제에 미치는 영향",
+                "전기차 배터리 제조 비용의 감소"
+            ],
+            answer: 2,
+            explanation: "이 글은 전기차(EV)가 친환경적이지만, 배터리에 포함된 희귀 금속(rare metals)을 재활용하는 것이 기술적으로 어렵고 비용이 많이 든다는 점, 그리고 이것이 새로운 환경 문제를 야기할 수 있다는 점을 다루고 있습니다. 따라서 주제로 가장 적절한 것은 '전기차 배터리 재활용의 어려움과 과제'입니다."
+        },
+        {
+            id: "d-20260204-i-2",
+            level: "Intermediate",
+            type: "필자의 주장",
+            isListening: false,
+            content: "Space tourism is no longer science fiction; it is quickly becoming a reality for the wealthy. While some argue that this industry drives technological innovation, others raise ethical concerns. Rocket launches release black carbon into the upper atmosphere, which can trap heat more effectively than carbon dioxide. Furthermore, the immense resources spent on sending a few individuals to space could be used to address urgent problems on Earth, such as climate change or poverty. Therefore, before we celebrate this new era of travel, we must strictly regulate the environmental impact of commercial spaceflights.",
+            question: "What is the author's main argument?",
+            choices: [
+                "우주 관광은 기술 발전을 위해 장려되어야 한다.",
+                "상업적 우주 비행의 환경적 영향을 엄격히 규제해야 한다.",
+                "우주 여행은 빈곤 문제를 해결하는 데 도움이 된다.",
+                "로켓 발사는 대기 오염과 전혀 관련이 없다.",
+                "우주 관광 비용을 낮추어 대중화해야 한다."
+            ],
+            answer: 1,
+            explanation: "필자는 우주 관광(로켓 발사)이 대기 오염을 유발하고 막대한 자원을 소모한다고 지적하며, 이를 축하하기 전에 '상업적 우주 비행의 환경적 영향을 엄격히 규제해야 한다(we must strictly regulate the environmental impact...)'고 주장하고 있습니다."
+        },
+        {
+            id: "d-20260204-i-3",
+            level: "Intermediate",
+            type: "내용 불일치",
+            isListening: false,
+            content: "Vertical farming is an innovative method of growing crops in stacked layers, often indoors. This approach allows farmers to control light, temperature, and humidity, resulting in year-round harvests regardless of the weather. It also uses significantly less water than traditional farming—up to 95% less—because the water is recycled within the system. Additionally, vertical farms can be set up in urban areas, reducing the transportation distance to markets. However, one major drawback is the high energy cost required to power the artificial lights and climate control systems.",
+            question: "Which is NOT true about vertical farming according to the passage?",
+            choices: [
+                "실내에서 층층이 작물을 재배하는 방식이다.",
+                "날씨에 관계없이 일 년 내내 수확할 수 있다.",
+                "전통 농업보다 물을 훨씬 적게 사용한다.",
+                "도시 지역에 설치하여 운송 거리를 줄일 수 있다.",
+                "태양광만을 사용하여 에너지 비용이 매우 낮다."
+            ],
+            answer: 4,
+            explanation: "지문의 마지막 문장에서 수직 농업의 주요 단점은 인공 조명(artificial lights)과 기후 제어 시스템을 가동하는 데 드는 '높은 에너지 비용(high energy cost)'이라고 언급했습니다. 따라서 '태양광만을 사용하여 에너지 비용이 매우 낮다'는 ⑤번은 내용과 일치하지 않습니다."
+        },
+        {
+            id: "d-20260204-i-4",
+            level: "Intermediate",
+            type: "문맥상 어휘 추론",
+            isListening: false,
+            content: "The rise of remote work has given birth to a new lifestyle: the 'Digital Nomad.' These individuals use technology to work from anywhere in the world, whether it's a beach in Bali or a cafe in Paris. While this lifestyle offers freedom, it requires a high degree of self-discipline. Without a boss watching over their shoulder, digital nomads must manage their own schedules and stay productive. This flexibility allows them to travel, but it also blurs the line between work and leisure, making it hard to disconnect.",
+            question: "In the context of the passage, what does 'flexibility' mean?",
+            choices: [
+                "physical strength",
+                "adaptability and freedom",
+                "financial stability",
+                "rigid rules",
+                "complex technology"
+            ],
+            answer: 1,
+            explanation: "문맥상 'flexibility'는 디지털 노마드들이 특정 장소나 시간에 얽매이지 않고 자유롭게 근무 시간과 장소를 선택할 수 있는 '자율성'과 '적응성'을 의미합니다. 따라서 'adaptability and freedom'이 가장 적절합니다."
+        },
+        {
+            id: "d-20260204-i-5",
+            level: "Intermediate",
+            type: "빈칸 추론",
+            isListening: false,
+            content: "Many companies are now using algorithms to screen job applicants, believing that computers are more objective than human managers. In theory, an algorithm should ignore irrelevant factors like gender or race and focus only on skills. However, these AI systems learn from historical data. If a company has historically hired mostly men for technical roles, the algorithm might learn to associate 'male' traits with 'success.' Consequently, instead of removing bias, the algorithm may actually ___________ it by rejecting qualified female candidates based on patterns found in the old data. Therefore, we must be cautious when trusting AI to make fair social decisions.",
+            question: "Which word best fits the blank?",
+            choices: [
+                "eliminate",
+                "reinforce",
+                "analyze",
+                "forget",
+                "monitor"
+            ],
+            answer: 1,
+            explanation: "알고리즘은 과거의 데이터(historical data)를 통해 학습하기 때문에, 만약 과거 데이터에 편향(bias)이 존재했다면 알고리즘이 이를 학습하여 편향을 제거하는 것이 아니라 오히려 '강화(reinforce)'하거나 '반복'하게 된다는 논리입니다."
+        }
+    ],
+    advanced: [
+        {
+            id: "d-20260204-a-1",
+            level: "Advanced",
+            type: "빈칸 추론",
+            isListening: false,
+            content: "The security of modern digital communications relies heavily on public-key encryption standards like RSA, which derive their security from the mathematical difficulty of factoring large prime numbers. For classical computers, this calculation is practically impossible to solve within a reasonable timeframe. However, the advent of quantum computing threatens to upend this paradigm. Shor's algorithm, a quantum algorithm, theoretically demonstrates that a sufficiently powerful quantum computer could factor these large numbers exponentially faster than the best classical algorithms. This possibility implies that the cryptographic walls protecting global financial transactions, state secrets, and personal data could essentially dissolve overnight. Consequently, researchers are racing to develop 'post-quantum' cryptography — new encryption methods based on mathematical problems that even quantum computers cannot easily solve. Until these new standards are implemented, virtually all currently encrypted data remains ___________.",
+            question: "다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.",
+            choices: [
+                "secure against theoretical threats",
+                "accessible only to authorized personnel",
+                "independent of mathematical complexity",
+                "vulnerable to future decryption",
+                "protected by physical barriers"
+            ],
+            answer: 3,
+            explanation: "지문은 현재의 암호화 방식이 양자 컴퓨터의 등장으로 인해 미래에 쉽게 해독될 수 있는 위험(Shor's algorithm)에 처해 있음을 설명하고 있습니다. 따라서 현재 암호화된 데이터는 미래에 양자 컴퓨터가 개발되면 해독될 가능성이 있으므로 '미래의 해독에 취약한(vulnerable to future decryption)' 상태라고 빈칸을 채우는 것이 적절합니다."
+        },
+        {
+            id: "d-20260204-a-2",
+            level: "Advanced",
+            type: "문장 삽입",
+            isListening: false,
+            content: "Synthetic biology represents a significant leap from traditional genetic engineering. (A) While traditional engineering involves transferring existing genes from one species to another, synthetic biology goes a step further. (B) Instead, it aims to design and construct new biological parts, devices, and systems that do not exist in the natural world. (C) This capability offers tremendous potential, such as creating bacteria that consume plastic waste or yeast that produces biofuels. (D) However, creating entirely new life forms raises profound ethical questions about safety and the definition of life itself. (E) Critics worry that artificial organisms could escape into the wild and disrupt ecosystems in unpredictable ways.",
+            question: "다음 문장이 들어갈 위치로 가장 적절한 곳은?\n'It is not merely about cutting and pasting nature's code.'",
+            choices: [
+                "(A)",
+                "(B)",
+                "(C)",
+                "(D)",
+                "(E)"
+            ],
+            answer: 1,
+            explanation: "주어진 문장 'It is not merely about cutting and pasting nature's code(그것은 단지 자연의 코드를 자르고 붙이는 것이 아니다)'는 기존 유전 공학(traditional engineering)과의 차이점을 강조하는 문장입니다. (A)에서 전통적인 공학을 설명하고, (B) 앞에서 '그것은 단순한 편집이 아니다'라고 부연한 뒤, (B)에서 '대신(Instead), 새로운 것을 설계하고 만든다'라고 이어지는 것이 논리적으로 자연스럽습니다. 따라서 (B) 위치가 가장 적절합니다."
+        },
+        {
+            id: "d-20260204-a-3",
+            level: "Advanced",
+            type: "글의 순서",
+            isListening: false,
+            content: "(A) One effective solution involves changing the materials used to build cities. Replacing dark asphalt with reflective 'cool pavements' and planting 'green roofs' can significantly lower surface temperatures. (B) Urban areas often experience significantly higher temperatures than their rural surroundings, a phenomenon known as the Urban Heat Island (UHI) effect. This occurs because concrete and asphalt absorb and retain heat more than natural vegetation. (C) These strategies not only reduce the need for air conditioning, saving energy, but also improve air quality and public health by mitigating the extreme heat stress faced by city dwellers.",
+            question: "주어진 글의 올바른 순서는?",
+            choices: [
+                "(A)-(C)-(B)",
+                "(B)-(A)-(C)",
+                "(B)-(C)-(A)",
+                "(C)-(A)-(B)",
+                "(A)-(B)-(C)"
+            ],
+            answer: 1,
+            explanation: "(B)에서 '도시 열섬 현상(UHI)'의 정의와 원인을 먼저 소개하고, (A)에서 이에 대한 '해결책(solution)'으로 쿨 페이브먼트와 옥상 정원을 제시한 뒤, (C)에서 이러한 전략들의 '효과(These strategies not only reduce...)'를 설명하는 순서가 가장 논리적입니다. 따라서 (B)-(A)-(C)입니다."
+        },
+        {
+            id: "d-20260204-a-4",
+            level: "Advanced",
+            type: "요약문 완성",
+            isListening: false,
+            content: "Generative AI models are increasingly being used in fields like law and medicine to summarize documents and draft advice. However, these models suffer from a persistent issue known as 'hallucination.' Unlike a database search that retrieves facts, a language model predicts the next likely word based on patterns. It does not 'know' truth from fiction. Consequently, AI can generate plausible-sounding but entirely incorrect legal cases or medical diagnoses with high confidence. This tendency makes human oversight critical, as relying solely on the machine's output can lead to professional malpractice and dangerous errors.",
+            question: "While AI models can process information efficiently, their tendency to produce ___________ information with a ___________ tone necessitates strict human verification.",
+            choices: [
+                "factual - hesitant",
+                "fabricated - confident",
+                "accurate - rude",
+                "outdated - humble",
+                "complex - simple"
+            ],
+            answer: 1,
+            explanation: "본문은 AI가 사실이 아닌 내용을 그럴듯하게 지어내는 '환각(hallucination)' 문제를 다루고 있습니다. AI는 '완전히 틀린(entirely incorrect)' 정보를 '높은 확신(high confidence)'을 가지고 생성할 수 있다고 했으므로, 요약문의 빈칸에는 '조작된(fabricated)' 정보와 '자신감 있는(confident)' 어조가 들어가는 것이 적절합니다."
+        },
+        {
+            id: "d-20260204-a-5",
+            level: "Advanced",
+            type: "글의 제목",
+            isListening: false,
+            content: "For decades, neuroscientists believed that the adult brain was relatively static, having completed its physical development and wiring during childhood. This view held that while adults could learn new facts, the fundamental neural pathways were rigid and unchangeable. However, recent research has shattered this static view, revealing that the brain retains an extraordinary capacity for neuroplasticity throughout the entire lifespan. Neuroplasticity refers to the brain's ability to reorganize itself by forming new neural connections in response to learning, experience, or injury. Studies show that acquiring a new skill, such as juggling or playing a musical instrument, can structurally alter the brain's gray matter density even in elderly participants. Furthermore, stroke victims often regain lost functions because healthy parts of the brain can adapt to take over the responsibilities of damaged areas. This adaptability suggests that cognitive decline is not an inevitable consequence of aging but a process that can be influenced by mental engagement.",
+            question: "다음 글의 제목으로 가장 적절한 것은?",
+            choices: [
+                "Critical Periods: Why Childhood Learning Is Most Effective",
+                "The Static Brain: Accepting the Limits of Aging",
+                "Neuroplasticity: The Brain's Lifelong Ability to Adapt",
+                "How Brain Injuries Permanently Halt Cognitive Function",
+                "The Myth of Multitasking in the Modern World"
+            ],
+            answer: 2,
+            explanation: "이 글은 과거의 통념과 달리 성인의 뇌도 평생 동안 구조적, 기능적으로 변화하고 적응할 수 있다는 '신경가소성(neuroplasticity)'에 대해 설명하고 있습니다. 새로운 기술 습득이나 부상 회복 등의 예시를 통해 뇌가 고정된 것이 아니라 평생 적응한다는 점을 강조하므로, 제목으로는 'Neuroplasticity: The Brain's Lifelong Ability to Adapt'가 가장 적절합니다."
+        },
+        {
+            id: "d-20260204-a-6-prime",
+            level: "Advanced",
+            type: "빈칸 추론 (Prime)",
+            isListening: false,
+            content: "The paradox of tragedy―that we derive pleasure from representations of suffering that would be distressing in reality―has long bedeviled aestheticians. David Hume famously proposed a ‘conversion theory,’ wherein the eloquence of the narrative converts the inherent unpleasantness of the subject matter into delight. Yet, this explanation is insufficient because it treats the distressing content as merely a raw material for aesthetic transformation, failing to account for why the unpleasantness is a prerequisite for the specific profundity of tragedy. If eloquence were the sole driver, a well-written comedy should invariably supersede a tragedy. A more robust resolution posits a dual-process model: we experience first-order distress at the tragic events, but this response simultaneously triggers a second-order meta-emotion. We derive satisfaction not from the suffering itself, but from the realization that we are responding with appropriate compassion to the misfortune of others. In this light, our engagement with tragic fiction is not a masochistic deviation, but rather _______________________________________________________.",
+            question: "Which choice best completes the passage?",
+            choices: [
+                "a strategic simulation to desensitize ourselves to potential calamities in the future",
+                "a mechanism to separate the aesthetic form from the emotional content of the work",
+                "an affirmation of one’s ethical disposition through the self-reflexive endorsement of pity",
+                "a psychological projection of our suppressed desires onto the fictional characters",
+                "a confirmation that artistic eloquence can completely override the unpleasantness of reality"
+            ],
+            answer: 2,
+            explanation: "이 글은 '비극의 역설(Paradox of Tragedy)'을 다루고 있습니다. 흄(Hume)의 '변환 이론(Conversion Theory)'은 예술적 표현력(eloquence)이 고통을 즐거움으로 바꾼다고 주장하지만, 필자는 이것이 왜 하필 '고통'이어야만 하는지를 설명하지 못한다고 비판합니다. 대신 제시된 '이중 과정 모델(dual-process model)'에 따르면, 관객은 비극적 사건에 대해 1차적으로 고통(first-order distress)을 느끼지만, 동시에 자신이 타인의 불행에 대해 적절한 연민(appropriate compassion)을 느끼고 있다는 사실을 자각함으로써 2차적인 만족감(second-order meta-emotion)을 얻습니다. 즉, 비극을 즐기는 것은 자신이 도덕적으로 올바르게 반응하고 있음을 확인하는 과정입니다. 따라서 빈칸에는 '연민에 대한 자기 성찰적 승인을 통해 자신의 윤리적 기질을 확인하는 것이다'라는 의미의 3번이 가장 적절합니다."
+        }
+    ],
+    mock: {
+        id: "m-20260204",
+        title: "2026-02-04 Mock Exam",
+        timeLimitMinutes: 20,
+        questions: [
+            {
+                id: "m-20260204-1",
+                level: "Intermediate",
+                type: "세부 내용 파악 (Listening)",
+                isListening: true,
+                content: "M: Hello, students. I'm Mr. Baker, president of the school's Library Book Club. I'm happy to invite you to our monthly meeting. We meet on the second Tuesday of every month in the main reading room. This month, we'll be reading and discussing the famous mystery novel, 'The Silent Witness'. It's a great opportunity to share your thoughts and make new friends. Also, we provide free cookies and juice for all attendees. If you are interested, please sign up on the bulletin board next to the cafeteria by this Friday. We hope to see many of you there!",
+                question: "Library Book Club에 관해 언급되지 않은 것은?",
+                choices: [
+                    "① 모임 요일",
+                    "② 이번 달 도서",
+                    "③ 제공 간식",
+                    "④ 신청 마감일",
+                    "⑤ 회비"
+                ],
+                answer: 4,
+                explanation: "모임 요일(매월 둘째 주 화요일), 도서 제목('The Silent Witness'), 제공 간식(쿠키와 주스), 신청 마감일(이번 주 금요일)은 언급되었으나, 회비에 대한 언급은 없습니다."
+            },
+            {
+                id: "m-20260204-2",
+                level: "Advanced",
+                type: "어법성 판단",
+                isListening: false,
+                content: "Ocean acidification is a rapidly emerging issue that poses a significant threat to marine ecosystems globally. It is primarily caused by the uptake of carbon dioxide (CO2) from the atmosphere. As the ocean absorbs CO2, the water becomes more acidic, which ① affects the ability of marine organisms to build shells and skeletons. The chemistry of the ocean is changing at an unprecedented rate, and the impact on marine life ② is becoming increasingly visible. Coral reefs, often called the rainforests of the sea, are particularly vulnerable. The number of marine species that ③ rely on these reefs for protection and food ④ are declining sharply. Scientists warn that if current trends continue, we may see the collapse of these vital ecosystems.",
+                question: "다음 글의 밑줄 친 부분 중, 어법상 틀린 것은?",
+                choices: [
+                    "①",
+                    "②",
+                    "③",
+                    "④",
+                    "⑤"
+                ],
+                answer: 3,
+                explanation: "④번이 포함된 문장의 주어는 'The number of marine species...'입니다. 관계사절(that rely on these reefs...)이 주어를 수식하고 있지만, 핵심 주어는 'The number'이므로 단수 취급해야 합니다. 따라서 동사 'are'를 단수형 'is'로 고쳐야 합니다."
+            },
+            {
+                id: "m-20260204-3",
+                level: "Intermediate",
+                type: "내용 불일치",
+                isListening: false,
+                content: "Scientists have proposed a new geological epoch called the 'Anthropocene' to describe the current period of Earth's history. This term highlights the significant impact human activities have had on the planet's geology and ecosystems. Unlike previous epochs defined by natural events, the Anthropocene is marked by human-driven changes such as mass extinctions, pollution of the oceans with plastic, and climate change caused by burning fossil fuels. While the exact starting date of this epoch is still debated, many researchers suggest it began with the Industrial Revolution in the 18th century, when human impact started to accelerate globally.",
+                question: "Anthropocene에 대한 설명으로 일치하지 않는 것은?",
+                choices: [
+                    "① 인간 활동이 지구에 미친 영향을 강조하는 용어이다.",
+                    "② 자연적인 사건에 의해 정의된 이전 시대와 구별된다.",
+                    "③ 플라스틱 오염과 기후 변화 등이 특징이다.",
+                    "④ 정확한 시작 시점에 대해 모든 학자가 동의했다.",
+                    "⑤ 많은 연구자들은 산업 혁명을 그 시작점으로 본다."
+                ],
+                answer: 3,
+                explanation: "지문에서 이 시대의 정확한 시작 날짜는 여전히 논쟁 중(still debated)이라고 언급했습니다. 따라서 '모든 학자가 동의했다'는 ④번은 내용과 일치하지 않습니다."
+            },
+            {
+                id: "m-20260204-4",
+                level: "Advanced",
+                type: "요약문 완성",
+                isListening: false,
+                content: "Many teenagers habitually check their social media feeds right before going to sleep. While this may seem like a harmless way to unwind, research suggests it negatively impacts sleep quality. The blue light emitted by screens suppresses the production of melatonin, the hormone that regulates sleep-wake cycles. Additionally, the content accessed on social media often triggers emotional engagement or anxiety, keeping the brain in a state of high alert. This combination of physiological suppression and psychological arousal makes it harder to fall asleep and reduces the amount of restorative deep sleep obtained.",
+                question: "Using social media before bed ___________ sleep by interfering with melatonin production and causing cognitive ___________.",
+                choices: [
+                    "① promotes …… relaxation",
+                    "② improves …… balance",
+                    "③ disturbs …… stimulation",
+                    "④ enhances …… confusion",
+                    "⑤ reduces …… stability"
+                ],
+                answer: 2,
+                explanation: "소셜 미디어의 야간 사용은 멜라토닌 생성을 억제하고 인지적 각성을 유발하여 수면을 방해한다는 내용이므로, 첫 번째 빈칸에는 'disturbs'(방해하다), 두 번째 빈칸에는 'stimulation'(자극/각성)이 가장 적절합니다."
+            },
+            {
+                id: "m-20260204-5",
+                level: "Advanced",
+                type: "빈칸 추론",
+                isListening: false,
+                content: "The Silk Road was much more than a trade route for transporting luxury goods like silk, spices, and precious stones between the East and the West. It functioned as a vibrant artery for the transmission of knowledge, ideas, and culture. Buddhism spread from India to China and eventually to Korea and Japan through these routes. Technological innovations, such as paper-making and gunpowder, traveled from China to the Islamic world and later to Europe, transforming civilizations. Merchants and travelers carried not only physical commodities but also stories, artistic styles, and religious beliefs. Thus, the Silk Road was effectively a superhighway for __________, shaping the course of human history.",
+                question: "다음 빈칸에 들어갈 말로 가장 적절한 것은?",
+                choices: [
+                    "① cultural and intellectual exchange",
+                    "② military expansion and conquest",
+                    "③ agricultural development and farming",
+                    "④ establishing rigid national borders",
+                    "⑤ preserving traditional isolationism"
+                ],
+                answer: 0,
+                explanation: "실크로드를 통해 종교, 기술, 예술, 이야기 등이 전파되고 문명이 변화했다는 내용은 단순한 물자 교역을 넘어 '문화적, 지적 교류'가 활발히 일어났음을 의미합니다. 따라서 빈칸에는 'cultural and intellectual exchange'가 가장 적절합니다."
+            }
+        ]
+    }
+};
+
 
 
 
