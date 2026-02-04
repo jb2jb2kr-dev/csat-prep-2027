@@ -191,11 +191,11 @@ W: Let me check. Yes, I’ll apply the $5 discount to your total.`,
             content: `M: Many economists predict that accessing resources in space will fundamentally alter our global economic system. First, the influx of massive amounts of platinum and gold from a single asteroid could crash global commodity prices. However, beyond just price fluctuation, it could shift the center of manufacturing. With abundant iron and nickel available in zero gravity, heavy industry might move off-planet to reduce pollution on Earth. Finally, we must consider the 'first-mover advantage.' Countries that establish mining infrastructure first could monopolize the market.`,
             question: "남자가 하는 말의 주제로 가장 적절한 것은?",
             choices: [
-                "Environmental benefits of moving heavy industries",
-                "Potential economic consequences of asteroid mining",
-                "Technological challenges in extracting rare earth metals",
-                "History of commodity price fluctuations",
-                "International laws for space resource distribution"
+                "중공업을 우주로 이전하는 것의 환경적 이점",
+                "소행성 채굴의 잠재적 경제적 결과",
+                "희토류 금속 추출의 기술적 난제",
+                "원자재 가격 변동의 역사",
+                "우주 자원 분배를 위한 국제법"
             ],
             answer: 1,
             explanation: "남자는 소행성 채굴이 가져올 경제적 변화(가격 폭락, 제조업 이동, 독점 등)에 대해 이야기하고 있으므로 '소행성 채굴의 잠재적 경제적 결과'가 주제입니다."
@@ -208,11 +208,11 @@ W: Let me check. Yes, I’ll apply the $5 discount to your total.`,
             content: "The ability to edit the human genome using CRISPR brings the promise of curing genetic diseases, but it also raises the specter of 'commodification.' If genetic enhancements—such as increased intelligence or physical strength—become available for purchase, they will likely be accessible only to the wealthy. This could transform biological inequality from a matter of chance into a matter of ____________.",
             question: "빈칸에 들어갈 말로 가장 적절한 것은?",
             choices: [
-                "economic choice",
-                "natural selection",
-                "random mutation",
-                "scientific curiosity",
-                "political debate"
+                "경제적 선택",
+                "자연 선택",
+                "무작위 돌연변이",
+                "과학적 호기심",
+                "정치적 논쟁"
             ],
             answer: 0,
             explanation: "유전적 강화가 상품화되어 부유층만 이용할 수 있게 된다면, 생물학적 불평등은 우연이 아니라 '경제적 선택(economic choice)'의 문제가 됩니다."
@@ -253,11 +253,11 @@ W: Let me check. Yes, I’ll apply the $5 discount to your total.`,
             content: "Traditionally, environmental ethics has been 'anthropocentric,' meaning it values nature only for its utility to humans. For example, we protect forests because they provide timber or oxygen for us. However, 'ecocentrism' argues that nature has intrinsic value regardless of its usefulness to humans. This shift in perspective requires us to recognize that a river or a mountain has a right to exist simply because it is part of the Earth's life support system.",
             question: "While anthropocentrism values nature based on human __________, ecocentrism emphasizes the __________ value of nature itself.",
             choices: [
-                "benefit ...... intrinsic",
-                "history ...... potential",
-                "survival ...... economic",
-                "curiosity ...... temporary",
-                "fear ...... aesthetic"
+                "혜택 ...... 내재적",
+                "역사 ...... 잠재적",
+                "생존 ...... 경제적",
+                "호기심 ...... 일시적",
+                "두려움 ...... 미적인"
             ],
             answer: 0,
             explanation: "인간 중심주의는 인간에 대한 '혜택/유용성(benefit/utility)'에 기반하지만, 생태 중심주의는 자연 그 자체의 '내재적(intrinsic)' 가치를 강조합니다."
@@ -270,11 +270,11 @@ W: Let me check. Yes, I’ll apply the $5 discount to your total.`,
             content: "In classical computing, a bit is a definitive '0' or '1'. This reflects a deterministic view of the world where facts are static. However, a quantum bit (qubit) exists in a state of superposition, embodying multiple probabilities simultaneously until it is measured. This shift forces a philosophical reimagining of 'knowledge' itself. In the quantum paradigm, knowing is no longer the passive acquisition of data. Instead, knowing becomes ________________________________, where the act of interaction compels the universe to choose a single reality from infinite potentials.",
             question: "빈칸에 들어갈 말로 가장 적절한 것은?",
             choices: [
-                "an intervention that collapses potentiality into a determined state",
-                "a process of filtering out uncertainties to reach a single truth",
-                "a passive observation of the pre-determined laws of physics",
-                "a sequential accumulation of binary information for accuracy",
-                "a rejection of probability in favor of absolute determinism"
+                "잠재성을 확정된 상태로 붕괴시키는 개입",
+                "단일한 진리에 도달하기 위해 불확실성을 걸러내는 과정",
+                "미리 결정된 물리 법칙에 대한 수동적 관찰",
+                "정확성을 위한 이진 정보의 순차적 축적",
+                "절대적 결정론을 위해 확률을 거부하는 것"
             ],
             answer: 0,
             explanation: "양자 패러다임에서 안다는 것(knowing)은 수동적 획득이 아니라, 중첩된 '잠재성(potentiality)'을 상호작용을 통해 하나의 '확정된 상태(determined state)'로 '붕괴(collapse)'시키는 개입(intervention)이라는 철학적 해석입니다."

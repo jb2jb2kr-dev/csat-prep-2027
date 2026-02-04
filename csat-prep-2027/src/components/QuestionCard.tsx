@@ -54,6 +54,12 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
                     {question.level}
                 </span>
 
+                {(question.id.includes('prime') || question.type.toLowerCase().includes('killer') || question.type.toLowerCase().includes('prime')) && (
+                    <span className="px-3 py-1 rounded-full text-xs font-black tracking-wide uppercase bg-rose-600 text-white shadow-sm flex items-center gap-1 animate-pulse">
+                        🔥 PRIME
+                    </span>
+                )}
+
                 <span className="text-slate-500 text-sm font-medium flex items-center gap-1">
                     {question.isListening && <Headphones className="w-4 h-4 text-indigo-500" />}
                     {question.type}
