@@ -154,11 +154,11 @@ M: Thanks. It’s relieving to have you managing this in the background.`,
             content: "Mental health has finally entered the biotechnology conversation, shifting from a taboo subject to a tech-driven field. New advancements are revolutionizing how we diagnose and treat psychological conditions. For instance, digital therapies and biomarkers can now detect depression and anxiety with precision. These technologies often include apps paired with wearable feedback and data-driven mental health plans. While some worry about digital overload, these advancements are reshaping the stigma surrounding mental health care. Furthermore, AI-driven predictive analytics can suggest preventive therapies personalized to each patient, detecting deterioration before symptoms even appear. This represents a future where healthcare is proactive rather than reactive.",
             question: "다음 글의 제목으로 가장 적절한 것은?",
             choices: [
-                "The Dangers of AI in Hospitals",
-                "How Technology is Transforming Mental Health Care",
-                "The Rising Cost of Wearable Devices",
-                "Why Traditional Therapy is Better than Digital",
-                "The History of Biotechnology in 2026"
+                "병원의 AI 위험성",
+                "기술이 정신 건강 관리를 어떻게 변화시키고 있는가",
+                "웨어러블 기기의 증가하는 비용",
+                "전통적인 치료법이 디지털보다 나은 이유",
+                "2026년 생명공학의 역사"
             ],
             answer: 1,
             explanation: "기술(biotech, AI, wearables)이 정신 건강 관리를 어떻게 혁신하고 있는지 설명하는 글입니다."
@@ -255,11 +255,11 @@ M: Precisely. While the goal is to make systems smarter and more efficient, the 
             content: `The year 2026 marks a watershed moment where the distinction between tool and collaborator begins to blur.We are witnessing the rise of \"agentic AI\"—systems that do not merely assist but \"reason, plan, and act autonomously to achieve complex goals.\" This shift forces a re-evaluation of human identity. Previously, technology was an instrument of human will; however, as organizations redesign processes around \"AI-first principles,\" creating hybrid teams where humans and machines complement each other, the locus of agency is shifting. As AI begins to integrate directly into business processes and act with a degree of self-direction, humanity faces a philosophical paradox: in empowering machines to be more like us, we are ____________________.`,
             question: "빈칸에 들어갈 말로 가장 적절한 것은?",
             choices: [
-                "reinforcing our status as the sole architects of reality",
-                "inadvertently ceding the monopoly on autonomous agency",
-                "securing absolute control over biological evolution",
-                "reducing the computational burden on legacy infrastructures",
-                "distancing ourselves from the ethical implications of automation"
+                "현실의 유일한 설계자로서 우리의 지위를 강화하고 있다",
+                "의도치 않게 자율적 행위 주체성에 대한 독점권을 이양하고 있다",
+                "생물학적 진화에 대한 절대적인 통제권을 확보하고 있다",
+                "기존 인프라에 대한 계산 부담을 줄이고 있다",
+                "자동화의 윤리적 영향으로부터 거리를 두고 있다"
             ],
             answer: 1,
             explanation: "인간이 기계에게 자율성(self-direction)을 부여함으로써, 인간만이 가지고 있던 '자율적 행위 주체(autonomous agency)'로서의 독점적 지위를 의도치 않게 포기하게 된다(ceding)는 맥락입니다."
@@ -306,11 +306,11 @@ M: Precisely. While the goal is to make systems smarter and more efficient, the 
             content: `In 2026, the convergence of AI and Customer Experience (CX) is fundamentally altering the cognitive landscape of consumption. Technologies are no longer passive tools; they are active agents that utilize \"emotional analytics\" to shape user behavior. Smart systems now tailor recommendations based on deep learning, creating an environment where every interaction is personalized. While this promises convenience, it also signifies a shift towards a highly engineered \"attention economy\" where AI detects anomalies in behavior and predicts needs before they are consciously realized. The danger lies in the potential for these systems to manipulate decision-making through hyper-targeted emotional triggers. Consequently, trust has become the new currency, as customers demand transparency about how their behavioral data is utilized.`,
             question: "As AI-driven systems increasingly utilize (A)_________ analytics to influence user behavior, the necessity for corporate (B)_________ becomes paramount to maintain consumer trust.",
             choices: [
-                "emotional — transparency",
-                "financial — profitability",
-                "predictive — secrecy",
-                "logistical — expansion",
-                "historical — dominance"
+                "emotional (감정적) — transparency (투명성)",
+                "financial (재정적) — profitability (수익성)",
+                "predictive (예측적) — secrecy (비밀 유지)",
+                "logistical (물류적) — expansion (확장)",
+                "historical (역사적) — dominance (지배)"
             ],
             answer: 0,
             explanation: "AI가 '감성(emotional)' 분석을 이용하므로 소비자는 '투명성(transparency)'을 요구한다는 내용입니다."
@@ -323,11 +323,11 @@ M: Precisely. While the goal is to make systems smarter and more efficient, the 
             content: `The technological trajectory of 2026 presents an ontological crisis. As \"agentic AI\" systems evolve to \"reason, plan, and act autonomously,\" they are effectively decoupling intelligence from biological consciousness. Concurrently, the integration of \"AI-first principles\" into the physical world suggests a collapsing distinction between the born and the made. Traditionally, the capacity for autonomous causation was the defining feature of human \"being.\" However, if a non-biological entity can independently execute complex goals without human intervention, the functional distinction between human agency and algorithmic processing evaporates. This leads to a radical post-humanist conclusion: if agency is substrate-independent, then ____________________, reducing humanity from a qualitative exception to a mere quantitative variable.`,
             question: "빈칸에 들어갈 말로 가장 적절한 것은?",
             choices: [
-                "the necessity of biological stewardship is reinforced",
-                "the privileged status of organic consciousness is dismantled",
-                "the ethical framework of society remains static",
-                "the capability of AI is limited to mimetic reproduction",
-                "the industrial application of robotics becomes obsolete"
+                "생물학적 관리의 필요성이 강화된다",
+                "유기적 의식의 특권적 지위가 해체된다",
+                "사회의 윤리적 틀이 정적으로 유지된다",
+                "AI의 능력은 모방적 재생산에 국한된다",
+                "로봇 공학의 산업적 적용이 쓸모없게 된다"
             ],
             answer: 1,
             explanation: "행위 주체성(agency)이 생물학적 기반과 무관하다면, 유기체적 의식이 누려온 '특권적 지위가 해체된다(privileged status of organic consciousness is dismantled)'는 결론이 도출됩니다."
@@ -351,11 +351,11 @@ M: That sounds advanced.Will it be ready for my next survey?
 W: It should be.We are replacing the sensor unit now.By the way, Physical AI allows these machines to act autonomously, so I recommend running a calibration flight before you go back to the field.`,
                 question: "대화가 일어나는 장소로 가장 적절한 곳은?",
                 choices: [
-                    "Medical research lab",
-                    "Drone repair shop",
-                    "Virtual reality classroom",
-                    "Software development agency",
-                    "Biology lecture hall"
+                    "의학 연구 실험실",
+                    "드론 수리점",
+                    "가상 현실 교실",
+                    "소프트웨어 개발 대행사",
+                    "생물학 강의실"
                 ],
                 answer: 1,
                 explanation: "드론(machine filming site survey)을 수리(fixable, replacing sensor)하는 내용이므로 'Drone repair shop'입니다."
@@ -385,11 +385,11 @@ W: It should be.We are replacing the sensor unit now.By the way, Physical AI all
                 content: `One of the most exciting developments in biotechnology is the refinement of gene editing technologies, specifically CRISPR-based systems. Researchers are achieving remarkable feats, such as correcting genetic mutations in living human cells. However, these breakthroughs raise profound questions. While precision medicine allows for treatments customized to unique biology, society must grapple with the implications. Questions arise: Who owns your genetic data? Governments are racing to establish ethical and regulatory frameworks. The ultimate goal of these regulations is to ensure that this powerful technology ____________________.`,
                 question: "빈칸에 들어갈 말로 가장 적절한 것은?",
                 choices: [
-                    "increases the cost burdens across the world",
-                    "helps rather than harms society",
-                    "replaces the need for human doctors entirely",
-                    "focuses solely on generating profits for startups",
-                    "remains a futuristic idea rather than a reality"
+                    "전 세계적으로 비용 부담을 증가시킨다",
+                    "사회에 해가 되기보다는 도움이 된다",
+                    "인간 의사의 필요성을 완전히 대체한다",
+                    "오직 스타트업의 이익 창출에만 집중한다",
+                    "현실보다는 미래의 아이디어로 남는다"
                 ],
                 answer: 1,
                 explanation: "규제의 궁극적 목표는 강력한 기술이 사회에 해가 되지 않고 '도움이 되도록(helps rather than harms)' 하는 것입니다."
@@ -419,11 +419,11 @@ W: It should be.We are replacing the sensor unit now.By the way, Physical AI all
                 content: `Elena, a digital artist, stared at her screen. The software she had used for years was being discontinued as the company shifted its focus entirely to AI. It felt like the end of an era, but also the beginning of something more complex. She was no longer just using tools; she was facing Agentic AI. Unlike the passive software of the past, these new AI agents could reason, plan, and act autonomously. at first, Elena feared this autonomy. However, she soon realized that the industry was moving toward human-machine collaboration. The most successful creators were not those who fought the technology, but those who formed \"hybrid teams.\" Elena began to use the AI to handle intricate tasks, allowing her to focus on high-level design. The technology wasn't replacing her artistry; it was forcing it to evolve into a partnership.`,
                 question: "다음 글의 제목으로 가장 적절한 것은?",
                 choices: [
-                    "The Collapse of Global Cybersecurity Systems",
-                    "Why Adobe Animate Failed to capture the Market",
-                    "From Operator to Partner: Adapting to Agentic AI",
-                    "The Dangers of Physical AI in Manufacturing",
-                    "How Gene Editing is Transforming Healthcare"
+                    "글로벌 사이버 보안 시스템의 붕괴",
+                    "Adobe Animate가 시장 점유에 실패한 이유",
+                    "운영자에서 파트너로: 에이전트 AI에 적응하기",
+                    "제조업에서 물리적 AI의 위험성",
+                    "유전자 편집이 의료를 어떻게 변화시키고 있는가"
                 ],
                 answer: 2,
                 explanation: "예술가 Elena가 AI를 단순한 도구가 아닌 파트너로 받아들이고 적응해가는 과정을 그렸으므로 'From Operator to Partner'가 적절합니다."
