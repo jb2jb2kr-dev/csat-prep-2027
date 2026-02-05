@@ -13,6 +13,7 @@ interface QuestionCardProps {
 export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNumber }) => {
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [playbackRate, setPlaybackRate] = useState(1.0);
     const isAnswered = selectedAnswer !== null;
 
     const stopAudio = () => {
@@ -33,7 +34,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
             question.content,
             () => setIsPlaying(true),
             () => setIsPlaying(false),
-            () => setIsPlaying(false)
+            () => setIsPlaying(false),
+            playbackRate
         );
     };
 
@@ -69,7 +71,30 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
             {/* Content Area */}
             <div className="mb-8">
                 {question.isListening ? (
-                    <div className="bg-slate-50 p-8 rounded-xl border border-slate-200 flex flex-col items-center justify-center gap-4">
+                    <div className="bg-slate-50 p-8 rounded-xl border border-slate-200 flex flex-col items-center justify-center gap-6">
+                        <div className="flex flex-col items-center gap-2">
+                            <span className="text-sm font-medium text-slate-500">배속 설정 (Speed)</span>
+                            <div className="flex bg-slate-200 rounded-lg p-1 gap-1">
+                                {[0.8, 1.0, 1.2].map((rate) => (
+                                    <button
+                                        key={rate}
+                                        onClick={() => {
+                                            setPlaybackRate(rate);
+                                            if (isPlaying) stopAudio(); // Stop if changing speed while playing
+                                        }}
+                                        className={clsx(
+                                            "px-3 py-1 rounded-md text-sm font-semibold transition-all",
+                                            playbackRate === rate
+                                                ? "bg-white text-indigo-600 shadow-sm"
+                                                : "text-slate-600 hover:text-slate-900"
+                                        )}
+                                    >
+                                        x{rate}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
                         <div className="text-center text-slate-500 mb-2">
                             <span className="text-sm font-medium">오디오를 듣고 문제를 풀어보세요</span>
                         </div>

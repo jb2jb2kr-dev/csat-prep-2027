@@ -30,11 +30,13 @@ const loadVoices = (): Promise<SpeechSynthesisVoice[]> => {
     });
 };
 
+// Rate: 0.8 (Slow), 1.0 (Normal), 1.2 (Fast)
 export const playDialogue = async (
     text: string,
     onStart?: () => void,
     onEnd?: () => void,
-    onError?: () => void
+    onError?: () => void,
+    rate: number = 1.0
 ) => {
     if (!window.speechSynthesis) {
         console.error("Speech Synthesis not supported");
@@ -75,22 +77,26 @@ export const playDialogue = async (
     // Default fallback: use different voices for M and W if possible.
 
     // Improved voice selection logic
-    // Priority for Male: 
-    // 1. "David" (Standard Windows US Male)
-    // 2. "Google US English" (Chrome US Male)
-    // 3. Any voice with "Male" AND ("US" or "United States")
-    // 4. Any "en-US" voice that is NOT explicitly Female (Zira, etc.)
-    let maleVoice = voices.find(v => v.name.includes('Google US English'))
+    // Priority for Male:
+    // 1. Specific Neural/Natural voices (if available in Edge/Chrome)
+    // 2. Google US English
+    // 3. Microsoft David
+    let maleVoice = voices.find(v => (v.name.includes('Neural') || v.name.includes('Natural')) && v.name.includes('Male') && v.lang.includes('US'))
+        || voices.find(v => v.name.includes('Google US English'))
         || voices.find(v => v.name.includes('David') && v.lang.includes('US'))
         || voices.find(v => (v.name.includes('US') || v.name.includes('United States')) && v.name.includes('Male'))
         || voices.find(v => v.lang === 'en-US' && !v.name.includes('Zira') && !v.name.includes('Female') && !v.name.includes('Girl'));
 
     // Priority for Female: US Female voices (Zira, Google US) -> Generic US Female
-    let femaleVoice = voices.find(v =>
-        (v.name.includes('Zira') && v.lang.includes('US')) ||
-        (v.name.includes('Google US English') && false) || // Google US is usually male-sounding, so skip for female preference if possible
-        ((v.name.includes('United States') || v.name.includes('US')) && v.name.includes('Female'))
-    ) || voices.find(v => v.lang === 'en-US' && (v.name.includes('Zira') || v.name.includes('Female') || v.name.includes('Woman')));
+    // Priority for Female:
+    // 1. Specific Neural/Natural voices (e.g. Jenny, Aria)
+    // 2. Microsoft Zira (Standard Windows)
+    // 3. Google US Female (if any)
+    let femaleVoice = voices.find(v => (v.name.includes('Neural') || v.name.includes('Natural')) && v.name.includes('Female') && (v.name.includes('Jenny') || v.name.includes('Aria') || v.lang.includes('US')))
+        || voices.find(v => v.name.includes('Zira') && v.lang.includes('US'))
+        || voices.find(v => (v.name.includes('Google') && v.name.includes('Female') && v.lang.includes('US')))
+        || voices.find(v => ((v.name.includes('United States') || v.name.includes('US')) && v.name.includes('Female')))
+        || voices.find(v => v.lang === 'en-US' && (v.name.includes('Zira') || v.name.includes('Female') || v.name.includes('Woman')));
 
     // Fallbacks if specific gendered voices aren't found
     const englishVoices = voices.filter(v => v.lang.startsWith('en'));
@@ -169,7 +175,7 @@ export const playDialogue = async (
             utterance.lang = 'en-US';
         }
 
-        utterance.rate = 0.9; // Slightly slower for clarity
+        utterance.rate = rate; // Use user-provided rate
 
         // Pitch adjustment: If it's a Male part but we are using a Female voice, lower pitch
         if (maleMatch) {
