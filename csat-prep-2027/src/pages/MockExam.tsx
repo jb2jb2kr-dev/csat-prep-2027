@@ -16,7 +16,15 @@ export const MockExam = () => {
     const [timeLeft, setTimeLeft] = useState(1200); // 20 minutes for mini mock
     const [answers, setAnswers] = useState<Record<string, number>>({});
 
-    const targetDate = date || "2026-02-03";
+    const getTodayStr = () => {
+        const d = new Date();
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+
+    const targetDate = date || getTodayStr();
 
     const handleDateChange = (days: number) => {
         const currentDateObj = new Date(targetDate);

@@ -13,8 +13,15 @@ export const PracticeMode = () => {
     const navigate = useNavigate();
     const [activeLevel, setActiveLevel] = useState<Level>('Foundation');
 
-    // Use URL date or fallback to today
-    const targetDate = date || "2026-02-03";
+    // Use URL date or fallback to today (Local time)
+    const getTodayStr = () => {
+        const d = new Date();
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+    const targetDate = date || getTodayStr();
     const data = dailyContent[targetDate];
 
     // Date Navigation Logic
