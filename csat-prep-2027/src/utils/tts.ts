@@ -80,8 +80,8 @@ export const playDialogue = async (
     // 2. "Google US English" (Chrome US Male)
     // 3. Any voice with "Male" AND ("US" or "United States")
     // 4. Any "en-US" voice that is NOT explicitly Female (Zira, etc.)
-    let maleVoice = voices.find(v => v.name.includes('David') && v.lang.includes('US'))
-        || voices.find(v => v.name.includes('Google US English'))
+    let maleVoice = voices.find(v => v.name.includes('Google US English'))
+        || voices.find(v => v.name.includes('David') && v.lang.includes('US'))
         || voices.find(v => (v.name.includes('US') || v.name.includes('United States')) && v.name.includes('Male'))
         || voices.find(v => v.lang === 'en-US' && !v.name.includes('Zira') && !v.name.includes('Female') && !v.name.includes('Girl'));
 
