@@ -99,17 +99,38 @@ export const playDialogue = async (
         || voices.find(v => v.lang === 'en-US' && (v.name.includes('Zira') || v.name.includes('Female') || v.name.includes('Woman')));
 
     // Fallbacks if specific gendered voices aren't found
-    const englishVoices = voices.filter(v => v.lang.startsWith('en'));
+
+    // First, strictly look for US English voices for fallback
+    const usVoices = voices.filter(v => v.lang === 'en-US' || v.lang.includes('US'));
+    const otherEnglishVoices = voices.filter(v => v.lang.startsWith('en') && !v.lang.includes('US'));
+
+    // Helper to find female in a list
+    const findFemale = (list: SpeechSynthesisVoice[]) => list.find(v => v.name.includes('Female') || v.name.includes('Zira') || v.name.includes('Woman') || v.name.includes('Girl'));
+    // Helper to find male in a list
+    const findMale = (list: SpeechSynthesisVoice[]) => list.find(v => v.name.includes('Male') || v.name.includes('David') || v.name.includes('Guy') || v.name.includes('Man'));
 
     if (!maleVoice) {
-        // Try to find any voice with "Male" in name, even if not US
-        maleVoice = voices.find(v => v.name.includes('Male') && v.lang.startsWith('en'));
+        // Try to find US Male
+        maleVoice = findMale(usVoices);
+        // Then any Male
+        if (!maleVoice) maleVoice = findMale(otherEnglishVoices);
     }
 
     if (!femaleVoice) {
-        // Try to find any voice with "Female" in name
-        femaleVoice = voices.find(v => v.name.includes('Female') && v.lang.startsWith('en'));
+        // Try to find US Female explicitly
+        femaleVoice = findFemale(usVoices);
+
+        // If no explicit "Female" US voice, pick ANY US voice that isn't the selected male voice
+        if (!femaleVoice && maleVoice) {
+            femaleVoice = usVoices.find(v => v.name !== maleVoice!.name);
+        }
+
+        // Then try any Female (even if UK, but only if no US options left)
+        if (!femaleVoice) femaleVoice = findFemale(otherEnglishVoices);
     }
+
+    // Final fallback pool
+    const englishVoices = [...usVoices, ...otherEnglishVoices];
 
     // Ultimate fallback: Ensure they are different if possible
     if (!maleVoice && !femaleVoice) {
