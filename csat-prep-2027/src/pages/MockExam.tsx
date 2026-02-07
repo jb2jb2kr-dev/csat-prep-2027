@@ -16,15 +16,12 @@ export const MockExam = () => {
     const [timeLeft, setTimeLeft] = useState(1200); // 20 minutes for mini mock
     const [answers, setAnswers] = useState<Record<string, number>>({});
 
-    const getTodayStr = () => {
-        const d = new Date();
-        const year = d.getFullYear();
-        const month = String(d.getMonth() + 1).padStart(2, '0');
-        const day = String(d.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
+    // Use URL date or fallback to the latest available date in dailyContent
+    const getLatestDateStr = () => {
+        const dates = Object.keys(dailyContent).sort((a, b) => b.localeCompare(a));
+        return dates[0] || new Date().toISOString().split('T')[0];
     };
-
-    const targetDate = date || getTodayStr();
+    const targetDate = date || getLatestDateStr();
 
     const handleDateChange = (days: number) => {
         const currentDateObj = new Date(targetDate);

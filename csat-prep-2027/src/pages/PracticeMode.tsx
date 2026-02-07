@@ -13,16 +13,18 @@ export const PracticeMode = () => {
     const navigate = useNavigate();
     const [activeLevel, setActiveLevel] = useState<Level>('Foundation');
 
-    // Use URL date or fallback to today (Local time)
-    const getTodayStr = () => {
-        const d = new Date();
-        const year = d.getFullYear();
-        const month = String(d.getMonth() + 1).padStart(2, '0');
-        const day = String(d.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
+    // Use URL date or fallback to the latest available date in dailyContent
+    const getLatestDateStr = () => {
+        const dates = Object.keys(dailyContent).sort((a, b) => b.localeCompare(a));
+        console.log('Available dates:', dates);
+        const latest = dates[0] || new Date().toISOString().split('T')[0];
+        console.log('Latest date selected:', latest);
+        return latest;
     };
-    const targetDate = date || getTodayStr();
+    const targetDate = date || getLatestDateStr();
+    console.log('Target date:', targetDate);
     const data = dailyContent[targetDate];
+    console.log('Data for target date exists:', !!data);
 
     // Date Navigation Logic
     const handleDateChange = (days: number) => {

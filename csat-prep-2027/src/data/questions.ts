@@ -36,8 +36,14 @@ import { daily20260205 } from './daily/20260205';
 import { daily20260206 } from './daily/20260206';
 import { daily20260207 } from './daily/20260207';
 import { daily20260208 } from './daily/20260208';
+import { daily20260209 } from './daily/20260209';
 export const dailyContent: Record<string, DailySet> = {
-    "2026-02-08": daily20260208,
+    "2026-02-09": daily20260209 as DailySet,
+    "2026-02-08": daily20260208 as DailySet,
+    "2026-02-07": daily20260207 as DailySet,
+    "2026-02-06": daily20260206 as DailySet,
+    "2026-02-05": daily20260205 as DailySet,
+    "2026-02-04": daily20260204 as DailySet,
     "2026-02-01": {
         foundation: [
             {
@@ -51,9 +57,9 @@ export const dailyContent: Record<string, DailySet> = {
                 answer: 0,
                 explanation: "항상 밝은 면(sunshine)을 보라는 것은 긍정적인 태도를 강조하는 것입니다."
             }
-        ],
-        intermediate: [],
-        advanced: [],
+        ] as Question[],
+        intermediate: [] as Question[],
+        advanced: [] as Question[],
         mock: {
             id: "mock-old-1",
             title: "지난 실전 모의고사 (Review)",
@@ -736,8 +742,118 @@ M: Then we should teach them how to use them responsibly, rather than just banni
                     choices: ["(A)", "(B)", "(C)", "(D)", "문장의 맨 뒤"],
                     answer: 2,
                     explanation: "(B)까지는 지식에 대한 설명이고, (C)부터는 지혜의 적용 능력에 대해 설명하고 있습니다. 따라서 역접의 연결사 However와 함께 지혜의 정의를 시작하는 문장은 (C) 앞에 들어가야 자연스럽습니다."
+                },
+                {
+                    id: "m-l-3",
+                    level: "Foundation",
+                    type: "관계 파악",
+                    isListening: true,
+                    content: `M: How would you like your hair done today?\nW: Just a trim, please. And I'd like to dye it brown.\nM: Sure. The dyeing process will take about an hour. Would you like a magazine?\nW: Yes, thank you.`,
+                    question: "두 사람의 관계로 가장 적절한 것은?",
+                    choices: ["의사 - 환자", "미용사 - 손님", "교사 - 학생", "경찰 - 운전자", "은행원 - 고객"],
+                    answer: 1,
+                    explanation: "머리 손질(hair done), 다듬기(trim), 염색(dye) 등의 대화 내용으로 보아 미용사와 손님의 관계입니다."
+                },
+                {
+                    id: "m-l-4",
+                    level: "Intermediate",
+                    type: "이유 파악",
+                    isListening: true,
+                    content: `W: You're late again, Tom. The meeting started 20 minutes ago.\nM: I'm really sorry. My car broke down on the highway.\nW: Oh, that's terrible. Did you call a tow truck?\nM: Yes, but it took a long time to arrive.`,
+                    question: "남자가 늦은 이유는?",
+                    choices: ["늦잠을 자서", "차가 고장 나서", "길을 잃어서", "버스를 놓쳐서", "사고가 나서"],
+                    answer: 1,
+                    explanation: "남자는 고속도로에서 차가 고장 났다(My car broke down)고 말했습니다."
+                },
+                {
+                    id: "m-r-4",
+                    level: "Foundation",
+                    type: "실용문 파악",
+                    isListening: false,
+                    content: "[Super Laptop Sale]\n- Model: X-Pro 2026\n- Original Price: $1,200\n- Sale Price: $900\n- Free wireless mouse included.\n- Sale ends this Sunday.",
+                    question: "광고의 내용과 일치하지 않는 것은?",
+                    choices: ["모델명은 X-Pro 2026이다.", "원래 가격은 1,200달러이다.", "할인 가격은 1,000달러이다.", "무선 마우스가 무료로 제공된다.", "이번 주 일요일에 세일이 끝난다."],
+                    answer: 2,
+                    explanation: "할인 가격은 $900이므로 1,000달러라는 진술은 틀렸습니다."
+                },
+                {
+                    id: "m-r-5",
+                    level: "Intermediate",
+                    type: "어법성 판단",
+                    isListening: false,
+                    content: "The man (A) [who / which] is sitting on the bench is my uncle. The book (B) [who / which] he is reading looks interesting.",
+                    question: "(A), (B)에 들어갈 말로 가장 적절한 것은?",
+                    choices: ["who - who", "which - which", "who - which", "which - who", "that - who"],
+                    answer: 2,
+                    explanation: "(A) 선행사가 사람(The man)이므로 who, (B) 선행사가 사물(The book)이므로 which가 적절합니다."
+                },
+                {
+                    id: "m-r-6",
+                    level: "Advanced",
+                    type: "빈칸 추론",
+                    isListening: false,
+                    content: "Empathy is the ability to understand and share the feelings of another. It is different from sympathy, which is feeling pity for someone's misfortune. Empathy requires us to step into someone else's shoes and experience their emotions from their ________.",
+                    question: "빈칸에 들어갈 말로 가장 적절한 것은?",
+                    choices: ["perspective", "distance", "wallet", "future", "memory"],
+                    answer: 0,
+                    explanation: "공감(Empathy)은 상대방의 입장이 되어보는 것이므로, 그들의 '관점(perspective)'에서 감정을 경험해야 합니다."
+                },
+                {
+                    id: "m-l-5",
+                    level: "Advanced",
+                    type: "담화 주체 파악",
+                    isListening: true,
+                    content: `M: Good morning, citizens. This is a special announcement from the City Council. Due to the severe storm warning, all public parks and beaches will be closed until further notice. We advise everyone to stay indoors and avoid unnecessary travel.`,
+                    question: "화자는 누구인가?",
+                    choices: ["기상 캐스터", "시의회 관계자", "경찰관", "소방관", "공원 관리인"],
+                    answer: 1,
+                    explanation: "화자는 'City Council(시의회)'에서 나온 특별 안내라고 자신을 소개했습니다."
+                },
+                {
+                    id: "m-l-6",
+                    level: "Intermediate",
+                    type: "그림 정보 파악",
+                    isListening: true,
+                    content: `W: Look at this painting I bought.\nM: It's beautiful. I like the mountain in the background.\nW: Yes, and the cabin by the lake looks so peaceful.\nM: Is that a boat on the lake?\nW: No, it's a duck.`,
+                    question: "대화의 내용과 일치하지 않는 그림 요소는?",
+                    choices: ["배경의 산", "호숫가 오두막", "호수", "호수 위의 배", "오리"],
+                    answer: 3,
+                    explanation: "남자가 배냐고 물었지만 여자는 오리(duck)라고 답했습니다. 따라서 배는 그림에 없습니다."
+                },
+                {
+                    id: "m-r-7",
+                    level: "Foundation",
+                    type: "격언 추론",
+                    isListening: false,
+                    content: "When you are angry, count to ten before you speak. If you are very angry, count to one hundred. This saying emphasizes the importance of ________.",
+                    question: "빈칸에 들어갈 말로 가장 적절한 것은?",
+                    choices: ["patience", "honesty", "speed", "money", "health"],
+                    answer: 0,
+                    explanation: "화가 날 때 숫자를 세라는 것은 '인내심(patience)'과 자제력을 강조하는 격언입니다."
+                },
+                {
+                    id: "m-r-8",
+                    level: "Intermediate",
+                    type: "글의 순서",
+                    isListening: false,
+                    content: "(A) However, paper bags also have a significant environmental impact. (B) Many people believe that using paper bags is better than using plastic ones. (C) Producing paper requires cutting down trees and using a lot of water.",
+                    question: "주어진 글의 올바른 순서는?",
+                    choices: ["(A)-(B)-(C)", "(B)-(A)-(C)", "(C)-(A)-(B)", "(B)-(C)-(A)", "(A)-(C)-(B)"],
+                    answer: 1,
+                    explanation: "통념(B: 종이가 플라스틱보다 낫다) -> 역접(A: 종이도 환경 영향 크다) -> 근거(C: 나무 벌목, 물 사용) 순서가 적절합니다."
+                },
+                {
+                    id: "m-r-9",
+                    level: "Advanced",
+                    type: "문맥상 낱말의 쓰임",
+                    isListening: false,
+                    content: "Cognitive dissonance occurs when a person holds contradictory beliefs. To reduce this discomfort, people often (A) [reject / accept] new information that conflicts with their existing beliefs. This is why it is so difficult to change someone's mind.",
+                    question: "(A)에 들어갈 말로 가장 적절한 것은?",
+                    choices: ["reject", "accept", "create", "share", "analyze"],
+                    answer: 0,
+                    explanation: "인지 부조화의 불편함을 줄이미 위해 사람들은 기존 믿음과 충돌하는 정보를 '거부(reject)'하는 경향이 있습니다."
                 }
-            ]
+            ] as Question[]
         }
     },
     "2026-02-03": {
@@ -1099,145 +1215,6 @@ M: Not really. It’s just one small thing we can do for the environment.`,
         }
     }
 };
-
-// Batch 1 Expansion (Ad-hoc addition logic simulated by appending to the array directly in code if this were a dynamic system, but here we hardcode it)
-// We will insert them into the array above.
-const additionalQuestions: Question[] = [
-    {
-        id: "m-l-3",
-        level: "Foundation",
-        type: "관계 파악",
-        isListening: true,
-        content: `M: How would you like your hair done today?
-W: Just a trim, please. And I'd like to dye it brown.
-M: Sure. The dyeing process will take about an hour. Would you like a magazine?
-W: Yes, thank you.`,
-        question: "두 사람의 관계로 가장 적절한 것은?",
-        choices: ["의사 - 환자", "미용사 - 손님", "교사 - 학생", "경찰 - 운전자", "은행원 - 고객"],
-        answer: 1,
-        explanation: "머리 손질(hair done), 다듬기(trim), 염색(dye) 등의 대화 내용으로 보아 미용사와 손님의 관계입니다."
-    },
-    {
-        id: "m-l-4",
-        level: "Intermediate",
-        type: "이유 파악",
-        isListening: true,
-        content: `W: You're late again, Tom. The meeting started 20 minutes ago.
-M: I'm really sorry. My car broke down on the highway.
-W: Oh, that's terrible. Did you call a tow truck?
-M: Yes, but it took a long time to arrive.`,
-        question: "남자가 늦은 이유는?",
-        choices: ["늦잠을 자서", "차가 고장 나서", "길을 잃어서", "버스를 놓쳐서", "사고가 나서"],
-        answer: 1,
-        explanation: "남자는 고속도로에서 차가 고장 났다(My car broke down)고 말했습니다."
-    },
-    {
-        id: "m-r-4",
-        level: "Foundation",
-        type: "실용문 파악",
-        isListening: false,
-        content: "[Super Laptop Sale]\n- Model: X-Pro 2026\n- Original Price: $1,200\n- Sale Price: $900\n- Free wireless mouse included.\n- Sale ends this Sunday.",
-        question: "광고의 내용과 일치하지 않는 것은?",
-        choices: ["모델명은 X-Pro 2026이다.", "원래 가격은 1,200달러이다.", "할인 가격은 1,000달러이다.", "무선 마우스가 무료로 제공된다.", "이번 주 일요일에 세일이 끝난다."],
-        answer: 2,
-        explanation: "할인 가격은 $900이므로 1,000달러라는 진술은 틀렸습니다."
-    },
-    {
-        id: "m-r-5",
-        level: "Intermediate",
-        type: "어법성 판단",
-        isListening: false,
-        content: "The man (A) [who / which] is sitting on the bench is my uncle. The book (B) [who / which] he is reading looks interesting.",
-        question: "(A), (B)에 들어갈 말로 가장 적절한 것은?",
-        choices: ["who - who", "which - which", "who - which", "which - who", "that - who"],
-        answer: 2,
-        explanation: "(A) 선행사가 사람(The man)이므로 who, (B) 선행사가 사물(The book)이므로 which가 적절합니다."
-    },
-    {
-        id: "m-r-6",
-        level: "Advanced",
-        type: "빈칸 추론",
-        isListening: false,
-        content: "Empathy is the ability to understand and share the feelings of another. It is different from sympathy, which is feeling pity for someone's misfortune. Empathy requires us to step into someone else's shoes and experience their emotions from their ________.",
-        question: "빈칸에 들어갈 말로 가장 적절한 것은?",
-        choices: ["perspective", "distance", "wallet", "future", "memory"],
-        answer: 0,
-        explanation: "공감(Empathy)은 상대방의 입장이 되어보는 것이므로, 그들의 '관점(perspective)'에서 감정을 경험해야 합니다."
-    }
-];
-
-// Merge into the main object
-dailyContent["2026-02-02"].mock.questions.push(...additionalQuestions);
-
-// Batch 2 Expansion
-const batch2Questions: Question[] = [
-    {
-        id: "m-l-5",
-        level: "Advanced",
-        type: "담화 주체 파악",
-        isListening: true,
-        content: `M: Good morning, citizens. This is a special announcement from the City Council. Due to the severe storm warning, all public parks and beaches will be closed until further notice. We advise everyone to stay indoors and avoid unnecessary travel.`,
-        question: "화자는 누구인가?",
-        choices: ["기상 캐스터", "시의회 관계자", "경찰관", "소방관", "공원 관리인"],
-        answer: 1,
-        explanation: "화자는 'City Council(시의회)'에서 나온 특별 안내라고 자신을 소개했습니다."
-    },
-    {
-        id: "m-l-6",
-        level: "Intermediate",
-        type: "그림 정보 파악",
-        isListening: true,
-        content: `W: Look at this painting I bought.
-M: It's beautiful. I like the mountain in the background.
-W: Yes, and the cabin by the lake looks so peaceful.
-M: Is that a boat on the lake?
-W: No, it's a duck.`,
-        question: "대화의 내용과 일치하지 않는 그림 요소는?",
-        choices: ["배경의 산", "호숫가 오두막", "호수", "호수 위의 배", "오리"],
-        answer: 3,
-        explanation: "남자가 배냐고 물었지만 여자는 오리(duck)라고 답했습니다. 따라서 배는 그림에 없습니다."
-    },
-    {
-        id: "m-r-7",
-        level: "Foundation",
-        type: "격언 추론",
-        isListening: false,
-        content: "When you are angry, count to ten before you speak. If you are very angry, count to one hundred. This saying emphasizes the importance of ________.",
-        question: "빈칸에 들어갈 말로 가장 적절한 것은?",
-        choices: ["patience", "honesty", "speed", "money", "health"],
-        answer: 0,
-        explanation: "화가 날 때 숫자를 세라는 것은 '인내심(patience)'과 자제력을 강조하는 격언입니다."
-    },
-    {
-        id: "m-r-8",
-        level: "Intermediate",
-        type: "글의 순서",
-        isListening: false,
-        content: "(A) However, paper bags also have a significant environmental impact. (B) Many people believe that using paper bags is better than using plastic ones. (C) Producing paper requires cutting down trees and using a lot of water.",
-        question: "주어진 글의 올바른 순서는?",
-        choices: ["(A)-(B)-(C)", "(B)-(A)-(C)", "(C)-(A)-(B)", "(B)-(C)-(A)", "(A)-(C)-(B)"],
-        answer: 1,
-        explanation: "통념(B: 종이가 플라스틱보다 낫다) -> 역접(A: 종이도 환경 영향 크다) -> 근거(C: 나무 벌목, 물 사용) 순서가 적절합니다."
-    },
-    {
-        id: "m-r-9",
-        level: "Advanced",
-        type: "문맥상 낱말의 쓰임",
-        isListening: false,
-        content: "Cognitive dissonance occurs when a person holds contradictory beliefs. To reduce this discomfort, people often (A) [reject / accept] new information that conflicts with their existing beliefs. This is why it is so difficult to change someone's mind.",
-        question: "(A)에 들어갈 말로 가장 적절한 것은?",
-        choices: ["reject", "accept", "create", "share", "analyze"],
-        answer: 0,
-        explanation: "인지 부조화의 불편함을 줄이기 위해 사람들은 기존 믿음과 충돌하는 정보를 '거부(reject)'하는 경향이 있습니다."
-    }
-];
-
-dailyContent["2026-02-02"].mock.questions.push(...batch2Questions);
-
-(dailyContent as any)["2026-02-04"] = daily20260204;
-(dailyContent as any)["2026-02-05"] = daily20260205;
-(dailyContent as any)["2026-02-06"] = daily20260206;
-(dailyContent as any)["2026-02-07"] = daily20260207;
 
 
 
