@@ -15,3 +15,163 @@
 .glass-card {
   @apply bg-white/50 backdrop-blur-md border border-white/30 shadow-sm hover:shadow-md transition-all duration-300;
 }
+
+/* Print Styles Optimization */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 20mm;
+  }
+
+  /* --- Robust Multi-page Print Reset --- */
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    background: white !important;
+  }
+
+  #root,
+  main,
+  .min-h-screen,
+  #printable-content {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-family: serif !important;
+    font-size: 24pt !important;
+    /* Doubled from standard ~12pt */
+    line-height: 1.5 !important;
+  }
+
+  /* Hide unnecessary elements */
+  nav,
+  footer,
+  .no-print,
+  [role="navigation"],
+  .fixed,
+  .absolute,
+  button.no-print,
+  .bg-slate-50.p-8.rounded-xl.flex-col {
+    display: none !important;
+  }
+
+  /* Typography - Forced large sizes */
+  h1,
+  h2 {
+    font-size: 40pt !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  h3 {
+    font-size: 32pt !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  h4 {
+    font-size: 26pt !important;
+  }
+
+  p,
+  span,
+  div,
+  li {
+    font-size: 22pt !important;
+  }
+
+  /* Column layout - Let flex/grid behave naturally or fallback to block if needed, 
+     but DO NOT force it, as it breaks .no-print hiding */
+  /* .flex, .grid { display: block !important; }  <-- REMOVED CAUSE OF BUG */
+
+  /* Question Card Styling */
+  .glass-card,
+  .question-card {
+    display: block !important;
+    position: relative !important;
+    width: 95% !important;
+    margin: 0 auto 40pt auto !important;
+    padding: 30pt !important;
+    border: 3pt solid #000 !important;
+    background: #fff !important;
+
+    /* Allow breaking inside because huge fonts makes cards taller than a page */
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+
+    border-radius: 15pt !important;
+    box-shadow: none !important;
+  }
+
+  /* Choices Styling */
+  .glass-card button {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 15pt !important;
+    padding: 20pt !important;
+    border: 2pt solid #666 !important;
+    background: #fff !important;
+    text-align: left !important;
+    font-weight: normal !important;
+    color: #000 !important;
+  }
+
+  /* Ensure framer-motion elements are visible */
+  * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Specific fix for hidden/overflowing content */
+  .overflow-hidden,
+  .overflow-x-hidden,
+  .overflow-y-hidden {
+    overflow: visible !important;
+  }
+
+
+  /* Force new page for specific sections if needed */
+  .page-break-before {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  /* Typography optimization */
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+
+  p,
+  span,
+  div {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Remove backgrounds/gradients for cleaner look and smaller size */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-image: none !important;
+    text-shadow: none !important;
+  }
+}

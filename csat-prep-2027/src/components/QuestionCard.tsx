@@ -72,7 +72,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
             <div className="mb-8">
                 {question.isListening ? (
                     <div className="bg-slate-50 p-8 rounded-xl border border-slate-200 flex flex-col items-center justify-center gap-6">
-                        <div className="flex flex-col items-center gap-2">
+                        <div className="flex flex-col items-center gap-2 no-print">
                             <span className="text-sm font-medium text-slate-500">배속 설정 (Speed)</span>
                             <div className="flex bg-slate-200 rounded-lg p-1 gap-1">
                                 {[0.8, 1.0, 1.2].map((rate) => (
@@ -101,7 +101,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
                         <button
                             onClick={toggleAudio}
                             className={clsx(
-                                "flex items-center gap-3 px-6 py-3 rounded-full font-bold text-lg transition-all shadow-md group",
+                                "flex items-center gap-3 px-6 py-3 rounded-full font-bold text-lg transition-all shadow-md group no-print",
                                 isPlaying
                                     ? "bg-rose-100 text-rose-600 hover:bg-rose-200"
                                     : "bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-105"

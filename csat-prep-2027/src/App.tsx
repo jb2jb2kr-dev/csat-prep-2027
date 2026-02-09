@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-slate-50 relative overflow-hidden">
         {/* Abstract Background Shapes */}
-        <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none no-print">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-200/20 rounded-full blur-3xl" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-200/20 rounded-full blur-3xl" />
           <div className="absolute top-[20%] right-[10%] w-[20%] h-[20%] bg-emerald-200/20 rounded-full blur-3xl" />

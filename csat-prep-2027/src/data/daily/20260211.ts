@@ -8,13 +8,13 @@ export const daily20260211: DailySet = {
             "type": "Purpose (Listening)",
             "isListening": true,
             "content": "M: Good morning, students. This is your school nurse, Mr. Lee. As you know, our school has started using the new AI Health Check system this semester. However, some students are worried about their personal data. I want to assure you that your health data is encrypted and safe. The system only uses the data to give you personalized health advice, like recommending exercises or meal plans. It does not share your information with anyone else. So, please don't worry and feel free to use the system for your health.",
-            "question": "What is the main purpose of the man's announcement?",
+            "question": "남자가 하는 안내 방송의 목적으로 가장 적절한 것은?",
             "choices": [
-                "To explain how to use the new AI health system",
-                "To assure students about the safety of their health data",
-                "To recommend a new exercise program",
-                "To announce the schedule of health checkups",
-                "To warn about the dangers of sharing personal information"
+                "새로운 AI 건강 관리 시스템 사용법을 설명하려고",
+                "건강 데이터의 안전성에 대해 학생들을 안심시키려고",
+                "새로운 운동 프로그램을 추천하려고",
+                "건강 검진 일정을 공지하려고",
+                "개인 정보 공유의 위험성을 경고하려고"
             ],
             "answer": 1,
             "explanation": "남자는 학교에서 새로 도입한 AI 건강 체크 시스템과 관련하여 개인 정보 유출을 걱정하는 학생들에게 데이터가 암호화되어 안전하며 제3자와 공유되지 않는다는 점을 강조하고 안심시키려 하고 있습니다. 따라서 남자가 하는 말의 목적은 '건강 데이터의 안전성에 대해 학생들을 안심시키려고'입니다."
@@ -25,13 +25,13 @@ export const daily20260211: DailySet = {
             "type": "Visual Info (Listening)",
             "isListening": true,
             "content": "W: Dad, look at this picture. It's the Climate Tech Fair I went to yesterday.\nM: Oh, interesting. What is that large machine in the center?\nW: It's a carbon capture machine. It looks like a giant fan.\nM: I see. And there is a small tree next to the machine.\nW: Yes. It's a digital tree that changes color based on the air quality.\nM: Cool. Look at the robot on the right. It is holding a recycling bin.\nW: Right. And there is a solar panel on the roof of the booth.\nM: It looks very futuristic.",
-            "question": "Which description does NOT match the picture?",
+            "question": "대화의 내용과 일치하지 않는 것은?",
             "choices": [
-                "A giant fan-shaped carbon capture machine",
-                "A digital tree next to the machine",
-                "A robot holding a recycling bin",
-                "A solar panel on the roof",
-                "A square table in front of the booth"
+                "거대한 선풍기 모양의 탄소 포집기",
+                "기계 옆에 있는 디지털 나무",
+                "재활용 통을 들고 있는 로봇",
+                "지붕 위에 있는 태양광 패널",
+                "부스 앞에 있는 사각형 테이블"
             ],
             "answer": 4,
             "explanation": "대화에서는 부스 앞의 사각형 테이블에 대한 언급이 전혀 없습니다. 따라서 대화 내용과 일치하지 않는 것은 5번입니다."
@@ -42,13 +42,13 @@ export const daily20260211: DailySet = {
             "type": "Heart/Atmosphere",
             "isListening": false,
             "content": "Minji opened the app on her phone. It was the release day of the new digital art collection she had been waiting for. She tapped the 'Buy' button, hoping to get the rare 'Golden Dragon' piece. The loading circle spun for a few seconds. Then, a bright golden light flashed on her screen, and the majestic dragon appeared with a 'Congratulations!' message. \"I got it! I finally got it!\" she screamed. Her hands were shaking as she admired the beautiful details of her new digital asset. She felt like all her patience had finally paid off.",
-            "question": "What is the best description of Minji's feeling?",
+            "question": "Minji의 심경으로 가장 적절한 것은?",
             "choices": [
-                "Scared and terrified",
-                "Bored and indifferent",
-                "Thrilled and delighted",
-                "Sad and depressed",
-                "Angry and annoyed"
+                "무섭고 겁에 질린",
+                "지루하고 무관심한",
+                "짜릿하고 매우 기쁜",
+                "슬프고 우울한",
+                "화나고 짜증 난"
             ],
             "answer": 2,
             "explanation": "민지는 오랫동안 기다려온 디지털 아트 컬렉션에서 희귀한 'Golden Dragon'을 얻게 되어 소리를 지르며 기뻐하고 있습니다. 손이 떨리고 인내심이 보상받았다고 느끼는 것으로 보아 심경은 'Thrilled and delighted(전율을 느끼고 매우 기쁜)'가 가장 적절합니다."
@@ -59,13 +59,13 @@ export const daily20260211: DailySet = {
             "type": "Info Match (Notice)",
             "isListening": false,
             "content": "2026 Circular Economy Workshop\n\nLearn how to make our planet greener by recycling and reusing!\n\n• Date: Saturday, March 14, 2026\n• Time: 2:00 p.m. – 5:00 p.m.\n• Place: Community Green Center\n• Program:\n  - Lecture: \"The Future of Zero Waste\"\n  - Workshop: Making bags from old clothes\n• Fee: $10 (Materials included)\n• Note: Participants must bring their own old t-shirts for the workshop.",
-            "question": "Which is NOT true according to the notice?",
+            "question": "안내문의 내용과 일치하지 않는 것은?",
             "choices": [
-                "The workshop is held in the afternoon.",
-                "The lecture topic is about zero waste.",
-                "Participants will make bags from old clothes.",
-                "The participation fee covers the cost of materials.",
-                "The center provides old t-shirts for the workshop."
+                "워크숍은 오후에 열린다.",
+                "강연 주제는 제로 웨이스트에 관한 것이다.",
+                "참가자들은 헌 옷으로 가방을 만들 것이다.",
+                "참가비에는 재료비가 포함된다.",
+                "센터에서 워크숍을 위한 헌 티셔츠를 제공한다."
             ],
             "answer": 4,
             "explanation": "안내문의 마지막 항목(Note)에서 참가자들은 워크숍을 위해 자신의 헌 티셔츠를 가져와야 한다고 명시되어 있습니다. 따라서 '센터에서 헌 티셔츠를 제공한다'는 내용은 안내문과 일치하지 않습니다."
@@ -76,13 +76,13 @@ export const daily20260211: DailySet = {
             "type": "Purpose (Reading)",
             "isListening": false,
             "content": "To whom it may concern,\n\nI am writing to inquire about your company's ESG report. As an investor interested in sustainable businesses, I have been following your company's activities. I was impressed by your recent announcement about using recycled materials. However, I could not find detailed information about your carbon footprint reduction goals on your website. I would appreciate it if you could send me your latest ESG report or let me know where I can download it. I look forward to hearing from you soon.\n\nSincerely,\nDavid Smith",
-            "question": "What is the purpose of the email?",
+            "question": "이 글의 목적으로 가장 적절한 것은?",
             "choices": [
-                "To complain about a defective product",
-                "To request the latest ESG report",
-                "To apply for a job at the company",
-                "To suggest a new business idea",
-                "To cancel an investment decision"
+                "불량 제품에 대해 항의하려고",
+                "최신 ESG 보고서를 요청하려고",
+                "회사에 입사 지원하려고",
+                "새로운 사업 아이디어를 제안하려고",
+                "투자 결정을 취소하려고"
             ],
             "answer": 1,
             "explanation": "글쓴이는 투자가로서 회사의 탄소 발자국 감축 목표에 대한 자세한 정보를 찾지 못해 최신 ESG 보고서를 보내달라고 요청하고 있습니다. 따라서 이메일의 목적은 '최신 ESG 보고서를 요청하려고'입니다."
@@ -95,13 +95,13 @@ export const daily20260211: DailySet = {
             "type": "Content Match",
             "isListening": true,
             "content": "M: Hello, Ms. Carter. I'm calling to check the settings for the new Agentic AI secretary we installed for your office. \\nW: Oh, hi. It’s working well, but I need to change a few permissions. \\nM: Sure. Currently, it’s set to auto-reply to all emails. Do you want to keep that? \\nW: No, please change it to draft responses only. I want to review them before sending. \\nM: Got it. Draft mode only. How about schedule management? It’s currently authorized to negotiate meeting times with external clients. \\nW: That’s fine. It saved me a lot of time yesterday. But please disable the function that automatically books flight tickets. \\nM: Okay. I’ll turn off the auto-booking feature. Is there anything else? \\nW: Yes, for the weekly report summary, can it use the new ‘2026 Data Viz’ format instead of the text summary. \\nM: Certainly. I'll update the configuration right away.",
-            "question": "Which request made by the woman is NOT appropriate according to the dialogue?",
+            "question": "대화의 내용과 일치하지 않는 여자의 요청은?",
             "choices": [
-                "Change email replies to draft mode",
-                "Keep the meeting scheduling feature enabled",
-                "Disable the automatic flight booking feature",
-                "Use the new data visualization format for reports",
-                "Turn off the meeting negotiation function"
+                "이메일 답장을 초안 모드로 변경해 달라",
+                "회의 일정 조율 기능을 켜두라",
+                "자동 항공권 예약 기능을 비활성화해 달라",
+                "보고서에 새로운 데이터 시각화 형식을 사용해 달라",
+                "회의 협상 기능을 꺼 달라"
             ],
             "answer": 5,
             "explanation": "여자는 Agentic AI가 외부 고객과 회의 시간을 조율하는 기능(negotiate meeting times)은 어제 시간을 많이 절약해 주었다며 그대로 두라고(That’s fine) 했으므로, 이 기능을 꺼달라고(Turn off) 요청한 5번은 대화 내용과 일치하지 않습니다."
@@ -112,13 +112,13 @@ export const daily20260211: DailySet = {
             "type": "Relationship",
             "isListening": true,
             "content": "W: Mr. Wilson, I’ve analyzed the data from your wearable bio-patch. \\nM: Is there anything concerning, Dr. Park? My AI health app gave me a yellow alert this morning. \\nW: The AI was correct to alert you. Your irregular heartbeat episodes have increased slightly since last week. \\nM: I see. Do I need to come to the hospital immediately? \\nW: Not yet. I’ve adjusted the medication dosage in your digital prescription. Please download the update to your smart dispenser. \\nM: Thank you. Technology really makes managing this condition easier. \\nW: Indeed. I'll keep monitoring your real-time vitals through the central AI system. Let's talk again next Friday.",
-            "question": "What is the most likely relationship between the two speakers?",
+            "question": "두 사람의 관계를 가장 잘 나타낸 것은?",
             "choices": [
-                "AI Developer – Investor",
-                "Smart Device Salesperson – Customer",
-                "Doctor – Patient",
-                "Fitness Coach – Athlete",
-                "Insurance Agent – Policyholder"
+                "AI 개발자 – 투자자",
+                "스마트 기기 판매원 – 고객",
+                "의사 – 환자",
+                "피트니스 코치 – 운동선수",
+                "보험 설계사 – 가입자"
             ],
             "answer": 3,
             "explanation": "여자는 남자의 웨어러블 패치 데이터를 분석하고 처방(prescription)을 조절해 주겠다고 말하고 있으며, 남자는 자신의 건강 상태에 대해 문의하고 있으므로 두 사람의 관계는 '의사 – 환자'가 가장 적절합니다."
@@ -129,7 +129,7 @@ export const daily20260211: DailySet = {
             "type": "Graph/Chart Info",
             "isListening": false,
             "content": "The graph above shows the adoption rates of three types of Digital Assets in 2025 and 2026 across four different regions. ① In all four regions, the adoption rate of Central Bank Digital Currencies (CBDCs) increased from 2025 to 2026. ② North America showed the highest adoption rate of Tokenized Securities in 2026, reaching over 40%. ③ In Europe, the gap between the adoption of NFTs and CBDCs in 2026 was smaller than that in Asia. ④ While Asia had the highest adoption rate of CBDCs in 2025, it was surpassed by North America in 2026. ⑤ In South America, the adoption rate of Tokenized Securities in 2026 was more than double that of 2025, showing the fastest growth among the regions.",
-            "question": "Which statement is NOT consistent with the graph description?",
+            "question": "다음 도표의 내용과 일치하지 않는 것은?",
             "choices": [
                 "①",
                 "②",
@@ -146,13 +146,13 @@ export const daily20260211: DailySet = {
             "type": "Title/Main Idea",
             "isListening": false,
             "content": "As we move further into 2026, the concept of the 'Circular Economy' is evolving beyond simple recycling. The focus has shifted to 'designing out' waste from the very beginning. Companies are now adopting 'Product-as-a-Service (PaaS)' models where customers lease appliances rather than buying them. This ensures that manufacturers retain responsibility for the product's entire lifecycle, incentivizing them to build durable, repairable, and modular goods. Furthermore, 'Digital Product Passports' are becoming mandatory, tracking the journey of materials to ensure they can be easily recovered and reused. This systemic change not only reduces environmental impact but also creates new economic opportunities in maintenance and refurbishment sectors.",
-            "question": "What is the best title for the passage?",
+            "question": "다음 글의 제목으로 가장 적절한 것은?",
             "choices": [
-                "The Difficulties of Recycling Plastic Waste",
-                "How to Invest in Digital Currency Markets",
-                "The Transition to a Service-Based Circular Economy",
-                "The History of Manufacturing Home Appliances",
-                "Why Consumers Prefer Buying Over Leasing"
+                "플라스틱 폐기물 재활용의 어려움",
+                "디지털 화폐 시장 투자 방법",
+                "서비스 기반 순환 경제로의 전환",
+                "가전제품 제조의 역사",
+                "소비자가 임대보다 구매를 선호하는 이유"
             ],
             "answer": 3,
             "explanation": "이 글은 단순한 재활용을 넘어, 제품을 서비스로 제공(PaaS)하고 디지털 여권을 도입하는 등 순환 경제(Circular Economy)가 어떻게 진화하고 있는지 설명하고 있으므로 주제로 'The Transition to a Service-Based Circular Economy'가 가장 적절합니다."
@@ -163,13 +163,13 @@ export const daily20260211: DailySet = {
             "type": "Grammar/Logic",
             "isListening": false,
             "content": "Geopatriation is a growing trend in 2026, driven by the realization that remote work allows people to reconnect with their roots. Unlike digital nomads who travel aimlessly, geopatriates choose to return to their home countries or regions to leverage their global salaries in a familiar environment. This movement is _______ by improved digital infrastructure in rural areas and small towns. As high-speed internet becomes available everywhere, professionals no longer feel the need to stay in expensive urban hubs. Instead, they bring their skills and capital back to their hometowns, revitalizing local economies and strengthening community bonds.",
-            "question": "Which word best fits the blank?",
+            "question": "빈칸에 들어갈 말로 가장 적절한 것은?",
             "choices": [
-                "hindered",
-                "facilitated",
-                "confused",
-                "forbidden",
-                "ignored"
+                "방해받는",
+                "촉진되는",
+                "혼란스러운",
+                "금지된",
+                "무시되는"
             ],
             "answer": 2,
             "explanation": "Geopatriation(귀향) 트렌드는 시골이나 소도시의 디지털 인프라가 개선됨에 따라 '촉진되고(facilitated)' 있다는 문맥이 자연스럽습니다. 인터넷이 발달하여 비싼 도시에 살 필요가 없어졌다는 뒤 문장의 내용이 이를 뒷받침합니다."
@@ -182,13 +182,13 @@ export const daily20260211: DailySet = {
             "type": "Global Topic (Listening)",
             "isListening": true,
             "content": "M: Hello, students. Last class, we discussed Generative AI that creates text and images. Today, we’ll look at the next evolution: Physical AI. Unlike software running on servers, Physical AI refers to AI models that control robots interacting with the real world. First, these systems must master 'spatial intelligence.' They need to understand gravity, friction, and the fragility of objects to handle a cup of coffee without crushing it. Second, they require adaptability. In factories, Physical AI robots now adjust to unexpected obstacles instantly, unlike old pre-programmed bots that would just stop. Third, we see them entering households. Beyond vacuuming, humanoid robots are being tested for complex chores like folding laundry or cooking, learning from human demonstration. Finally, safety is the biggest challenge. Physical AI must predict human movement to prevent collisions in crowded spaces. It is blurring the line between digital intelligence and physical action.",
-            "question": "What is the main topic of the spoken discourse?",
+            "question": "남자가 하는 말의 주제로 가장 적절한 것은?",
             "choices": [
-                "Ethical dilemmas of using humanoid robots",
-                "Key characteristics and challenges of Physical AI",
-                "Differences between Generative AI and Physical AI",
-                "The history of industrial automation in factories",
-                "Economic impacts of AI on household labor"
+                "휴머노이드 로봇 사용의 윤리적 딜레마",
+                "Physical AI의 주요 특징과 과제",
+                "생성형 AI와 Physical AI의 차이점",
+                "공장 산업 자동화의 역사",
+                "AI가 가사 노동에 미치는 경제적 영향"
             ],
             "answer": 2,
             "explanation": "남자는 Physical AI의 정의, 특징(공간 지능, 적응성), 가사 노동으로의 확장, 그리고 안전 문제라는 과제를 순차적으로 설명하고 있으므로 주제로 가장 적절한 것은 'Key characteristics and challenges of Physical AI'입니다."
@@ -199,13 +199,13 @@ export const daily20260211: DailySet = {
             "type": "Blank Inference (Quasi-killer)",
             "isListening": false,
             "content": "The proliferation of 'Shadow AI'—the unsanctioned use of AI tools by employees within an organization—presents a complex paradox for modern cybersecurity. On one hand, it represents a bottom-up drive for efficiency; workers adopt these tools to solve immediate problems faster than IT departments can approve them. However, this creates a fragmented digital landscape where sensitive data flows into unvetted models, invisible to security protocols. Unlike traditional 'Shadow IT,' which involved downloading unauthorized software, Shadow AI involves feeding proprietary information into external learning algorithms that might retain that data. Consequently, the organization loses the ability to trace the provenance of its own intellectual property. If a company cannot verify whether its code or strategy was generated by a public AI or a human, it risks legal claims and loss of competitive edge. Thus, the immediate productivity gains of Shadow AI effectively _________________.",
-            "question": "Which choice best completes the blank?",
+            "question": "빈칸에 들어갈 말로 가장 적절한 것은?",
             "choices": [
-                "reinforce the centralized control of digital assets",
-                "dismantle the very foundation of data sovereignty",
-                "accelerate the adoption of approved software",
-                "bridge the gap between IT and employees",
-                "guarantee the authenticity of external algorithms"
+                "디지털 자산의 중앙 집중식 통제를 강화한다",
+                "데이터 주권의 기초 자체를 해체한다",
+                "승인된 소프트웨어의 채택을 가속화한다",
+                "IT 부서와 직원 간의 격차를 해소한다",
+                "외부 알고리즘의 진위성을 보장한다"
             ],
             "answer": 2,
             "explanation": "Shadow AI는 단기적인 생산성을 높여주지만, 데이터가 검증되지 않은 외부 모델로 흘러들어가게 함으로써 조직이 자신의 지적 재산에 대한 출처를 추적할 수 없게 만듭니다. 이는 결과적으로 조직이 자신의 데이터에 대해 가져야 할 주권(sovereignty)이나 통제권을 무너뜨리는 결과를 초래하므로, 빈칸에는 'dismantle the very foundation of data sovereignty'가 가장 적절합니다."
@@ -216,7 +216,7 @@ export const daily20260211: DailySet = {
             "type": "Sentence Ordering",
             "isListening": false,
             "content": "Deep space logistics requires a fundamental shift from the 'launch-and-forget' model of early space exploration to a sustainable, circular supply chain.\n\n(A) This limitation necessitates the development of 'in-situ' resource utilization and autonomous manufacturing. Instead of waiting for spare parts, deep space missions must be able to 3D print tools and medical supplies using recycled materials or local regolith found on the Moon or Mars.\n(B) However, as missions extend further to Mars and beyond, the communication lag and the sheer cost of fuel make continuous resupply from Earth unfeasible. A critical component breaks down, and the replacement is six months away, spelling potential disaster for the crew.\n(C) In low Earth orbit operations, resupply missions can be launched relatively quickly if a critical system fails. Cargo ships can dock with the International Space Station within hours or days, maintaining a safety buffer of consumables.",
-            "question": "What is the most logical order for the sentences above?",
+            "question": "주어진 글 다음에 이어질 글의 순서로 가장 적절한 것은?",
             "choices": [
                 "(A) - (C) - (B)",
                 "(B) - (A) - (C)",
@@ -233,7 +233,7 @@ export const daily20260211: DailySet = {
             "type": "Sentence Insertion",
             "isListening": false,
             "content": "Technical standards like C2PA are being developed to embed cryptographic metadata directly into files, creating a tamper-evident record of the content's history.\n\nIn an era where hyper-realistic synthetic media can be generated in seconds, establishing 'digital provenance' has become the cornerstone of information integrity. ( ① ) Provenance does not necessarily verify that an image is 'true' in an objective sense, but rather certifies where it came from and how it has been altered. ( ② ) This transparency allows consumers to judge the trustworthiness of the media based on its origin. ( ③ ) However, relying solely on metadata acts as a fragile shield. ( ④ ) Malicious actors can strip these digital signatures by simply taking a screenshot of the image or re-encoding the file, effectively washing away its history. ( ⑤ ) Therefore, robust digital provenance requires a multi-layered approach, combining cryptographic watermarking that survives format changes with blockchain-based ledgers that store the verification data independently of the file itself.",
-            "question": "Where does the following sentence best fit?\n\n\"Technical standards like C2PA are being developed to embed cryptographic metadata directly into files, creating a tamper-evident record of the content's history.\"",
+            "question": "글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳은?\n\n\"Technical standards like C2PA are being developed to embed cryptographic metadata directly into files, creating a tamper-evident record of the content's history.\"",
             "choices": [
                 "①",
                 "②",
@@ -250,7 +250,7 @@ export const daily20260211: DailySet = {
             "type": "Summary Completion",
             "isListening": false,
             "content": "Traditional cybersecurity has long operated on a reactive model: wait for an attack, detect the breach, and then patch the vulnerability. This 'fortress' mentality assumes that breaches can be stopped at the gate. However, in the age of AI-driven cyberattacks, this approach is obsolete. Preemptive cybersecurity represents a paradigm shift towards predictive defense. By utilizing AI agents that continuously simulate attacks on one's own network—a practice known as automated red-teaming—organizations can identify and fix weaknesses before an adversary exploits them. Furthermore, preemptive systems analyze global threat intelligence to forecast likely attack vectors based on geopolitical trends and hacker behavior patterns. Instead of building thicker walls, preemptive security focuses on immune system-like resilience, where the network constantly tests and strengthens itself against potential mutations of malware.\n\nSummary: While traditional cybersecurity relies on a (A)_________ strategy of responding to incidents after they occur, preemptive cybersecurity employs AI to (B)_________ vulnerabilities and strengthen defenses beforehand.",
-            "question": "Which choice best completes the summary?",
+            "question": "다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?",
             "choices": [
                 "responsive - conceal",
                 "defensive - anticipate",
@@ -267,13 +267,13 @@ export const daily20260211: DailySet = {
             "type": "Blank Inference (Prime Killer)",
             "isListening": false,
             "content": "The emergence of Agentic AI—systems capable of autonomous reasoning, planning, and execution—introduces a profound philosophical and practical paradox in 2026. Deloitte and Gartner predict that these agents will integrate directly into workflows, making decisions without human intervention. While this promises unparalleled efficiency, it generates a \"competence-control trade-off.\" To maximize the utility of Agentic AI, humans must cede decision-making authority. However, as the AI handles increasingly complex and opaque tasks, the human operator's ability to scrutinize or audit the AI's logic inevitably atrophies due to disuse and lack of understanding. We are effectively building systems designed to surpass our cognitive speed, yet we demand they remain under our supervision. Thus, the ultimate risk of 2026 is not merely that AI will fail, but that __________.",
-            "question": "Which choice best completes the blank to capture the logical paradox?",
+            "question": "빈칸에 들어갈 말로 가장 적절한 것은?",
             "choices": [
-                "we will lose the distinct biological advantage of emotional intelligence required to operate them",
-                "the regulatory frameworks will be too slow to categorize the newly formed sovereign data clouds",
-                "we will eventually lack the epistemic capacity to determine whether it has failed or succeeded",
-                "the cost of maintaining these agents will exceed the productivity gains they generate",
-                "shadow AI will become the dominant form of enterprise software, bypassing all security protocols"
+                "우리가 그것들을 운용하는 데 필요한 감성 지능이라는 고유한 생물학적 이점을 잃게 될 것이다",
+                "규제 프레임워크가 새로 형성된 주권 데이터 클라우드를 분류하기에는 너무 느릴 것이다",
+                "우리는 결국 그것이 실패했는지 성공했는지 판단할 인식론적 능력을 상실하게 될 것이다",
+                "이러한 에이전트를 유지하는 비용이 그것들이 창출하는 생산성 향상을 초과하게 될 것이다",
+                "섀도우 AI가 모든 보안 프로토콜을 우회하여 기업 소프트웨어의 지배적인 형태가 될 것이다"
             ],
             "answer": 2,
             "explanation": "이 문제는 'Agentic AI(에이전트 AI)'의 역설을 다룹니다. AI의 효용을 높이려면 인간이 통제권을 넘겨야 하는데, AI가 복잡한 업무를 자율적으로 처리할수록 인간은 그 과정을 검증할 능력을 잃어갑니다(atrophies). 가장 큰 위험은 AI가 단순히 실패하는 것이 아니라, AI가 실패했는지 성공했는지조차 인간이 판단할 수 있는 '인식론적 능력(epistemic capacity)' 자체를 상실하게 된다는 것입니다."
@@ -290,13 +290,13 @@ export const daily20260211: DailySet = {
                 "type": "Mood/Atmosphere (Listening)",
                 "isListening": true,
                 "content": "M: Honey, look at the view from this observatory. The city lights look like stars on the ground.\nW: It's breathtaking. I'm so glad we came here for our anniversary.\nM: Me too. Remember our first date? It was at a place just like this.\nW: Of course. You were so nervous back then.\nM: (Laughs) I was. But tonight feels perfect. The music, the breeze, everything is so romantic.\nW: I agree. This is the best night ever.\nM: I want this moment to last forever.",
-                "question": "What is the atmosphere of the conversation?",
+                "question": "대화의 분위기로 가장 적절한 것은?",
                 "choices": [
-                    "Tense and urgent",
-                    "Romantic and peaceful",
-                    "Sad and gloomy",
-                    "Noisy and chaotic",
-                    "Formal and serious"
+                    "긴박하고 다급한",
+                    "로맨틱하고 평화로운",
+                    "슬프고 우울한",
+                    "시끄럽고 혼란스러운",
+                    "격식 있고 진지한"
                 ],
                 "answer": 2,
                 "explanation": "두 사람이 결혼기념일을 맞아 전망대에서 야경을 감상하며 로맨틱하고 평화로운 분위기를 즐기고 있으므로 'Romantic and peaceful'이 가장 적절합니다."
@@ -307,13 +307,13 @@ export const daily20260211: DailySet = {
                 "type": "Content Match (Listening)",
                 "isListening": true,
                 "content": "W: Welcome to the 2026 Future Job Fair. Here is the pamphlet for today's events.\nM: Thank you. Can you tell me where the AI Developer seminar is held?\nW: Sure. It's in Hall A on the second floor. It starts at 10 a.m.\nM: I see. And I heard there is a resume consulting session.\nW: Yes. That's in the meeting room next to the cafeteria. You need to sign up in advance.\nM: Okay. Is there any event in the afternoon?\nW: We have a CEO talk show at 2 p.m in the main auditorium. And the VR experience zone is open all day in the lobby.\nM: Great. I'll invoke the VR zone first.",
-                "question": "Which is NOT true according to the dialogue?",
+                "question": "대화의 내용과 일치하지 않는 것은?",
                 "choices": [
-                    "The AI Developer seminar is in Hall A.",
-                    "The resume consulting session requires advance sign-up.",
-                    "The CEO talk show starts at 2 p.m.",
-                    "The VR experience zone is only open in the morning.",
-                    "The meeting room is next to the cafeteria."
+                    "AI 개발자 세미나는 A홀에서 열린다.",
+                    "이력서 상담 세션은 사전 신청이 필요하다.",
+                    "CEO 토크쇼는 오후 2시에 시작한다.",
+                    "VR 체험존은 오전에만 열린다.",
+                    "회의실은 구내식당 옆에 있다."
                 ],
                 "answer": 4,
                 "explanation": "여자가 VR 체험존은 로비에서 하루 종일(all day) 열려 있다고 했으므로, '오전에만 열린다'는 4번은 내용과 일치하지 않습니다."
@@ -324,13 +324,13 @@ export const daily20260211: DailySet = {
                 "type": "Blank Inference (Reading)",
                 "isListening": false,
                 "content": "In 2026, the concept of 'Digital Provenance' has moved from a niche technical term to a cornerstone of media literacy. As generative AI becomes capable of creating indistinguishable fakes, the ability to trace the origin of a digital file is paramount. The C2PA standard, often called a 'nutrition label' for content, embeds cryptographic metadata into files, recording who created it and what tools were used. However, a significant challenge remains: the 'analog hole.' When a user takes a photo of a screen displaying a watermarked image, the metadata is lost. This break in the chain of custody allows malicious actors to __________, effectively washing the content of its provenance history.",
-                "question": "Which choice best completes the blank?",
+                "question": "빈칸에 들어갈 말로 가장 적절한 것은?",
                 "choices": [
-                    "restore the original metadata using AI",
-                    "bypass the cryptographic verification process",
-                    "enhance the resolution of the digital file",
-                    "automatically copyright the new image",
-                    "track the viewer's eye movement"
+                    "AI를 사용하여 원본 메타데이터를 복원하다",
+                    "암호화된 검증 과정을 우회하다",
+                    "디지털 파일의 해상도를 높이다",
+                    "새 이미지에 자동으로 저작권을 설정하다",
+                    "시청자의 시선 움직임을 추적하다"
                 ],
                 "answer": 2,
                 "explanation": "아날로그 홀(화면을 다시 찍는 행위)이 발생하면 원본 파일에 심어진 암호화된 메타데이터가 사라지게 됩니다. 이는 결과적으로 검증 과정을 우회(bypass)하여 출처 세탁을 가능하게 하므로, 빈칸에는 'bypass the cryptographic verification process'가 적절합니다."
@@ -341,7 +341,7 @@ export const daily20260211: DailySet = {
                 "type": "Sentence Insertion (Reading)",
                 "isListening": false,
                 "content": "The global shift towards renewable energy has accelerated the demand for critical minerals like lithium and cobalt. ( ① ) Traditional mining methods are often environmentally damaging and geopolitically sensitive. ( ② ) As a result, 'Urban Mining' has emerged as a sustainable alternative in 2026. ( ③ ) This process involves recovering rare metals from discarded electronics, such as old smartphones and laptops. ( ④ ) For instance, a ton of mobile phones contains more gold than a ton of gold ore. ( ⑤ ) By establishing efficient e-waste collection systems, countries can reduce their reliance on foreign imports and minimize the ecological footprint of raw material extraction.",
-                "question": "Where does the following sentence best fit?\n\n\"Rather than digging deep into the earth, it focuses on mining the 'anthropogenic reserves' already in circulation.\"",
+                "question": "글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳은?\n\n\"Rather than digging deep into the earth, it focuses on mining the 'anthropogenic reserves' already in circulation.\"",
                 "choices": [
                     "①",
                     "②",
@@ -358,7 +358,7 @@ export const daily20260211: DailySet = {
                 "type": "Grammar (Reading)",
                 "isListening": false,
                 "content": "As AI healthcare assistants become more common, patients are (1) increasingly relying on them for initial diagnoses. These systems use advanced algorithms to analyze symptoms and (2) recommend appropriate treatments. However, doctors warn that AI should not replace professional medical advice. They emphasize that human intuition and empathy (3) are essential for understanding a patient's full condition. While AI can process data faster, it (4) lacks the ability to understand the emotional context of pain. Therefore, a hybrid model, where AI supports doctors rather than replacing them, (5) seem to be the most promising future for medicine.",
-                "question": "Which underlined part is grammatically incorrect?",
+                "question": "밑줄 친 부분 중 어법상 틀린 것은?",
                 "choices": [
                     "(1)",
                     "(2)",

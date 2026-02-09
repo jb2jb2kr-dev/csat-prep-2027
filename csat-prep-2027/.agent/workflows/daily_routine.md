@@ -15,6 +15,7 @@ This workflow defines the standard process for generating daily content.
 ## 2. Generate Content key
 - Use `NotebookLM` to generate 21 questions (Foundation, Intermediate, Advanced, Mock).
 - Ensure questions are novel and follow 2026/2027 trends.
+- **Critical Rule:** Questions and choices MUST be in Korean.
 
 ## 3. Create Data File
 - Create file: `src/data/daily/{YYYYMMDD}.ts`
