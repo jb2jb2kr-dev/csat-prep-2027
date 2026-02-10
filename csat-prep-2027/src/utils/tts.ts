@@ -78,21 +78,22 @@ export const playDialogue = async (
 
     // Improved voice selection logic
     // Priority for Male:
-    // 1. Specific Neural/Natural voices (if available in Edge/Chrome)
-    // 2. Google US English
-    // 3. Microsoft David
-    let maleVoice = voices.find(v => (v.name.includes('Neural') || v.name.includes('Natural')) && v.name.includes('Male') && v.lang.includes('US'))
+    // 1. "Microsoft Guy" (User Request)
+    // 2. Specific Neural/Natural voices (if available in Edge/Chrome)
+    // 3. Google US English
+    let maleVoice = voices.find(v => v.name.includes('Microsoft') && v.name.includes('Guy'))
+        || voices.find(v => (v.name.includes('Neural') || v.name.includes('Natural')) && v.name.includes('Male') && v.lang.includes('US'))
         || voices.find(v => v.name.includes('Google US English'))
         || voices.find(v => v.name.includes('David') && v.lang.includes('US'))
         || voices.find(v => (v.name.includes('US') || v.name.includes('United States')) && v.name.includes('Male'))
         || voices.find(v => v.lang === 'en-US' && !v.name.includes('Zira') && !v.name.includes('Female') && !v.name.includes('Girl'));
 
-    // Priority for Female: US Female voices (Zira, Google US) -> Generic US Female
     // Priority for Female:
-    // 1. Specific Neural/Natural voices (e.g. Jenny, Aria)
-    // 2. Microsoft Zira (Standard Windows)
-    // 3. Google US Female (if any)
-    let femaleVoice = voices.find(v => (v.name.includes('Neural') || v.name.includes('Natural')) && v.name.includes('Female') && (v.name.includes('Jenny') || v.name.includes('Aria') || v.lang.includes('US')))
+    // 1. "Microsoft Jenny" (User Request)
+    // 2. Specific Neural/Natural voices (e.g. Aria)
+    // 3. Microsoft Zira (Standard Windows)
+    let femaleVoice = voices.find(v => v.name.includes('Microsoft') && v.name.includes('Jenny'))
+        || voices.find(v => (v.name.includes('Neural') || v.name.includes('Natural')) && v.name.includes('Female') && (v.name.includes('Aria') || v.lang.includes('US')))
         || voices.find(v => v.name.includes('Zira') && v.lang.includes('US'))
         || voices.find(v => (v.name.includes('Google') && v.name.includes('Female') && v.lang.includes('US')))
         || voices.find(v => ((v.name.includes('United States') || v.name.includes('US')) && v.name.includes('Female')))
