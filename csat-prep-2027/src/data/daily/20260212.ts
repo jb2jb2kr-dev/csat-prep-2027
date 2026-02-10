@@ -44,11 +44,11 @@ export const daily20260212: DailySet = {
             "content": "Many people enjoy growing plants at home, but keeping them alive can be difficult. To solve this, smart plant pots have become popular in 2026. These pots have sensors that monitor the soil moisture, light levels, and temperature. When the plant needs water, the pot sends a notification to your smartphone. Some advanced models even have automatic watering systems. This technology helps busy modern people enjoy gardening without the stress of killing their plants.",
             "question": "이 글의 주제로 가장 적절한 것은?",
             "choices": [
-                "식물 성장에 필요한 영양분의 종류",
-                "스마트 화분이 가정 원예에 주는 도움",
-                "실내 공기 정화 식물의 인기 요인",
-                "전통적인 농업 방식의 중요성",
-                "지구 온난화가 식물에 미치는 영향"
+                "Nutrients essential for plant growth",
+                "How smart pots assist home gardening",
+                "Popularity factors of indoor air-purifying plants",
+                "Importance of traditional farming methods",
+                "Impact of global warming on plants"
             ],
             "answer": 2,
             "explanation": "이 글은 식물 관리를 어려워하는 사람들을 돕기 위해 등장한 스마트 화분의 기능(센서 모니터링, 알림, 자동 급수 등)과 그 이점에 대해 설명하고 있습니다. 따라서 주제로 '스마트 화분이 가정 원예에 주는 도움'이 가장 적절합니다."
@@ -201,11 +201,11 @@ export const daily20260212: DailySet = {
             "content": "The 'Uncanny Valley' effect has long been a hurdle for robotics, where a robot that looks nearly human—but not quite—evokes a sense of revulsion. However, in 2026, we are witnessing a reversal of this phenomenon with the rise of 'Digital Humans' in customer service. These hyper-realistic avatars, powered by generative AI, mimic human micro-expressions so perfectly that the brain accepts them as real. Ironically, this perfection creates a new psychological discomfort: the fear of deception. When users cannot distinguish between a human agent and an AI, trust erodes. To mitigate this, regulators are proposing 'Watermarking Laws' that mandate AI avatars to have a visible identifier. This suggests that in the future, the uncanny valley will not be triggered by imperfection, but by _______________.",
             "question": "빈칸에 들어갈 말로 가장 적절한 것은?",
             "choices": [
-                "인간과의 명확한 구별 불가능성",
-                "로봇의 기계적인 움직임",
-                "AI의 감정 표현 능력 부족",
-                "디지털 아바타의 낮은 해상도",
-                "고객 서비스의 비효율성"
+                "indistinguishability from humans",
+                "robotic movements",
+                "lack of emotional expression in AI",
+                "low resolution of digital avatars",
+                "inefficiency of customer service"
             ],
             "answer": 1,
             "explanation": "과거에는 로봇이 어설프게 인간을 닮아서 불쾌감(불쾌한 골짜기)을 줬다면, 이제는 AI가 너무 완벽해서 인간과 구별할 수 없을 때(cannot distinguish) 속임수에 대한 두려움과 불신이 생긴다고 설명합니다. 따라서 미래의 불쾌감은 'indistinguishability from humans(인간과의 명확한 구별 불가능성)'에 의해 유발될 것임을 추론할 수 있습니다."
