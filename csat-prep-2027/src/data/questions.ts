@@ -41,7 +41,9 @@ import { daily20260210 } from './daily/20260210';
 import { daily20260211 } from './daily/20260211';
 import { daily20260213 } from './daily/20260213';
 import { daily20260212 } from './daily/20260212';
+import { daily20260214 } from './daily/20260214';
 export const dailyContent: Record<string, DailySet> = {
+    "2026-02-14": daily20260214 as DailySet,
     "2026-02-13": daily20260213 as DailySet,
     "2026-02-12": daily20260212 as DailySet,
     "2026-02-11": daily20260211 as DailySet,
