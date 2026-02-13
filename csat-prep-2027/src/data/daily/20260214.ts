@@ -1,4 +1,4 @@
-import type { DailySet } from '../questions';
+import type { DailySet, Question } from '../types';
 
 export const daily20260214: DailySet = {
     foundation: [
@@ -87,7 +87,7 @@ export const daily20260214: DailySet = {
             "answer": 4,
             "explanation": "등록은 온라인으로만 가능(Online only)하다고 되어 있으므로 현장 등록이 가능하다는 4번은 일치하지 않습니다."
         }
-    ],
+    ] as Question[],
     intermediate: [
         {
             "id": "d-20260214-i-1",
@@ -174,7 +174,7 @@ export const daily20260214: DailySet = {
             "answer": 4,
             "explanation": "(1) 비교급 than 적절, (2) 주어 cost(단수)에 동사 remains(단수) 적절, (3) 미래 시제 will become 적절. 틀린 부분이 없습니다."
         }
-    ],
+    ] as Question[],
     advanced: [
         {
             "id": "d-20260214-a-1",
@@ -279,7 +279,7 @@ export const daily20260214: DailySet = {
             "answer": 1,
             "explanation": "Prime Killer 문항. 글의 핵심은 '무료' 서비스에서 우리가 지불하는 것은 돈이 아니라 '주의력(attention)'과 '의식(consciousness)'이라는 점입니다. 알고리즘이 우리의 생각을 유도(guided by algorithms)하므로, 우리는 스스로의 생각에 대한 통제권을 잃게 됩니다. 따라서 빈칸에는 단순히 'attention'을 넘어, 자신의 인지/생각에 대한 주권인 'cognitive sovereignty(인지적 주권)'이 가장 적절합니다. 이는 'mental liberation'이나 'autonomy'와 맥락을 같이 하는 고난도 추론입니다."
         }
-    ],
+    ] as Question[],
     mock: {
         "id": "m-20260214",
         "title": "2026-02-14 실전 모의고사 (Mini 5)",
@@ -370,6 +370,6 @@ export const daily20260214: DailySet = {
                 "answer": 2,
                 "explanation": "후성유전학(Epigenetics)이 환경 요인에 따라 유전자 발현을 조절하며, 이것이 후대에까지 유전될 수 있다는 내용입니다. 즉, 후성유전학이 유전과 건강에 미치는 영향이 주제입니다."
             }
-        ]
+        ] as Question[]
     }
 };

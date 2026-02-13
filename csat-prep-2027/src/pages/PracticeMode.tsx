@@ -1,30 +1,75 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { dailyContent } from '../data/questions';
-import type { Level } from '../data/questions';
+import type { Level, DailySet } from '../data/questions';
 import { QuestionCard } from '../components/QuestionCard';
 import { PDFDownloadButton } from '../components/PDFDownloadButton';
 import { clsx } from 'clsx';
-import { ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Calendar, Loader2 } from 'lucide-react';
 
 
 export const PracticeMode = () => {
     const { date } = useParams<{ date: string }>();
     const navigate = useNavigate();
     const [activeLevel, setActiveLevel] = useState<Level>('Foundation');
+    const [data, setData] = useState<DailySet | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     // Use URL date or fallback to the latest available date in dailyContent
     const getLatestDateStr = () => {
-        const dates = Object.keys(dailyContent).sort((a, b) => b.localeCompare(a));
-        console.log('Available dates:', dates);
+        const dates = Object.keys(dailyContent)
+            .filter(key => key.match(/^\d{4}-\d{2}-\d{2}$/)) // Only valid date formats
+            .sort((a, b) => b.localeCompare(a));
+        // console.log('Available dates:', dates);
         const latest = dates[0] || new Date().toISOString().split('T')[0];
-        console.log('Latest date selected:', latest);
+        // console.log('Latest date selected:', latest);
         return latest;
     };
     const targetDate = date || getLatestDateStr();
-    console.log('Target date:', targetDate);
-    const data = dailyContent[targetDate];
-    console.log('Data for target date exists:', !!data);
+    // console.log('Target date:', targetDate);
+
+    useEffect(() => {
+        let isMounted = true;
+
+        const loadData = async () => {
+            setIsLoading(true);
+            try {
+                // Check if the date exists in our data source
+                const loader = dailyContent[targetDate];
+
+                if (loader) {
+                    // console.log(`Loading data for ${targetDate}...`);
+                    const content = await loader();
+
+                    if (isMounted) {
+                        setData(content);
+                        // console.log(`Data loaded for ${targetDate}`);
+                    }
+                } else {
+                    console.warn(`No data found for ${targetDate}`);
+                    if (isMounted) {
+                        setData(null);
+                    }
+                }
+            } catch (error) {
+                console.error(`Failed to load daily content for ${targetDate}:`, error);
+                if (isMounted) {
+                    setData(null);
+                }
+            } finally {
+                if (isMounted) {
+                    setIsLoading(false);
+                }
+            }
+        };
+
+        loadData();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [targetDate]);
+
 
     // Date Navigation Logic
     const handleDateChange = (days: number) => {
@@ -115,7 +160,11 @@ export const PracticeMode = () => {
             </div>
 
             {/* Content Area */}
-            {!data ? (
+            {isLoading ? (
+                <div className="py-32 flex justify-center items-center">
+                    <Loader2 className="w-12 h-12 text-indigo-500 animate-spin" />
+                </div>
+            ) : !data ? (
                 <div className="py-32 text-center rounded-3xl bg-white/50 border border-slate-200 border-dashed">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 mb-4">
                         <Calendar className="w-8 h-8 text-slate-400" />

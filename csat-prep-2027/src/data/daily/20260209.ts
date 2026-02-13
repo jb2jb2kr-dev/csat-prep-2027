@@ -1,4 +1,4 @@
-import type { DailySet } from '../questions';
+import type { DailySet } from '../types';
 
 export const daily20260209: DailySet = {
     foundation: [

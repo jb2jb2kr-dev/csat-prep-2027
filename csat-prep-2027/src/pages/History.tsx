@@ -36,10 +36,8 @@ export const History = () => {
                                                 모의고사 점수: {result.score}점 ({result.correctCount}/{result.totalQuestions})
                                             </p>
                                         ) : (
-                                            <p className="text-sm text-slate-500">
-                                                기본 {dailyContent[date].foundation?.length || 0}문제 /
-                                                중급 {dailyContent[date].intermediate?.length || 0}문제 /
-                                                심화 {dailyContent[date].advanced?.length || 0}문제
+                                            <p className="text-sm text-slate-500 font-medium">
+                                                학습 시작하기
                                             </p>
                                         )}
                                     </div>
@@ -55,8 +53,8 @@ export const History = () => {
                                     <Link
                                         to={`/mock/${date}`}
                                         className={`px-4 py-2 border rounded-lg text-sm font-semibold transition-colors flex items-center gap-1 ${result
-                                                ? 'bg-emerald-50 text-emerald-600 border-emerald-100 hover:bg-emerald-100'
-                                                : 'bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100'
+                                            ? 'bg-emerald-50 text-emerald-600 border-emerald-100 hover:bg-emerald-100'
+                                            : 'bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100'
                                             }`}
                                     >
                                         {result ? '성적 확인' : '모의고사'} <ChevronRight className="w-4 h-4" />

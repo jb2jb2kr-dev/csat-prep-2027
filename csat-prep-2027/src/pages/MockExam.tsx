@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Timer, CheckCircle, AlertCircle, PlayCircle, StopCircle, ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
+import { Timer, CheckCircle, AlertCircle, PlayCircle, StopCircle, ChevronLeft, ChevronRight, Calendar, Loader2 } from 'lucide-react';
 import { dailyContent } from '../data/questions';
+import type { MockExam as MockExamData } from '../data/questions';
 import { PDFDownloadButton } from '../components/PDFDownloadButton';
 import { saveExamResult } from '../utils/storage';
 import { playDialogue } from '../utils/tts';
@@ -15,10 +16,14 @@ export const MockExam = () => {
     const [examState, setExamState] = useState<'intro' | 'active' | 'finished'>('intro');
     const [timeLeft, setTimeLeft] = useState(1200); // 20 minutes for mini mock
     const [answers, setAnswers] = useState<Record<string, number>>({});
+    const [mockData, setMockData] = useState<MockExamData | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     // Use URL date or fallback to the latest available date in dailyContent
     const getLatestDateStr = () => {
-        const dates = Object.keys(dailyContent).sort((a, b) => b.localeCompare(a));
+        const dates = Object.keys(dailyContent)
+            .filter(key => key.match(/^\d{4}-\d{2}-\d{2}$/)) // Only valid date formats
+            .sort((a, b) => b.localeCompare(a));
         return dates[0] || new Date().toISOString().split('T')[0];
     };
     const targetDate = date || getLatestDateStr();
@@ -34,7 +39,48 @@ export const MockExam = () => {
 
         navigate(`/mock/${newDateStr}`);
     };
-    const mockData = dailyContent[targetDate]?.mock;
+
+    useEffect(() => {
+        let isMounted = true;
+
+        const loadData = async () => {
+            setIsLoading(true);
+            try {
+                // Check if the date exists in our data source
+                const loader = dailyContent[targetDate];
+
+                if (loader) {
+                    // console.log(`Loading mock data for ${targetDate}...`);
+                    const content = await loader();
+
+                    if (isMounted) {
+                        setMockData(content.mock);
+                        // console.log(`Mock data loaded for ${targetDate}`);
+                    }
+                } else {
+                    console.warn(`No mock data found for ${targetDate}`);
+                    if (isMounted) {
+                        setMockData(null);
+                    }
+                }
+            } catch (error) {
+                console.error(`Failed to load mock data for ${targetDate}:`, error);
+                if (isMounted) {
+                    setMockData(null);
+                }
+            } finally {
+                if (isMounted) {
+                    setIsLoading(false);
+                }
+            }
+        };
+
+        loadData();
+
+        return () => {
+            isMounted = false;
+        };
+    }, [targetDate]);
 
     useEffect(() => {
         // Optional: Check if already completed? 
@@ -93,6 +139,14 @@ export const MockExam = () => {
         });
         return Math.round((correct / mockData.questions.length) * 100);
     };
+
+    if (isLoading) {
+        return (
+            <div className="min-h-screen pt-24 pb-12 flex justify-center items-center">
+                <Loader2 className="w-12 h-12 text-emerald-500 animate-spin" />
+            </div>
+        );
+    }
 
     if (!mockData) return <div className="pt-32 text-center text-slate-500 font-bold text-xl">{targetDate} 모의고사 데이터가 없습니다.</div>;
 
