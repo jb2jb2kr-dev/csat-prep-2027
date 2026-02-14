@@ -137,7 +137,8 @@ export const PracticeMode = () => {
                         <PDFDownloadButton
                             targetId="printable-content"
                             fileName={`CSAT_Practice_${activeLevel}_${dateStr}`}
-                            label="PDF 저장"
+                            label="인쇄하기"
+                            printTitle={`수능 영어 연습문제 (${activeLevel === 'Foundation' ? '초급' : activeLevel === 'Intermediate' ? '중급' : '심화'}) - ${targetDate}`}
                         />
                     )}
                     <div className="flex p-1 bg-slate-200/50 rounded-xl backdrop-blur-sm">

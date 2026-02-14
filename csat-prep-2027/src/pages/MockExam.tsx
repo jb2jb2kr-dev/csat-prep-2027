@@ -218,12 +218,14 @@ export const MockExam = () => {
                                 fileName={`MockExam_${mockData?.title?.replace(/\s+/g, '_')}`}
                                 label="시험지 인쇄"
                                 className="bg-emerald-600 hover:bg-emerald-700"
+                                printTitle={`${mockData?.title} - ${targetDate}`}
+                                isMock={true}
                             />
                         </div>
                     </header>
                     <div id="mock-exam-paper" className="pt-8 space-y-12 pb-24">
                         {mockData.questions.map((q, idx) => (
-                            <div key={q.id} id={`q-${q.id}`} className="scroll-mt-32">
+                            <div key={q.id} id={`q-${q.id}`} className="scroll-mt-32 print-question-card">
                                 <div className="flex items-center gap-2 mb-4">
                                     <span className="bg-slate-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
                                         {idx + 1}

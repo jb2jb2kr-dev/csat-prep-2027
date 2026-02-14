@@ -40,7 +40,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
     };
 
     return (
-        <div className="glass-card rounded-2xl p-8 mb-8">
+        <div className="glass-card print-question-card rounded-2xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
                 {questionNumber && (
                     <span className="bg-slate-900 text-white w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-sm shadow-sm">
@@ -190,7 +190,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="mt-8 pt-6 border-t border-slate-200"
+                        className="mt-8 pt-6 border-t border-slate-200 print-hide-explanation"
                     >
                         <div className="flex items-start gap-3 bg-indigo-50/50 p-6 rounded-xl border border-indigo-100">
                             <HelpCircle className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-0.5" />

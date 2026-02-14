@@ -5,6 +5,7 @@ export type { DailySet, Question, Level, MockExam };
 // Returns a Promise that resolves to the DailySet
 export const dailyContent: Record<string, () => Promise<DailySet>> = {
     "test-2026-02-15": async () => (await import('./daily/test2')).dailyTest as unknown as DailySet,
+    "2026-02-17": async () => (await import('./daily/20260217')).daily20260217 as unknown as DailySet,
     "2026-02-16": async () => (await import('./daily/20260216')).daily20260216 as unknown as DailySet,
     "2026-02-15": async () => (await import('./daily/20260215')).daily20260215 as unknown as DailySet,
     "2026-02-14": async () => (await import('./daily/20260214')).daily20260214 as unknown as DailySet,
