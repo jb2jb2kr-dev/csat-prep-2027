@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, GraduationCap, LayoutDashboard, History, User as UserIcon, LogOut, Users, Key } from 'lucide-react';
+import { BookOpen, GraduationCap, LayoutDashboard, History, User as UserIcon, LogOut, Users, Key, Crown } from 'lucide-react';
 import { clsx } from 'clsx';
 import { LoginModal } from '../components/LoginModal';
 import { logout, getCurrentUser, type User } from '../utils/auth';
@@ -39,6 +39,7 @@ export const Navbar = () => {
         { label: '일일 학습', path: '/practice', icon: BookOpen },
         { label: '실전 모의고사', path: '/mock', icon: GraduationCap },
         { label: '기록실', path: '/history', icon: History },
+        { label: '프리미엄', path: '/premium', icon: Crown },
         { label: '회원 명단', path: '/admin/users', icon: Users, adminOnly: true },
     ];
 

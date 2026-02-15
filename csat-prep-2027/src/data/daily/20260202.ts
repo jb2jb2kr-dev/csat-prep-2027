@@ -38,12 +38,13 @@ export const daily20260202: DailySet = {
             chartData: {
                 type: 'bar',
                 title: "Preferred Leisure Activities of Teens in 2025",
-                items: [
-                    { label: "Video Games", value: 40, unit: "%", color: "bg-indigo-500" },
-                    { label: "Social Media", value: 25, unit: "%", color: "bg-emerald-500" },
-                    { label: "Sports", value: 15, unit: "%", color: "bg-amber-500" },
-                    { label: "Reading", value: 10, unit: "%", color: "bg-rose-500" },
-                    { label: "Others", value: 10, unit: "%", color: "bg-slate-400" }
+                labels: ["Video Games", "Social Media", "Sports", "Reading", "Others"],
+                datasets: [
+                    {
+                        label: "Students (%)",
+                        data: [40, 25, 15, 10, 10],
+                        color: "bg-indigo-500"
+                    }
                 ]
             }
         },

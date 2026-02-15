@@ -5,6 +5,7 @@ import { PracticeMode } from './pages/PracticeMode';
 import { MockExam } from './pages/MockExam';
 import { History } from './pages/History';
 import { AdminUserList } from './pages/AdminUserList';
+import { Premium } from './pages/Premium';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/mock/:date" element={<MockExam />} />
             <Route path="/history" element={<History />} />
             <Route path="/admin/users" element={<AdminUserList />} />
+            <Route path="/premium" element={<Premium />} />
           </Routes>
         </main>
       </div>

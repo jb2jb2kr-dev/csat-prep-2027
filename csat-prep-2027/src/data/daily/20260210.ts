@@ -155,7 +155,16 @@ export const daily20260210: DailySet = {
                 "Solar energy in 2026 was less than Wind and Hydrogen combined."
             ],
             answer: 4,
-            explanation: "⑤번: 2026년 태양광(Solar) 용량은 350GW이고, 풍력(Wind)과 수소(Hydrogen)의 합계는 120 + 60 = 180GW입니다. 350GW는 180GW보다 작지 않으므로(less than), ⑤번 진술은 도표의 내용과 일치하지 않습니다."
+            explanation: "⑤번: 2026년 태양광(Solar) 용량은 350GW이고, 풍력(Wind)과 수소(Hydrogen)의 합계는 120 + 60 = 180GW입니다. 350GW는 180GW보다 작지 않으므로(less than), ⑤번 진술은 도표의 내용과 일치하지 않습니다.",
+            chartData: {
+                type: 'bar',
+                title: "Global Energy Capacity Additions (2025 vs 2026)",
+                labels: ["Solar", "Wind", "Hydrogen", "Coal"],
+                datasets: [
+                    { label: "2025", data: [250, 100, 20, 50], color: "bg-gray-400" },
+                    { label: "2026", data: [350, 120, 60, 30], color: "bg-blue-600" }
+                ]
+            }
         },
         {
             id: "d-20260210-i-5",

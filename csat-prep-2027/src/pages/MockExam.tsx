@@ -283,7 +283,12 @@ export const MockExam = () => {
                                                 </div>
                                             )}
                                             <p className="text-lg text-slate-800 leading-relaxed whitespace-pre-wrap mb-6">
-                                                {q.content}
+                                                {q.content.split(/(<u>.*?<\/u>)/g).map((part, i) => {
+                                                    if (part.startsWith('<u>') && part.endsWith('</u>')) {
+                                                        return <u key={i} className="decoration-2 underline-offset-4 decoration-indigo-300">{part.slice(3, -4)}</u>;
+                                                    }
+                                                    return part;
+                                                })}
                                             </p>
                                         </div>
                                     )}
@@ -350,7 +355,12 @@ export const MockExam = () => {
                                         <h4 className="font-bold text-slate-900 mb-2">{q.question}</h4>
                                         <div className="text-sm text-slate-600 mb-4 bg-slate-50 p-3 rounded-lg overflow-y-auto max-h-32">
                                             <div className="font-bold text-slate-400 mb-1 text-xs uppercase">Content/Script</div>
-                                            {q.content}
+                                            {q.content.split(/(<u>.*?<\/u>)/g).map((part, i) => {
+                                                if (part.startsWith('<u>') && part.endsWith('</u>')) {
+                                                    return <u key={i} className="decoration-2 underline-offset-4 decoration-indigo-300">{part.slice(3, -4)}</u>;
+                                                }
+                                                return part;
+                                            })}
                                         </div>
                                         <div className="bg-indigo-50 p-4 rounded-lg text-sm text-indigo-900">
                                             <span className="font-bold block mb-1">정답 및 해설:</span>

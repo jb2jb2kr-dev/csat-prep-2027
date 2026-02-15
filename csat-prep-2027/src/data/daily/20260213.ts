@@ -112,6 +112,17 @@ export const daily20260213: DailySet = {
             "type": "Chart Consistency",
             "isListening": false,
             "content": "The graph above shows the 'Global Electric Vehicle (EV) Sales Share by Region' in 2025. ① Europe had the highest share of EV sales, accounting for 40% of the total. ② China followed closely with 35% of the market share. ③ North America's share was less than half of Europe's share. ④ The share of 'Other Regions' was the smallest, at only 5%. ⑤ Compared to the previous year, every region showed a decrease in EV sales share.",
+            "chartData": {
+                "type": "pie",
+                "title": "2025 EV Market Share",
+                "labels": ["Europe", "China", "North America", "Other Regions"],
+                "datasets": [
+                    {
+                        "label": "2025 EV Market Share (%)",
+                        "data": [40, 35, 20, 5]
+                    }
+                ]
+            },
             "question": "도표의 내용과 일치하지 않는 것은?",
             "choices": [
                 "①",
@@ -215,7 +226,7 @@ export const daily20260213: DailySet = {
             "level": "Advanced",
             "type": "Underlined Implicit Meaning",
             "isListening": false,
-            "content": "In the era of algorithm-driven content, we are often trapped in 'Filter Bubbles.' Use interaction data primarily to show us what we already agree with. While this feels comfortable, it isolates us from opposing viewpoints. We become intellectually sedentary, consuming only 'mental junk food' that validates our biases. To break free, we must actively seek out perform  **'informational cross-training'**—deliberately engaging with ideas that challenge our worldview.",
+            "content": "In the era of algorithm-driven content, we are often trapped in 'Filter Bubbles.' Use interaction data primarily to show us what we already agree with. While this feels comfortable, it isolates us from opposing viewpoints. We become intellectually sedentary, consuming only 'mental junk food' that validates our biases. To break free, we must actively seek out perform  <u>'informational cross-training'</u>—deliberately engaging with ideas that challenge our worldview.",
             "question": "밑줄 친 **'informational cross-training'**이 의미하는 바로 가장 적절한 것은?",
             "choices": [
                 "consuming a balanced diet of diverse information sources to strengthen critical thinking",
@@ -358,6 +369,17 @@ export const daily20260213: DailySet = {
                 "type": "Chart Consistency",
                 "isListening": false,
                 "content": "The graph shows the 'Projected Global Space Economy Growth' from 2025 to 2030. ① The total market value is expected to reach $1 trillion by 2030. ② The satellite internet sector shows the steepest growth rate among all sectors. ③ Space tourism, while growing, remains the smallest sector throughout the period. ④ Commercial space stations are projected to overtake satellite manufacturing in value by 2028. ⑤ Government spending on space exploration is expected to decrease every year.",
+                "chartData": {
+                    "type": "line",
+                    "title": "Global Space Economy Growth",
+                    "labels": ["2025", "2026", "2027", "2028", "2029", "2030"],
+                    "datasets": [
+                        {
+                            "label": "Space Economy (Billion $)",
+                            "data": [450, 520, 610, 720, 850, 1000]
+                        }
+                    ]
+                },
                 "question": "도표의 내용과 일치하지 않는 것은?",
                 "choices": [
                     "①",

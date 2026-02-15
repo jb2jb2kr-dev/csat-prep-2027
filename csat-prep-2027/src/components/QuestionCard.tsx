@@ -117,27 +117,38 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, questionNu
                             <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm mb-6">
                                 <h4 className="text-center font-bold text-slate-700 mb-6">{question.chartData.title}</h4>
                                 <div className="space-y-4">
-                                    {question.chartData.items.map((item, idx) => (
-                                        <div key={idx} className="relative">
-                                            <div className="flex justify-between text-sm font-medium text-slate-600 mb-1">
-                                                <span>{item.label}</span>
-                                                <span>{item.value}{item.unit}</span>
+                                    {(question.chartData.labels || []).map((label, idx) => {
+                                        const value = question.chartData?.datasets?.[0]?.data?.[idx] ?? 0;
+                                        const datasetLabel = question.chartData?.datasets?.[0]?.label || "";
+                                        const color = question.chartData?.datasets?.[0]?.color || "bg-indigo-500";
+
+                                        return (
+                                            <div key={idx} className="relative">
+                                                <div className="flex justify-between text-sm font-medium text-slate-600 mb-1">
+                                                    <span>{label}</span>
+                                                    <span>{value}{question.chartData?.unit || (datasetLabel.includes('%') ? '%' : '')}</span>
+                                                </div>
+                                                <div className="h-4 bg-slate-100 rounded-full overflow-hidden">
+                                                    <motion.div
+                                                        initial={{ width: 0 }}
+                                                        animate={{ width: `${Math.min(value, 100)}%` }}
+                                                        transition={{ duration: 1, ease: "easeOut", delay: idx * 0.1 }}
+                                                        className={clsx("h-full rounded-full", color)}
+                                                    />
+                                                </div>
                                             </div>
-                                            <div className="h-4 bg-slate-100 rounded-full overflow-hidden">
-                                                <motion.div
-                                                    initial={{ width: 0 }}
-                                                    animate={{ width: `${item.value}%` }}
-                                                    transition={{ duration: 1, ease: "easeOut", delay: idx * 0.1 }}
-                                                    className={clsx("h-full rounded-full", item.color || "bg-indigo-500")}
-                                                />
-                                            </div>
-                                        </div>
-                                    ))}
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )}
                         <p className="text-lg text-slate-800 leading-relaxed font-medium whitespace-pre-wrap border-l-4 border-slate-200 pl-4">
-                            {question.content}
+                            {question.content.split(/(<u>.*?<\/u>)/g).map((part, i) => {
+                                if (part.startsWith('<u>') && part.endsWith('</u>')) {
+                                    return <u key={i} className="decoration-2 underline-offset-4 decoration-indigo-300">{part.slice(3, -4)}</u>;
+                                }
+                                return part;
+                            })}
                         </p>
                     </div>
                 )}

@@ -11,9 +11,15 @@ export interface Question {
     choices: string[];
     answer: number;
     chartData?: {
-        type: 'bar' | 'pie';
+        type: 'bar' | 'pie' | 'line';
         title: string;
-        items: { label: string; value: number; unit?: string; color?: string }[];
+        labels: string[];
+        datasets: {
+            label: string;
+            data: number[];
+            color?: string;
+        }[];
+        unit?: string;
     };
     explanation: string;
 }

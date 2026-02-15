@@ -373,5 +373,7 @@ function escapeHtml(text: string): string {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
+        .replace(/&lt;u&gt;/g, '<u>')
+        .replace(/&lt;\/u&gt;/g, '</u>')
         .replace(/\n/g, '<br>');
 }

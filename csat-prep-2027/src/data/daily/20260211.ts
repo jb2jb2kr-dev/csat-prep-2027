@@ -129,6 +129,21 @@ export const daily20260211: DailySet = {
             "type": "Graph/Chart Info",
             "isListening": false,
             "content": "The graph above shows the adoption rates of three types of Digital Assets in 2025 and 2026 across four different regions. ① In all four regions, the adoption rate of Central Bank Digital Currencies (CBDCs) increased from 2025 to 2026. ② North America showed the highest adoption rate of Tokenized Securities in 2026, reaching over 40%. ③ In Europe, the gap between the adoption of NFTs and CBDCs in 2026 was smaller than that in Asia. ④ While Asia had the highest adoption rate of CBDCs in 2025, it was surpassed by North America in 2026. ⑤ In South America, the adoption rate of Tokenized Securities in 2026 was more than double that of 2025, showing the fastest growth among the regions.",
+            "chartData": {
+                "type": "bar",
+                "title": "Digital Asset Adoption Rates",
+                "labels": ["North America", "Europe", "Asia", "South America"],
+                "datasets": [
+                    {
+                        "label": "CBDC 2026 (%)",
+                        "data": [45, 30, 42, 15]
+                    },
+                    {
+                        "label": "Tokenized Securities 2026 (%)",
+                        "data": [42, 25, 20, 18]
+                    }
+                ]
+            },
             "question": "다음 도표의 내용과 일치하지 않는 것은?",
             "choices": [
                 "①",
@@ -357,7 +372,7 @@ export const daily20260211: DailySet = {
                 "level": "Intermediate",
                 "type": "Grammar (Reading)",
                 "isListening": false,
-                "content": "As AI healthcare assistants become more common, patients are (1) increasingly relying on them for initial diagnoses. These systems use advanced algorithms to analyze symptoms and (2) recommend appropriate treatments. However, doctors warn that AI should not replace professional medical advice. They emphasize that human intuition and empathy (3) are essential for understanding a patient's full condition. While AI can process data faster, it (4) lacks the ability to understand the emotional context of pain. Therefore, a hybrid model, where AI supports doctors rather than replacing them, (5) seem to be the most promising future for medicine.",
+                "content": "As AI healthcare assistants become more common, patients are <u>(1) increasingly relying</u> on them for initial diagnoses. These systems use advanced algorithms to analyze symptoms and <u>(2) recommend</u> appropriate treatments. However, doctors warn that AI should not replace professional medical advice. They emphasize that human intuition and empathy <u>(3) are essential</u> for understanding a patient's full condition. While AI can process data faster, it <u>(4) lacks</u> the ability to understand the emotional context of pain. Therefore, a hybrid model, where AI supports doctors rather than replacing them, <u>(5) seem</u> to be the most promising future for medicine.",
                 "question": "밑줄 친 부분 중 어법상 틀린 것은?",
                 "choices": [
                     "(1)",

@@ -129,6 +129,17 @@ export const daily20260214: DailySet = {
             "type": "Graph",
             "isListening": false,
             "content": "The graph above shows the Preferred Modes of Transportation for Commuting in 2026. ① 'Autonomous Bus' is the most popular mode, accounting for 35% of the total. ② 'Electric Scooter' follows in second place with 25%. ③ 'Subway' comes next, used by 20% of commuters. ④ The percentage of people using 'Personal Car' is 15%, which is lower than that of 'Subway'. ⑤ 'Walking' is the least preferred mode, at 10%.",
+            "chartData": {
+                "type": "bar",
+                "title": "Preferred Commuting Transportation",
+                "labels": ["Autonomous Bus", "Electric Scooter", "Subway", "Personal Car", "Walking"],
+                "datasets": [
+                    {
+                        "label": "2026 Preferred Transportation (%)",
+                        "data": [35, 25, 20, 15, 5]
+                    }
+                ]
+            },
             "question": "도표의 내용과 일치하지 않는 것은?",
             "choices": [
                 "①",
@@ -162,7 +173,7 @@ export const daily20260214: DailySet = {
             "level": "Intermediate",
             "type": "Grammar",
             "isListening": false,
-            "content": "Vertical farming is an innovative method of growing crops indoors. By stacking plants vertically, it uses significantly less land (1) than traditional farming. The controlled environment allows crops to grow year-round, regardless of the weather outside. Also, because the water is recycled within the system, vertical farms consume 95% less water. However, the high energy cost for artificial lighting (2) remains a challenge. Many experts believe that as renewable energy becomes cheaper, vertical farming (3) will become a key solution to global food security.",
+            "content": "Vertical farming is an innovative method of growing crops indoors. By stacking plants vertically, it uses significantly less land <u>(1) than</u> traditional farming. The controlled environment allows crops to grow year-round, regardless of the weather outside. Also, because the water is recycled within the system, vertical farms consume 95% less water. However, the high energy cost for artificial lighting <u>(2) remains</u> a challenge. Many experts believe that as renewable energy becomes cheaper, vertical farming <u>(3) will become</u> a key solution to global food security.",
             "question": "밑줄 친 부분 중 어법상 틀린 것은?",
             "choices": [
                 "(1)",

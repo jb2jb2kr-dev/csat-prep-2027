@@ -55,7 +55,19 @@ M: Thanks. I'll finish folding these shirts while you get them.`,
                 "햄스터가 가장 인기가 낮다."
             ],
             answer: 3,
-            explanation: "본문에서 새(Birds)는 8%라고 했으므로 10%라는 진술은 일치하지 않습니다. (10%는 물고기)"
+            explanation: "본문에서 새(Birds)는 8%라고 했으므로 10%라는 진술은 일치하지 않습니다. (10%는 물고기)",
+            chartData: {
+                type: 'pie',
+                title: "The Most Popular Pets in 2025",
+                labels: ["Dogs", "Cats", "Fish", "Birds", "Hamsters"],
+                datasets: [
+                    {
+                        label: "Market Share (%)",
+                        data: [45, 30, 10, 8, 7],
+                        color: "bg-orange-500"
+                    }
+                ]
+            }
         },
         {
             id: "d-20260205-f-4",

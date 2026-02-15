@@ -199,12 +199,13 @@ M: Thanks. It’s relieving to have you managing this in the background.`,
             chartData: {
                 type: 'bar',
                 title: "Projected Energy & Waste Trends (2026)",
-                items: [
-                    { label: "Fossil Fuel Growth", value: 1, unit: "%", color: "bg-gray-500" },
-                    { label: "Solar/Wind Growth", value: 17, unit: "%", color: "bg-green-500" },
-                    { label: "Data Center Power Boom", value: 90, unit: "%", color: "bg-blue-500" },
-                    { label: "Plastic Packaging Share", value: 33, unit: "%", color: "bg-red-400" },
-                    { label: "EU Recycling Target (Real)", value: 90, unit: "%", color: "bg-yellow-400" }
+                labels: ["Fossil Fuel Growth", "Solar/Wind Growth", "Data Center Power Boom", "Plastic Packaging Share", "EU Recycling Target (Real)"],
+                datasets: [
+                    {
+                        label: "Percentage (%)",
+                        data: [1, 17, 90, 33, 90],
+                        color: "bg-blue-500"
+                    }
                 ]
             }
         },

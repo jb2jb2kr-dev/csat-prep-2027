@@ -90,7 +90,19 @@ W: Coco must have been playing with it.`,
                 "다큐멘터리가 공포물보다 더 인기가 있었다."
             ],
             answer: 4,
-            explanation: "다큐멘터리는 5%이고 공포물(Horror)은 10%이므로, 다큐멘터리가 공포물보다 더 인기 있었다는 진술은 도표 내용과 일치하지 않습니다."
+            explanation: "다큐멘터리는 5%이고 공포물(Horror)은 10%이므로, 다큐멘터리가 공포물보다 더 인기 있었다는 진술은 도표 내용과 일치하지 않습니다.",
+            chartData: {
+                type: 'pie',
+                title: "Preferred Movie Genres - Class A",
+                labels: ["Action", "Comedy", "Romance", "Horror", "Documentary"],
+                datasets: [
+                    {
+                        label: "Students (%)",
+                        data: [40, 25, 15, 10, 5],
+                        color: "bg-purple-500"
+                    }
+                ]
+            }
         }
     ],
     intermediate: [

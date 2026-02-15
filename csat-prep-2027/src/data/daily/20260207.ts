@@ -88,11 +88,18 @@ export const daily20260207 = {
             chartData: {
                 type: 'bar',
                 title: "Recycling Efficiency: Robots vs. Humans (2026)",
-                items: [
-                    { label: "Plastic (Robot)", value: 95, unit: "%", color: "bg-blue-500" },
-                    { label: "Plastic (Human)", value: 70, unit: "%", color: "bg-gray-400" },
-                    { label: "Metal (Robot)", value: 92, unit: "%", color: "bg-blue-500" },
-                    { label: "Metal (Human)", value: 85, unit: "%", color: "bg-gray-400" }
+                labels: ["Plastic", "Metal", "Glass", "Paper"],
+                datasets: [
+                    {
+                        label: "Robots (%)",
+                        data: [95, 92, 90, 75],
+                        color: "bg-blue-500"
+                    },
+                    {
+                        label: "Humans (%)",
+                        data: [70, 85, 80, 85],
+                        color: "bg-gray-400"
+                    }
                 ]
             }
         }

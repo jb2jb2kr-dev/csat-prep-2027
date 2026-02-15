@@ -146,7 +146,19 @@ const intermediate: Question[] = [
             "데이터 센터 에너지 및 냉각 요구 사항의 감소."
         ],
         answer: 1,
-        explanation: "투자는 '운영 연속성(operational continuity)'과 위험 완화, 즉 물 부족 지역의 공급망 위험을 완화해야 할 필요성에 의해 주도됩니다."
+        explanation: "투자는 '운영 연속성(operational continuity)'과 위험 완화, 즉 물 부족 지역의 공급망 위험을 완화해야 할 필요성에 의해 주도됩니다.",
+        chartData: {
+            type: 'bar',
+            title: "Water Risk-Driven Investments (2026 Estimate)",
+            labels: ["Smart Leak Detection", "Desalination Tech", "Recycled Water Systems", "Wastewater Treatment"],
+            datasets: [
+                {
+                    label: "Investment Growth (%)",
+                    data: [25, 18, 12, 15],
+                    color: "bg-blue-500"
+                }
+            ]
+        }
     },
     {
         id: "d-20260206-i-5",

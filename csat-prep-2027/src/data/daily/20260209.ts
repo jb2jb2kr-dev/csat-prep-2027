@@ -155,7 +155,19 @@ export const daily20260209: DailySet = {
                 "5"
             ],
             answer: 2,
-            explanation: "2026년에는 원자력(Nuclear)에 대한 정부의 지원이 갱신되고 수요가 증가하는 추세이지, 수요가 급격히 감소(decreased significantly)하지 않습니다. 따라서 3번 진술은 틀린 내용입니다."
+            explanation: "2026년에는 원자력(Nuclear)에 대한 정부의 지원이 갱신되고 수요가 증가하는 추세이지, 수요가 급격히 감소(decreased significantly)하지 않습니다. 따라서 3번 진술은 틀린 내용입니다.",
+            chartData: {
+                type: 'bar',
+                title: "Global Energy Demand Growth by Source (2026 Forecast)",
+                labels: ["Solar & Wind", "Fossil Fuels", "Nuclear", "Other Renewables"],
+                datasets: [
+                    {
+                        label: "Growth Rate (%)",
+                        data: [17.5, 0.8, 3.5, 5.2],
+                        color: "bg-green-500"
+                    }
+                ]
+            }
         },
         {
             id: "d-20260209-i-5",

@@ -129,6 +129,21 @@ export const daily20260212: DailySet = {
             "type": "Chart Description",
             "isListening": false,
             "content": "The graph above shows the Global Market Share of Renewable Energy Sources in 2020 and 2026. ① In 2020, Hydropower accounted for the largest share of the market, followed by Wind and Solar. ② However, in 2026, Solar energy overtook Hydropower to become the leading renewable energy source. ③ The share of Wind energy increased from 2020 to 2026, but it remained in the second position in both years. ④ Bioenergy showed a slight decrease in its market share in 2026 compared to 2020. ⑤ Geothermal energy had the smallest market share in both years, remaining below 5%.",
+            "chartData": {
+                "type": "bar",
+                "title": "Renewable Energy Share",
+                "labels": ["Hydropower", "Wind", "Solar", "Bioenergy", "Geothermal"],
+                "datasets": [
+                    {
+                        "label": "2020 (%)",
+                        "data": [40, 20, 15, 10, 3]
+                    },
+                    {
+                        "label": "2026 (Projected %)",
+                        "data": [25, 22, 45, 8, 4]
+                    }
+                ]
+            },
             "question": "다음 도표의 내용과 일치하지 않는 것은?",
             "choices": [
                 "①",
@@ -162,7 +177,7 @@ export const daily20260212: DailySet = {
             "level": "Intermediate",
             "type": "Grammar",
             "isListening": false,
-            "content": "The Clean Ocean Project is a global initiative aiming to remove plastic waste from the seas. It uses massive floating barriers (1) designed to catch plastic debris while allowing marine life to pass underneath. Since its launch, the project (2) has collected thousands of tons of trash. However, critics argue that cleaning up the ocean is not enough. They claim that we must also stop the production of single-use plastics (3) to solve the problem permanently. If we continue to dump plastic into the ocean at the current rate, the cleanup efforts (4) will be meaningless. Therefore, a combination of removal and prevention (5) represent the only viable solution.",
+            "content": "The Clean Ocean Project is a global initiative aiming to remove plastic waste from the seas. It uses massive floating barriers <u>(1) designed</u> to catch plastic debris while allowing marine life to pass underneath. Since its launch, the project <u>(2) has collected</u> thousands of tons of trash. However, critics argue that cleaning up the ocean is not enough. They claim that we must also stop the production of single-use plastics <u>(3) to solve</u> the problem permanently. If we continue to dump plastic into the ocean at the current rate, the cleanup efforts <u>(4) will be</u> meaningless. Therefore, a combination of removal and prevention <u>(5) represent</u> the only viable solution.",
             "question": "밑줄 친 부분 중 어법상 틀린 것은?",
             "choices": [
                 "(1)",
@@ -357,7 +372,7 @@ export const daily20260212: DailySet = {
                 "level": "Intermediate",
                 "type": "Contextual Vocabulary",
                 "isListening": false,
-                "content": "The introduction of autonomous vehicles (AVs) promises to reduce traffic accidents caused by human error. However, the transition period, where AVs share the road with human drivers, presents unique challenges. Human drivers often communicate through (A) [subtle / explicit] cues like eye contact or hand gestures, which current AV sensors struggle to interpret. This communication gap can lead to misunderstandings at intersections. AV developers are trying to solve this by adding external displays to cars that (B) [hide / signal] the vehicle's intent to pedestrians and other drivers. Until this technology is perfected, human drivers must remain (C) [vigilant / indifferent] around autonomous cars.",
+                "content": "The introduction of autonomous vehicles (AVs) promises to reduce traffic accidents caused by human error. However, the transition period, where AVs share the road with human drivers, presents unique challenges. Human drivers often communicate through <u>(A) [subtle / explicit]</u> cues like eye contact or hand gestures, which current AV sensors struggle to interpret. This communication gap can lead to misunderstandings at intersections. AV developers are trying to solve this by adding external displays to cars that <u>(B) [hide / signal]</u> the vehicle's intent to pedestrians and other drivers. Until this technology is perfected, human drivers must remain <u>(C) [vigilant / indifferent]</u> around autonomous cars.",
                 "question": "(A), (B), (C)의 각 네모 안에서 문맥에 맞는 낱말로 가장 적절한 것은?",
                 "choices": [
                     "subtle - signal - vigilant",
